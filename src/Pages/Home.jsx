@@ -13,6 +13,7 @@ import TechnicalSpecifications from '../components/TechnicalSpecifications';
 import ServicesSection from '../components/ServicesSection';
 import PVEHotspotSection from '../components/PVEHotspotSection';
 import './Home.css';
+import brochurePdf from '../assets/images/Brochure. Capricorn.PDF';
 
 // Import assets
 import bannerVideo from '../assets/banner.mp4';
@@ -94,83 +95,83 @@ const Home = () => {
   ];
 
   const countries = [
-    { 
-      code: '+91', 
-      name: 'India', 
-      pattern: /^[6-9]\d{9}$/, 
-      placeholder: 'Enter 10-digit number (e.g., 9876543210)', 
+    {
+      code: '+91',
+      name: 'India',
+      pattern: /^[6-9]\d{9}$/,
+      placeholder: 'Enter 10-digit number (e.g., 9876543210)',
       example: '9876543210',
       description: '10 digits starting with 6-9'
     },
-    { 
-      code: '+971', 
-      name: 'UAE', 
-      pattern: /^[5]\d{8}$/, 
-      placeholder: 'Enter 9-digit number (e.g., 501234567)', 
+    {
+      code: '+971',
+      name: 'UAE',
+      pattern: /^[5]\d{8}$/,
+      placeholder: 'Enter 9-digit number (e.g., 501234567)',
       example: '501234567',
       description: '9 digits starting with 5'
     },
-    { 
-      code: '+1', 
-      name: 'USA', 
-      pattern: /^[2-9]\d{9}$/, 
-      placeholder: 'Enter 10-digit number (e.g., 2125551234)', 
+    {
+      code: '+1',
+      name: 'USA',
+      pattern: /^[2-9]\d{9}$/,
+      placeholder: 'Enter 10-digit number (e.g., 2125551234)',
       example: '2125551234',
       description: '10 digits starting with 2-9'
     },
-    { 
-      code: '+44', 
-      name: 'UK', 
-      pattern: /^[1-9]\d{9,10}$/, 
-      placeholder: 'Enter 10-11 digit number (e.g., 2012345678)', 
+    {
+      code: '+44',
+      name: 'UK',
+      pattern: /^[1-9]\d{9,10}$/,
+      placeholder: 'Enter 10-11 digit number (e.g., 2012345678)',
       example: '2012345678',
       description: '10-11 digits starting with 1-9'
     },
-    { 
-      code: '+33', 
-      name: 'France', 
-      pattern: /^[1-9]\d{8}$/, 
-      placeholder: 'Enter 9-digit number (e.g., 123456789)', 
+    {
+      code: '+33',
+      name: 'France',
+      pattern: /^[1-9]\d{8}$/,
+      placeholder: 'Enter 9-digit number (e.g., 123456789)',
       example: '123456789',
       description: '9 digits starting with 1-9'
     },
-    { 
-      code: '+49', 
-      name: 'Germany', 
-      pattern: /^[1-9]\d{9,11}$/, 
-      placeholder: 'Enter 10-12 digit number (e.g., 1712345678)', 
+    {
+      code: '+49',
+      name: 'Germany',
+      pattern: /^[1-9]\d{9,11}$/,
+      placeholder: 'Enter 10-12 digit number (e.g., 1712345678)',
       example: '1712345678',
       description: '10-12 digits starting with 1-9'
     },
-    { 
-      code: '+81', 
-      name: 'Japan', 
-      pattern: /^[1-9]\d{9,10}$/, 
-      placeholder: 'Enter 10-11 digit number (e.g., 9012345678)', 
+    {
+      code: '+81',
+      name: 'Japan',
+      pattern: /^[1-9]\d{9,10}$/,
+      placeholder: 'Enter 10-11 digit number (e.g., 9012345678)',
       example: '9012345678',
       description: '10-11 digits starting with 1-9'
     },
-    { 
-      code: '+86', 
-      name: 'China', 
-      pattern: /^[1]\d{10}$/, 
-      placeholder: 'Enter 11-digit number (e.g., 13812345678)', 
+    {
+      code: '+86',
+      name: 'China',
+      pattern: /^[1]\d{10}$/,
+      placeholder: 'Enter 11-digit number (e.g., 13812345678)',
       example: '13812345678',
       description: '11 digits starting with 1'
     },
-    { 
-      code: '+61', 
-      name: 'Australia', 
-      pattern: /^[4]\d{8}$/, 
-      placeholder: 'Enter 9-digit number (e.g., 412345678)', 
+    {
+      code: '+61',
+      name: 'Australia',
+      pattern: /^[4]\d{8}$/,
+      placeholder: 'Enter 9-digit number (e.g., 412345678)',
       example: '412345678',
       description: '9 digits starting with 4'
     },
-    { 
-      code: '+65', 
-      name: 'Singapore', 
-      pattern: /^[8-9]\d{7}$/, 
-      placeholder: 'Enter 8-digit number (e.g., 81234567)', 
+    {
+      code: '+65',
+      name: 'Singapore',
+      pattern: /^[8-9]\d{7}$/,
+      placeholder: 'Enter 8-digit number (e.g., 81234567)',
       example: '81234567',
       description: '8 digits starting with 8 or 9'
     }
@@ -274,18 +275,18 @@ const Home = () => {
   // Enhanced Phone Validation Functions
   const validatePhoneNumber = (phone, countryCode) => {
     if (!phone || !countryCode) return false;
-    
+
     const selectedCountry = countries.find(c => c.code === countryCode);
     if (!selectedCountry) return false;
-    
+
     // Remove formatting characters
     const cleanPhone = phone.replace(/[\s\-\(\)]/g, '');
-    
+
     // Must contain only digits
     if (!/^\d+$/.test(cleanPhone)) {
       return false;
     }
-    
+
     // Must match country-specific pattern
     return selectedCountry.pattern.test(cleanPhone);
   };
@@ -296,24 +297,24 @@ const Home = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    
+
     if (name === 'phone') {
       // Only allow digits, spaces, hyphens, and parentheses
       let cleanValue = value.replace(/[^\d\s\-\(\)]/g, '');
-      
+
       // Additional check: if the input contains letters, show immediate error
       if (/[a-zA-Z]/.test(value)) {
         const selectedCountry = getSelectedCountryInfo();
         setPhoneError(`Phone number must contain only digits. Please enter a valid ${selectedCountry?.name || ''} phone number.`);
       }
-      
+
       setFormData(prev => ({ ...prev, [name]: cleanValue }));
-      
+
       // Real-time validation
       if (formData.country && cleanValue) {
         const isValid = validatePhoneNumber(cleanValue, formData.country);
         const selectedCountry = getSelectedCountryInfo();
-        
+
         // Check if contains only digits (after removing formatting)
         const digitsOnly = cleanValue.replace(/[\s\-\(\)]/g, '');
         if (!/^\d+$/.test(digitsOnly)) {
@@ -329,12 +330,12 @@ const Home = () => {
     } else if (name === 'country') {
       setFormData(prev => ({ ...prev, [name]: value }));
       setPhoneError(''); // Reset phone error when country changes
-      
+
       // Re-validate existing phone number with new country
       if (formData.phone) {
         const isValid = validatePhoneNumber(formData.phone, value);
         const selectedCountry = countries.find(c => c.code === value);
-        
+
         const digitsOnly = formData.phone.replace(/[\s\-\(\)]/g, '');
         if (!/^\d+$/.test(digitsOnly)) {
           setPhoneError(`Phone number must contain only digits. Please enter a valid ${selectedCountry?.name || ''} phone number.`);
@@ -352,25 +353,25 @@ const Home = () => {
   // Updated handleSubmit function with EmailJS integration
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     // Reset errors
     setPhoneError('');
     setSubmitError('');
     let hasErrors = false;
-    
+
     // Validate required fields
     if (!formData.name?.trim()) {
       hasErrors = true;
     }
-    
+
     if (!formData.email?.trim()) {
       hasErrors = true;
     }
-    
+
     if (!formData.message?.trim()) {
       hasErrors = true;
     }
-    
+
     // Phone validation
     if (!formData.phone?.trim()) {
       setPhoneError('Phone number is required');
@@ -393,13 +394,13 @@ const Home = () => {
         }
       }
     }
-    
+
     if (hasErrors) {
       return;
     }
-    
+
     setIsSubmitting(true);
-    
+
     try {
       // Prepare email data for EmailJS
       const templateParams = {
@@ -422,26 +423,26 @@ const Home = () => {
       );
 
       console.log('Email sent successfully:', result);
-      
+
       // Success - show success message
       setIsSubmitted(true);
-      setFormData({ 
-        name: '', 
-        email: '', 
-        phone: '', 
-        country: '', 
-        company: '', 
-        projectType: '', 
-        message: '' 
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        country: '',
+        company: '',
+        projectType: '',
+        message: ''
       });
       setPhoneError('');
-      
+
       // Hide success message after 5 seconds
       setTimeout(() => setIsSubmitted(false), 5000);
-      
+
     } catch (error) {
       console.error('Email sending failed:', error);
-      
+
       if (error.text) {
         setSubmitError(`Failed to send message: ${error.text}`);
       } else if (error.status === 400) {
@@ -565,10 +566,10 @@ const Home = () => {
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     const handleResize = () => checkIsMobile();
-    
+
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleResize);
@@ -618,8 +619,12 @@ const Home = () => {
           </div>
 
           <div className="hero-buttons" ref={heroButtonsRef}>
-            <Link to="/products/home"><button className="btn-primary-large">Explore Collection</button></Link>
-            <Link to="/contact"><button className="btn-secondary-large">Get Quote</button></Link>
+            <Link to="/products/home">
+              <button className="btn-primary-large">Explore Collection</button>
+            </Link>
+            <a href={brochurePdf} target="_blank" rel="noopener noreferrer">
+              <button className="btn-secondary-large">See Our Brochure</button>
+            </a>
           </div>
         </div>
 
@@ -653,14 +658,14 @@ const Home = () => {
                       <h4>{product.id === 'residential' ? 'Home Lift' : 'Commercial'}</h4>
                     </div>
                   </div>
-                  
+
                   <div className="elite-content-panel">
                     <div className="elite-product-content">
                       <div className="elite-content-inner">
                         <h3 className="elite-content-title">{product.title}</h3>
                         <h4 className="elite-content-subtitle-gold">{product.subtitle}</h4>
                         <p className="elite-content-description">{product.description}</p>
-                        
+
                       </div>
                     </div>
                   </div>
@@ -709,7 +714,7 @@ const Home = () => {
                     <h3 className="elite-content-title">{products[0].title}</h3>
                     <h4 className="elite-content-subtitle-gold">{products[0].subtitle}</h4>
                     <p className="elite-content-description">{products[0].description}</p>
-                    
+
                   </div>
                 </div>
 
@@ -719,7 +724,7 @@ const Home = () => {
                     <h3 className="elite-content-title">{products[1].title}</h3>
                     <h4 className="elite-content-subtitle-gold">{products[1].subtitle}</h4>
                     <p className="elite-content-description">{products[1].description}</p>
-                    
+
                   </div>
                 </div>
               </div>
@@ -1060,13 +1065,13 @@ const Home = () => {
                         <label htmlFor="company">Company (Optional)</label>
                         <div className="input-wrapper">
                           <Building size={18} className="input-icon" />
-                          <input 
-                            type="text" 
-                            id="company" 
-                            name="company" 
-                            value={formData.company} 
-                            onChange={handleInputChange} 
-                            placeholder="Enter your company name" 
+                          <input
+                            type="text"
+                            id="company"
+                            name="company"
+                            value={formData.company}
+                            onChange={handleInputChange}
+                            placeholder="Enter your company name"
                           />
                         </div>
                       </div>

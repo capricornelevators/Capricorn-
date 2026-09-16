@@ -2,15 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo1.png';
+import brochurePdf from '../assets/images/Brochure. Capricorn.PDF';
 import './Header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
-
-  // Debug log to see state changes
-  console.log('Current activeDropdown state:', activeDropdown);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,11 +46,6 @@ const Header = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, [isMenuOpen]);
 
-  const toggleDropdown = (dropdown) => {
-    console.log('Dropdown clicked:', dropdown); // Debug log
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  };
-
   const closeDropdowns = () => {
     setActiveDropdown(null);
   };
@@ -89,12 +82,11 @@ const Header = () => {
               About
             </Link>
 
-            {/* Products Dropdown - SIMPLIFIED */}
+            {/* Products Dropdown */}
             <div className="nav-dropdown">
               <button
                 className="nav-dropdown-trigger"
                 onClick={() => {
-                  console.log('Dropdown clicked!');
                   setActiveDropdown(activeDropdown === 'products' ? null : 'products');
                 }}
               >
@@ -104,7 +96,6 @@ const Header = () => {
                   className={`dropdown-icon ${activeDropdown === 'products' ? 'rotated' : ''}`}
                 />
               </button>
-              {console.log('Should show dropdown:', activeDropdown === 'products')}
               {activeDropdown === 'products' && (
                 <div className="nav-dropdown-menu">
                   <Link to="/products/home" className="dropdown-item" onClick={() => setActiveDropdown(null)}>
@@ -127,14 +118,20 @@ const Header = () => {
             <Link to="/contact" className="nav-link" onClick={closeMenu}>
               Contact
             </Link>
-            
+
             <Link to="/careers" className="nav-link" onClick={closeMenu}>
               Careers
             </Link>
 
-            <Link to="/contact">
-              <button className="btn-secondary" onClick={closeMenu}>Get Quote</button>
-            </Link>
+            <a
+              href={brochurePdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav-link header-brochure-link"
+              onClick={closeMenu}
+            >
+              View Catalogue
+            </a>
           </nav>
 
           <button
@@ -156,7 +153,7 @@ const Header = () => {
             <Link to="/about" onClick={closeMenu}>About</Link>
 
             <div className="mobile-dropdown">
-              <button 
+              <button
                 className="mobile-dropdown-trigger"
                 onClick={(e) => {
                   e.preventDefault();
@@ -179,13 +176,19 @@ const Header = () => {
             </div>
 
             <Link to="/services" onClick={closeMenu}>Services</Link>
-             <Link to="/gallery" onClick={closeMenu}>Gallery</Link>
+            <Link to="/gallery" onClick={closeMenu}>Gallery</Link>
             <Link to="/contact" onClick={closeMenu}>Contact</Link>
             <Link to="/careers" onClick={closeMenu}>Careers</Link>
 
-            <Link to="/contact" onClick={closeMenu}>
-              <button className="btn-secondary mobile-get-quote">Get Quote</button>
-            </Link>
+            <a
+              href={brochurePdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mobile-brochure-link"
+              onClick={closeMenu}
+            >
+              <button className="btn-secondary mobile-get-quote">View Catalogue</button>
+            </a>
           </div>
         </div>
       )}

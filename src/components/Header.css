@@ -2,7 +2,7 @@
    Header Component Styles - Fixed Navigation Spacing & Logo Size
 ============================================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Cormorant:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
 /* CSS Variables */
 :root {
@@ -16,7 +16,8 @@
   --gray-800: #262626;
   --shadow-elegant: 0 4px 20px rgba(0, 0, 0, 0.08);
   --shadow-luxury: 0 8px 40px rgba(0, 0, 0, 0.12);
-  --font-heading: 'Playfair Display', serif;
+  --font-heading: 'Cormorant Garamond', 'Cormorant', serif;
+  --font-nav: 'Montserrat', sans-serif;
   --font-body: 'Inter', sans-serif;
 }
 
@@ -91,15 +92,14 @@ body {
   position: relative;
 }
 
-/* FIXED: Proper flex distribution for equal spacing */
+/* Proper flex distribution */
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  gap: 2rem; /* Add gap between logo and nav */
-} /* Add gap between logo and nav */
-
+  gap: 2rem;
+}
 
 /* Logo Styles - ENLARGED & IMPROVED */
 .header-logo {
@@ -110,7 +110,7 @@ body {
   transition: all 0.3s ease;
   animation: logoFloat 0.8s ease-out 0.2s both;
   z-index: 99999999;
-  flex-shrink: 0; /* Prevent logo from shrinking */
+  flex-shrink: 0;
 }
 
 @keyframes logoFloat {
@@ -125,13 +125,13 @@ body {
 }
 
 .header-logo:hover {
-  transform: scale(1.05);
+  transform: none;
 }
 
 /* ENLARGED LOGO CONTAINER */
 .logo-container {
-  width: 5.5rem; /* Increased from 4.5rem */
-  height: 5.5rem; /* Increased from 4.5rem */
+  width: 5.5rem;
+  height: 5.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,18 +157,18 @@ body {
 }
 
 .header-scrolled .logo-container {
-  width: 5rem; /* Increased from 4rem */
-  height: 5rem; /* Increased from 4rem */
+  width: 5rem;
+  height: 5rem;
   background: rgba(229, 195, 96, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* IMPROVED LOGO IMAGE - Larger and better visibility */
+/* IMPROVED LOGO IMAGE */
 .logo-image {
-  width: 85%; /* Increased from 70% for better CE visibility */
-  height: 85%; /* Increased from 70% for better CE visibility */
+  width: 85%;
+  height: 85%;
   object-fit: contain;
   transition: all 0.3s ease;
   will-change: transform;
@@ -178,14 +178,11 @@ body {
 }
 
 .logo-container:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-  border-color: rgba(255, 255, 255, 0.4);
+  transform: none;
 }
 
 .logo-container:hover .logo-image {
-  transform: scale(1.05) rotate(5deg);
-  filter: brightness(1.2) contrast(1.2) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  transform: none;
 }
 
 .logo-text {
@@ -204,15 +201,16 @@ body {
   font-size: 2.2rem;
 }
 
-/* FIXED: Navigation Styles - Equal space distribution */
+/* Navigation Styles - tightened spacing via gap, aligned to the end */
 .header-nav {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Distribute items evenly with space between */
+  justify-content: flex-end;
+  gap: 2rem;
   animation: navSlide 0.8s ease-out 0.4s both;
   min-height: 40px;
-  flex: 1; /* Take up all available space */
-  max-width: 100%; /* Ensure it uses full width */
+  flex: 1;
+  max-width: 100%;
 }
 
 @keyframes navSlide {
@@ -226,12 +224,13 @@ body {
   }
 }
 
-/* Nav Link Styles */
+/* Nav Link Styles - Montserrat */
 .nav-link {
+  font-family: var(--font-nav);
   color: var(--white);
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   letter-spacing: 0.02em;
   transition: all 0.4s ease;
   position: relative;
@@ -259,21 +258,22 @@ body {
 }
 
 .nav-link:hover {
-  color: var(--primary-gold);
-  transform: translateY(-2px);
+  color: var(--white);
+  transform: none;
 }
 
 .nav-link:hover::after {
-  width: 100%;
+  width: 0;
 }
 
-/* Dropdown Styles - ENHANCED Z-INDEX FOR HERO OVERLAY */
+/* Dropdown Styles */
 .nav-dropdown {
   position: relative;
   z-index: 99999999;
 }
 
 .nav-dropdown-trigger {
+  font-family: var(--font-nav);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -281,10 +281,9 @@ body {
   border: 0 !important;
   color: var(--white);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   cursor: pointer;
   transition: all 0.4s ease;
-  font-family: var(--font-heading);
   letter-spacing: 0.02em;
   position: relative;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -336,9 +335,9 @@ button.nav-dropdown-trigger:visited {
   gap: 0.5rem !important;
   color: var(--white) !important;
   font-weight: 600 !important;
-  font-size: 0.95rem !important;
+  font-size: 1.05rem !important;
   cursor: pointer !important;
-  font-family: var(--font-heading) !important;
+  font-family: var(--font-nav) !important;
   letter-spacing: 0.02em !important;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
   white-space: nowrap !important;
@@ -361,12 +360,12 @@ button.nav-dropdown-trigger:visited {
 }
 
 .nav-dropdown-trigger:hover {
-  color: var(--primary-gold);
-  transform: translateY(-2px);
+  color: var(--white);
+  transform: none;
 }
 
 .nav-dropdown-trigger:hover::after {
-  width: 100%;
+  width: 0;
 }
 
 .dropdown-icon {
@@ -380,6 +379,7 @@ button.nav-dropdown-trigger:visited {
 }
 
 .nav-dropdown-menu {
+  font-family: var(--font-nav);
   position: absolute;
   top: 100%;
   left: 0;
@@ -415,7 +415,7 @@ button.nav-dropdown-trigger:visited {
   color: var(--cream);
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   transition: all 0.3s ease;
   position: relative;
   white-space: nowrap;
@@ -444,6 +444,7 @@ button.nav-dropdown-trigger:visited {
 
 /* Button Styles */
 .btn-primary {
+  font-family: var(--font-heading);
   background: linear-gradient(135deg, var(--primary-gold), var(--gold-light));
   color: var(--white);
   padding: 0.7rem 2rem;
@@ -453,7 +454,7 @@ button.nav-dropdown-trigger:visited {
   cursor: pointer;
   transition: all 0.4s ease;
   box-shadow: 0 4px 15px rgba(229, 195, 96, 0.3);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   letter-spacing: 0.02em;
   animation: buttonFloat 0.8s ease-out 0.6s both;
   outline: none;
@@ -478,6 +479,7 @@ button.nav-dropdown-trigger:visited {
 }
 
 .btn-secondary {
+  font-family: var(--font-heading);
   border: 2px solid var(--primary-gold);
   color: var(--primary-gold);
   padding: 0.7rem 2rem;
@@ -487,7 +489,7 @@ button.nav-dropdown-trigger:visited {
   backdrop-filter: blur(10px);
   cursor: pointer;
   transition: all 0.4s ease;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   letter-spacing: 0.02em;
   text-decoration: none;
   display: inline-block;
@@ -499,8 +501,37 @@ button.nav-dropdown-trigger:visited {
 .btn-secondary:hover {
   background: var(--primary-gold);
   color: var(--white);
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 25px rgba(229, 195, 96, 0.4);
+  transform: none;
+  box-shadow: none;
+}
+
+/* View Catalogue link (desktop nav) - pill-styled like a button */
+.header-brochure-link {
+  font-family: var(--font-nav);
+  border: 2px solid var(--primary-gold);
+  color: var(--primary-gold);
+  padding: 0.55rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  background: rgba(229, 195, 96, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.header-brochure-link::after {
+  display: none;
+}
+
+.header-brochure-link:hover {
+  background: var(--primary-gold);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(229, 195, 96, 0.3);
 }
 
 /* Mobile Menu Button */
@@ -518,7 +549,7 @@ button.nav-dropdown-trigger:visited {
   z-index: 99999999;
   min-width: 44px;
   min-height: 44px;
-  flex-shrink: 0; /* Prevent button from shrinking */
+  flex-shrink: 0;
 }
 
 .mobile-menu-btn:focus {
@@ -567,6 +598,7 @@ button.nav-dropdown-trigger:visited {
 }
 
 .mobile-menu-content {
+  font-family: var(--font-nav);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -634,7 +666,8 @@ button.nav-dropdown-trigger:visited {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--primary-gold);
-  font-family: var(--font-heading);
+  font-family: var(--font-nav);
+  letter-spacing: 0.02em;
 }
 
 .mobile-dropdown-icon {
@@ -705,11 +738,11 @@ a:active,
   .header-nav {
     display: flex !important;
   }
-  
+
   .mobile-menu-btn {
     display: none !important;
   }
-  
+
   .mobile-menu {
     display: none !important;
   }
@@ -720,20 +753,19 @@ a:active,
   .header-nav {
     display: none !important;
   }
-  
+
   .mobile-menu-btn {
     display: block !important;
   }
-  
+
   .header-container {
     position: relative;
   }
-  
+
   .mobile-menu-content {
     -webkit-overflow-scrolling: touch;
   }
-  
-  /* Better touch targets for mobile */
+
   .mobile-menu-content > a,
   .mobile-dropdown-trigger,
   .mobile-dropdown-items a {
@@ -742,13 +774,12 @@ a:active,
     align-items: center;
     justify-content: center;
   }
-  
-  /* Adjust logo size for mobile */
+
   .logo-container {
     width: 4.5rem;
     height: 4.5rem;
   }
-  
+
   .header-scrolled .logo-container {
     width: 4rem;
     height: 4rem;
@@ -758,24 +789,23 @@ a:active,
 /* Extra Large Desktop (1400px+) */
 @media (min-width: 1400px) {
   .header-nav {
-    gap: 3rem;
+    gap: 2.25rem;
   }
-  
+
   .nav-link,
   .nav-dropdown-trigger {
     font-size: 1rem;
   }
-  
+
   .header-container {
     padding: 0 3rem;
   }
-  
-  /* Even larger logo for large screens */
+
   .logo-container {
     width: 6rem;
     height: 6rem;
   }
-  
+
   .header-scrolled .logo-container {
     width: 5.5rem;
     height: 5.5rem;
@@ -787,9 +817,9 @@ a:active,
   .header-container {
     padding: 0 2.5rem;
   }
-  
+
   .header-nav {
-    gap: 2.2rem;
+    gap: 2rem;
   }
 }
 
@@ -798,18 +828,18 @@ a:active,
   .header-container {
     padding: 0 2rem;
   }
-  
+
   .header-nav {
-    gap: 1.8rem;
+    gap: 1.5rem;
   }
-  
+
   .nav-link,
   .nav-dropdown-trigger {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
-  
-  .btn-secondary {
-    padding: 0.6rem 1.5rem;
+
+  .header-brochure-link {
+    padding: 0.5rem 1.2rem;
     font-size: 0.85rem;
   }
 }
@@ -819,22 +849,22 @@ a:active,
   .header-container {
     padding: 0 1.5rem;
   }
-  
+
   .mobile-menu-content {
     gap: 2rem;
     padding: 3rem 2rem;
   }
-  
+
   .mobile-menu-content > a {
     font-size: 1.2rem;
     min-width: 250px;
   }
-  
+
   .mobile-dropdown {
     min-width: 300px;
     padding: 2rem;
   }
-  
+
   .mobile-dropdown-title {
     font-size: 1.2rem;
   }
@@ -845,45 +875,45 @@ a:active,
   .header {
     padding: 0.75rem 0;
   }
-  
+
   .header-scrolled {
     padding: 0.5rem 0;
   }
-  
+
   .header-container {
     padding: 0 1.25rem;
   }
-  
+
   .logo-container {
     width: 4rem;
     height: 4rem;
   }
-  
+
   .header-scrolled .logo-container {
     width: 3.5rem;
     height: 3.5rem;
   }
-  
+
   .mobile-menu-btn {
     padding: 0.5rem;
   }
-  
+
   .mobile-menu-content {
     gap: 1.8rem;
     padding: 2.5rem 1.5rem;
     font-size: 1rem;
   }
-  
+
   .mobile-menu-content > a {
     min-width: 220px;
     padding: 0.7rem 1.2rem;
   }
-  
+
   .mobile-dropdown {
     min-width: 280px;
     padding: 1.5rem;
   }
-  
+
   .mobile-get-quote {
     padding: 0.7rem 2rem;
     font-size: 0.9rem;
@@ -895,54 +925,54 @@ a:active,
   .header {
     padding: 0.6rem 0;
   }
-  
+
   .header-scrolled {
     padding: 0.4rem 0;
   }
-  
+
   .header-container {
     padding: 0 1rem;
   }
-  
+
   .logo-container {
     width: 3.5rem;
     height: 3.5rem;
   }
-  
+
   .header-scrolled .logo-container {
     width: 3rem;
     height: 3rem;
   }
-  
+
   .mobile-menu-btn {
     padding: 0.45rem;
   }
-  
+
   .mobile-menu-content {
     gap: 1.5rem;
     padding: 2rem 1rem;
     font-size: 0.95rem;
   }
-  
+
   .mobile-menu-content > a {
     min-width: 200px;
     padding: 0.6rem 1rem;
     font-size: 1rem;
   }
-  
+
   .mobile-dropdown {
     min-width: 260px;
     padding: 1.2rem;
   }
-  
+
   .mobile-dropdown-title {
     font-size: 1rem;
   }
-  
+
   .mobile-dropdown-items a {
     font-size: 0.9rem;
   }
-  
+
   .mobile-get-quote {
     padding: 0.6rem 1.8rem;
     font-size: 0.85rem;
@@ -955,62 +985,62 @@ a:active,
   .header {
     padding: 0.5rem 0;
   }
-  
+
   .header-scrolled {
     padding: 0.4rem 0;
   }
-  
+
   .header-container {
     padding: 0 1rem;
   }
-  
+
   .logo-container {
     width: 3.2rem;
     height: 3.2rem;
   }
-  
+
   .header-scrolled .logo-container {
     width: 2.8rem;
     height: 2.8rem;
   }
-  
+
   .logo-text {
     font-size: 1.3rem;
   }
-  
+
   .header-scrolled .logo-text {
     font-size: 1.2rem;
   }
-  
+
   .mobile-menu-btn {
     padding: 0.4rem;
   }
-  
+
   .mobile-menu-content {
     gap: 1.3rem;
     padding: 1.5rem 1rem;
     font-size: 0.9rem;
   }
-  
+
   .mobile-menu-content > a {
     min-width: 180px;
     padding: 0.6rem 1rem;
     font-size: 0.95rem;
   }
-  
+
   .mobile-dropdown {
     min-width: 240px;
     padding: 1rem;
   }
-  
+
   .mobile-dropdown-title {
     font-size: 0.95rem;
   }
-  
+
   .mobile-dropdown-items a {
     font-size: 0.85rem;
   }
-  
+
   .mobile-get-quote {
     padding: 0.5rem 1.5rem;
     font-size: 0.8rem;
@@ -1023,49 +1053,49 @@ a:active,
   .header-container {
     padding: 0 0.75rem;
   }
-  
+
   .logo-container {
     width: 2.8rem;
     height: 2.8rem;
   }
-  
+
   .header-scrolled .logo-container {
     width: 2.5rem;
     height: 2.5rem;
   }
-  
+
   .logo-text {
     font-size: 1.1rem;
   }
-  
+
   .header-scrolled .logo-text {
     font-size: 1rem;
   }
-  
+
   .mobile-menu-content {
     padding: 1rem 0.75rem;
     gap: 1.2rem;
   }
-  
+
   .mobile-menu-content > a {
     min-width: 160px;
     font-size: 0.9rem;
     padding: 0.5rem 0.8rem;
   }
-  
+
   .mobile-dropdown {
     min-width: 200px;
     padding: 0.8rem;
   }
-  
+
   .mobile-dropdown-title {
     font-size: 0.9rem;
   }
-  
+
   .mobile-dropdown-items a {
     font-size: 0.8rem;
   }
-  
+
   .mobile-get-quote {
     padding: 0.5rem 1.2rem;
     font-size: 0.75rem;
@@ -1080,15 +1110,15 @@ a:active,
     gap: 0.8rem;
     min-height: auto;
   }
-  
+
   .mobile-menu-content > a {
     padding: 0.4rem 1rem;
   }
-  
+
   .mobile-dropdown {
     padding: 0.8rem;
   }
-  
+
   .mobile-get-quote {
     margin-top: 0.3rem;
   }
@@ -1110,23 +1140,23 @@ a:active,
     box-shadow: none !important;
     padding: 1rem 0 !important;
   }
-  
+
   .mobile-menu,
   .mobile-menu-btn,
   .nav-dropdown-menu {
     display: none !important;
   }
-  
+
   .header-nav {
     display: flex !important;
   }
-  
+
   .nav-link,
   .nav-dropdown-trigger {
     color: black !important;
     text-shadow: none !important;
   }
-  
+
   .btn-secondary {
     border-color: black !important;
     color: black !important;
@@ -1149,7 +1179,7 @@ a:active,
     animation: none !important;
     transition: none !important;
   }
-  
+
   .header-logo:hover,
   .logo-container:hover .logo-image,
   .nav-link:hover,
@@ -1179,11 +1209,11 @@ a:active,
   .mobile-menu {
     background: rgba(18, 18, 18, 0.98);
   }
-  
+
   .mobile-menu-content > a {
     color: var(--cream);
   }
-  
+
   .mobile-dropdown {
     background: rgba(229, 195, 96, 0.08);
     border-color: rgba(229, 195, 96, 0.3);
@@ -1196,17 +1226,17 @@ a:active,
     .header-nav {
       display: none !important;
     }
-    
+
     .mobile-menu-btn {
       display: block !important;
     }
   }
-  
+
   @container (min-width: 1024px) {
     .header-nav {
       display: flex !important;
     }
-    
+
     .mobile-menu-btn {
       display: none !important;
     }
@@ -1227,7 +1257,7 @@ a:active,
     background: none;
     color: inherit;
   }
-  
+
   .nav-link:hover::after,
   .nav-dropdown-trigger:hover::after {
     width: 0;
@@ -1267,7 +1297,7 @@ a:active,
   .mobile-menu {
     -webkit-overflow-scrolling: touch;
   }
-  
+
   .header {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
@@ -1279,7 +1309,7 @@ a:active,
   .mobile-menu-btn {
     -webkit-tap-highlight-color: transparent;
   }
-  
+
   .nav-link,
   .nav-dropdown-trigger,
   .mobile-menu-content a {
@@ -1292,11 +1322,11 @@ a:active,
   .header-scrolled {
     background: rgba(59, 47, 32, 0.95);
   }
-  
+
   .mobile-menu {
     background: rgba(250, 249, 247, 0.95);
   }
-  
+
   .nav-dropdown-menu {
     background: rgba(0, 0, 0, 0.9);
   }

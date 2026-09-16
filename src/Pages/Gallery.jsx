@@ -25,6 +25,24 @@ import galleryProject15 from '../assets/15.jpeg';
 import galleryProject16 from '../assets/16.jpeg';
 import galleryProject17 from '../assets/17.jpeg';
 
+// Import images from assets/images folder
+import galleryImg1 from '../assets/images/gallery1-jpThnQYD.webp';
+import galleryImg2 from '../assets/images/gallery2-CrrfnwKy.webp';
+import galleryImg3 from '../assets/images/gallery3-CO56dp70.webp';
+import galleryImg5 from '../assets/images/gallery5-jc5EOdhO.webp';
+import galleryImg6 from '../assets/images/gallery6-Q-DVBgSV.webp';
+import galleryImg7 from '../assets/images/gallery7-CNk2CwXP.webp';
+import galleryImg8 from '../assets/images/gallery8-CvEJBRgr.webp';
+import galleryImg9 from '../assets/images/gallery9-BC8NY627.webp';
+import galleryImg10 from '../assets/images/gallery10-PBFrTpDN.webp';
+import galleryImg12 from '../assets/images/gallery12-BLKSMulg.webp';
+import galleryImg13 from '../assets/images/gallery13-DPfJPFpg.webp';
+import galleryImg14 from '../assets/images/gallery14-BaUc08Cm.webp';
+import galleryImg15 from '../assets/images/gallery15-BWbiC4f0.webp';
+import galleryImg16 from '../assets/images/gallery16-DA6AsLNQ.webp';
+import galleryImg17 from '../assets/images/gallery17-Cw0wBDxo.webp';
+import galleryImg18 from '../assets/images/gallery18-DPQwZvJC.webp';
+
 const Gallery = () => {
   // States
   const [scrollY, setScrollY] = useState(0);
@@ -40,21 +58,37 @@ const Gallery = () => {
   // Register GSAP plugins
   gsap.registerPlugin(ScrollTrigger);
 
-  // Gallery images data
+  // Gallery images data - combined from assets and assets/images
   const galleryImages = [
+    { src: galleryImg1, alt: 'Premium Elevator Interior Design' },
     { src: galleryProject1, alt: 'Luxury Residential Elevator Installation' },
+    { src: galleryImg2, alt: 'Modern Elevator Cabin Finish' },
     { src: galleryProject2, alt: 'Commercial Building Elevator System' },
+    { src: galleryImg3, alt: 'Elegant Elevator Door Design' },
     { src: galleryProject3, alt: 'Modern Hospital Elevator Solution' },
+    { src: galleryImg5, alt: 'Stylish Home Elevator Setup' },
     { src: galleryProject4, alt: 'Premium Office Building Elevator' },
+    { src: galleryImg6, alt: 'Contemporary Elevator Panel' },
     { src: galleryProject5, alt: 'Residential Complex Elevator Installation' },
+    { src: galleryImg7, alt: 'Luxury Elevator Lighting Design' },
     { src: galleryProject6, alt: 'Industrial Elevator System' },
+    { src: galleryImg8, alt: 'Premium Cabin Interior' },
     { src: galleryProject7, alt: 'Hotel Elevator Installation' },
+    { src: galleryImg9, alt: 'Commercial Elevator Solution' },
     { src: galleryProject8, alt: 'Shopping Mall Elevator Solution' },
+    { src: galleryImg10, alt: 'Residential Elevator Project' },
     { src: galleryProject9, alt: 'Apartment Building Elevator' },
+    { src: galleryImg12, alt: 'Custom Elevator Design' },
     { src: galleryProject10, alt: 'Corporate Office Elevator' },
+    { src: galleryImg13, alt: 'Elevator Installation Showcase' },
     { src: galleryProject12, alt: 'Luxury Home Elevator' },
+    { src: galleryImg14, alt: 'Modern Lift System' },
+    { src: galleryImg15, alt: 'Premium Elevator Finish' },
     { src: galleryProject15, alt: 'Commercial Complex Elevator' },
+    { src: galleryImg16, alt: 'Elegant Lift Design' },
     { src: galleryProject16, alt: 'Residential Tower Elevator' },
+    { src: galleryImg17, alt: 'High-Rise Elevator Installation' },
+    { src: galleryImg18, alt: 'Luxury Building Elevator' },
     { src: galleryProject17, alt: 'Premium Elevator Installation' },
   ];
 

@@ -13,7 +13,7 @@ import TechnicalSpecifications from '../components/TechnicalSpecifications';
 import ServicesSection from '../components/ServicesSection';
 import PVEHotspotSection from '../components/PVEHotspotSection';
 import './Home.css';
-import brochurePdf from '../assets/images/Brochure. Capricorn.PDF';
+const brochurePdf = '/brochure.pdf';
 
 // Import assets
 import bannerVideo from '../assets/banner.mp4';

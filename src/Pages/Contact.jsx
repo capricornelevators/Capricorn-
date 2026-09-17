@@ -761,9 +761,14 @@ const Contact = () => {
                 Schedule Consultation
                 <ArrowRight size={18} />
               </button>
-              <button className="contact-cta-btn contact-secondary">
+              <a
+                href="/brochure.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-cta-btn contact-secondary"
+              >
                 Download Brochure
-              </button>
+              </a>
             </div>
           </div>
         </div>

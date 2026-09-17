@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo1.png';
-import brochurePdf from '../assets/images/Brochure. Capricorn.PDF';
+const brochurePdf = '/brochure.pdf';
 import './Header.css';
 
 const Header = () => {

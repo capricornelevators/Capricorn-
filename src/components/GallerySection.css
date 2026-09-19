@@ -1,0 +1,537 @@
+/* =============================================================================
+   ELEGANT MARQUEE GALLERY SECTION CSS - CAPRICORN ELEVATORS
+   Combining Previous Design (Header, Cards, Lightbox) with Infinite Marquee Movement
+============================================================================= */
+
+.site-gallery-section {
+  background: var(--black, #05080c);
+  color: var(--white, #ffffff);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.site-gallery-container {
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* =============================================================================
+   1. Section Header (Matching Prompt 10 Specification)
+============================================================================= */
+.site-gallery-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  padding: 0 1.5rem;
+}
+
+.site-gallery-label {
+  display: inline-block;
+  font-family: var(--font-nav, sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--primary-gold, #d4b347);
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.site-gallery-title {
+  font-family: var(--font-heading, serif);
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  color: var(--white, #ffffff);
+  line-height: 1.15;
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.01em;
+}
+
+.site-gallery-subtitle {
+  font-family: var(--font-body, sans-serif);
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+}
+
+/* =============================================================================
+   2. Filter Pills Bar (High Contrast Visible Pills)
+============================================================================= */
+.site-gallery-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto 3.5rem;
+  padding: 0 1.5rem;
+}
+
+.site-gallery-tab {
+  font-family: var(--font-nav, sans-serif);
+  padding: 0.65rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff !important;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  white-space: nowrap;
+}
+
+.site-gallery-tab:hover {
+  border-color: var(--primary-gold, #d4b347);
+  color: var(--primary-gold, #d4b347) !important;
+  background: rgba(212, 179, 71, 0.15);
+  transform: translateY(-2px);
+}
+
+.site-gallery-tab.active {
+  background: var(--primary-gold, #d4b347) !important;
+  border-color: var(--primary-gold, #d4b347) !important;
+  color: #000000 !important;
+  box-shadow: 0 4px 20px rgba(212, 179, 71, 0.4);
+  font-weight: 800;
+}
+
+/* =============================================================================
+   3. COLUMN-BASED MARQUEE SLIDER (Active Tab: ALL)
+============================================================================= */
+.gallery-marquee-container {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  overflow: hidden;
+  user-select: none;
+  padding: 0.5rem 0 2rem;
+}
+
+.gallery-marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: galleryMarquee 50s linear infinite;
+}
+
+.gallery-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes galleryMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.gallery-marquee-set {
+  display: flex;
+  gap: 24px;
+  padding-right: 24px;
+}
+
+/* =============================================================================
+   3b. FIXED STATIONARY CONTAINER (Active Tabs: 2 to 6)
+============================================================================= */
+.gallery-fixed-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.5rem 1.5rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: galleryTabFadeIn 0.35s ease-out forwards;
+}
+
+@keyframes galleryTabFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gallery-fixed-track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+/* =============================================================================
+   4. COLUMN WRAPPERS & CARDS (Alternating: 1 Full, 2 Stacked)
+============================================================================= */
+.gallery-col {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.gallery-col-full {
+  width: 340px;
+  height: 520px;
+}
+
+.gallery-col-stacked {
+  width: 340px;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.site-gallery-card {
+  position: relative;
+  flex-shrink: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #101520;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-gallery-card.card-full {
+  width: 340px;
+  height: 520px;
+}
+
+.site-gallery-card.card-stacked {
+  width: 340px;
+  height: 248px;
+}
+
+.site-gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease, filter 0.4s ease;
+  display: block;
+}
+
+.site-gallery-card:hover {
+  border-color: var(--primary-gold, #d4b347);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(212, 179, 71, 0.25);
+}
+
+.site-gallery-card:hover .site-gallery-img {
+  transform: scale(1.08);
+  filter: brightness(0.9);
+}
+
+/* =============================================================================
+   4b. Center Play Icon for Video Cards
+============================================================================= */
+.site-gallery-center-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  pointer-events: none;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-gallery-play-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(10, 14, 22, 0.75);
+  border: 2px solid var(--primary-gold, #d4b347);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), 0 0 18px rgba(212, 179, 71, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-gallery-play-icon {
+  margin-left: 3px;
+  color: var(--primary-gold, #d4b347);
+  transition: all 0.3s ease;
+}
+
+.site-gallery-card:hover .site-gallery-center-play {
+  transform: translate(-50%, -50%) scale(1.15);
+}
+
+.site-gallery-card:hover .site-gallery-play-btn {
+  background: var(--primary-gold, #d4b347);
+  box-shadow: 0 12px 35px rgba(212, 179, 71, 0.5), 0 0 25px rgba(212, 179, 71, 0.7);
+}
+
+.site-gallery-card:hover .site-gallery-play-icon {
+  fill: #000000 !important;
+  color: #000000 !important;
+}
+
+.site-gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(5, 8, 12, 0.95) 0%,
+    rgba(10, 14, 22, 0.5) 60%,
+    transparent 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.site-gallery-card:hover .site-gallery-overlay {
+  opacity: 1;
+}
+
+.site-gallery-card-content {
+  transform: translateY(12px);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-gallery-card:hover .site-gallery-card-content {
+  transform: translateY(0);
+}
+
+.site-gallery-card-tag {
+  display: inline-block;
+  font-family: var(--font-nav, sans-serif);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--primary-gold, #d4b347);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.25rem 0.75rem;
+  border-radius: 30px;
+  border: 1px solid rgba(212, 179, 71, 0.3);
+  margin-bottom: 0.4rem;
+}
+
+.site-gallery-card-title {
+  font-family: var(--font-heading, serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+.site-gallery-expand-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(212, 179, 71, 0.9);
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transform: translateY(12px) scale(0.9);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.site-gallery-card:hover .site-gallery-expand-icon {
+  transform: translateY(0) scale(1);
+  background: var(--primary-gold, #d4b347);
+}
+
+/* =============================================================================
+   5. Full-Screen Lightbox Modal
+============================================================================= */
+.site-lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 999999999;
+  background: rgba(0, 0, 0, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: lightboxFade 0.3s ease-out;
+}
+
+@keyframes lightboxFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.site-lightbox-container {
+  position: relative;
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-lightbox-close {
+  position: absolute;
+  top: -3.5rem;
+  right: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.site-lightbox-close:hover {
+  background: var(--primary-gold, #d4b347);
+  color: #000000;
+  border-color: var(--primary-gold, #d4b347);
+  transform: scale(1.1);
+}
+
+.site-lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+  z-index: 10;
+}
+
+.site-lightbox-nav.prev {
+  left: -4rem;
+}
+
+.site-lightbox-nav.next {
+  right: -4rem;
+}
+
+.site-lightbox-nav:hover {
+  background: var(--primary-gold, #d4b347);
+  color: #000000;
+  border-color: var(--primary-gold, #d4b347);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.site-lightbox-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+}
+
+.site-lightbox-img {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid rgba(212, 179, 71, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+.site-lightbox-caption {
+  text-align: center;
+  margin-top: 1.25rem;
+}
+
+.site-lightbox-tag {
+  font-family: var(--font-nav, sans-serif);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--primary-gold, #d4b347);
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+.site-lightbox-title {
+  font-family: var(--font-heading, serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.2rem;
+}
+
+.site-lightbox-counter {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-nav, sans-serif);
+}
+
+/* =============================================================================
+   6. Responsive Breakpoints
+============================================================================= */
+@media (max-width: 991px) {
+  .site-lightbox-nav.prev {
+    left: 0.5rem;
+  }
+
+  .site-lightbox-nav.next {
+    right: 0.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .site-gallery-section {
+    padding: 60px 0;
+  }
+
+  .gallery-col-full,
+  .gallery-col-stacked {
+    width: 280px;
+    height: 440px;
+  }
+
+  .site-gallery-card.card-full {
+    width: 280px;
+    height: 440px;
+  }
+
+  .site-gallery-card.card-stacked {
+    width: 280px;
+    height: 210px;
+  }
+
+  .gallery-col-stacked {
+    gap: 20px;
+  }
+
+  .site-lightbox-close {
+    top: -3rem;
+    right: 0;
+  }
+}

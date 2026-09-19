@@ -1,3 +1,4 @@
+'use client';
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronRight, Star, Palette, Building, Monitor, Zap, DoorOpen, Wrench } from 'lucide-react';
 import './ServicesSection.css'; // Import the CSS file
@@ -340,7 +341,7 @@ return (
         <div className="customization-service-details">
           <div className="customization-service-image-container">
             <img
-              src={currentService?.image}
+              src={currentService?.image?.src || currentService?.image}
               alt={currentService?.title || 'Service'}
               className="customization-service-image"
               onError={(e) => {
@@ -398,7 +399,7 @@ return (
                       {!isColorOpen ? (
                         <>
                           <img 
-                            src={feature.image} 
+                            src={feature.image?.src || feature.image} 
                             alt={feature.name}
                             className="customization-feature-image"
                             onError={(e) => {
@@ -446,7 +447,7 @@ return (
                                 >
                                   <div className="customization-color-swatch">
                                     <img
-                                      src={color.image}
+                                      src={color.image?.src || color.image} 
                                       alt={`${color.name} Steel`}
                                       className="customization-color-swatch-image"
                                       onError={(e) => {

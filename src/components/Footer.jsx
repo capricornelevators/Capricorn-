@@ -1,6 +1,7 @@
+'use client';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import Link from 'next/link';
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
 import logo from '../assets/logo1.png';
 import './Footer.css';
 
@@ -11,10 +12,10 @@ const Footer = () => {
         <div className="footer-content">
           {/* Company Info */}
           <div className="footer-section">
-            <Link to="/" className="footer-logo">
+            <Link href="/" className="footer-logo">
               <div className="footer-logo-container">
                 <img 
-                  src={logo} 
+                  src={logo?.src || logo} 
                   alt="Capricorn Elevators" 
                   className="footer-logo-image"
                 />
@@ -26,14 +27,17 @@ const Footer = () => {
               Your trusted partner for reliable, safe, and stylish vertical transportation.
             </p>
             <div className="footer-social">
-              <a href="https://www.facebook.com/people/Capricorn-Elevators/61578797188516/?mibextid=wwXIfr&rdid=LiNpFQ4qUqCO9aRq&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18Sc67Jroc%2F%3Fmibextid%3DwwXIfr" className="social-link" aria-label="Facebook">
+              <a href="https://www.facebook.com/people/Capricorn-Elevators/61578797188516/?mibextid=wwXIfr&rdid=LiNpFQ4qUqCO9aRq&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18Sc67Jroc%2F%3Fmibextid%3DwwXIfr" className="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                 <Facebook size={18} />
               </a>
-              <a href="https://www.instagram.com/capricornelevators/?igsh=bXNtemo1bmtvNTNm#" className="social-link" aria-label="Instagram">
+              <a href="https://www.instagram.com/capricornelevators/?igsh=bXNtemo1bmtvNTNm#" className="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                 <Instagram size={18} />
               </a>
-              <a href="https://www.linkedin.com/company/capricornelevators" className="social-link" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/capricornelevators" className="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                 <Linkedin size={18} />
+              </a>
+              <a href="https://www.youtube.com/@capricornelevators" className="social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                <Youtube size={18} />
               </a>
             </div>
           </div>
@@ -42,12 +46,12 @@ const Footer = () => {
           <div className="footer-section">
             <h3 className="footer-title">Quick Links</h3>
             <div className="footer-links">
-              <Link to="/" className="footer-link">Home</Link>
-              <Link to="/about" className="footer-link">About Us</Link>
+              <Link href="/" className="footer-link">Home</Link>
+              <Link href="/about" className="footer-link">About Us</Link>
              
-              <Link to="/services" className="footer-link">Services</Link>
-              <Link to="/contact" className="footer-link">Contact</Link>
-              <Link to="/careers" className="footer-link">Careers</Link>
+              <Link href="/services" className="footer-link">Services</Link>
+              <Link href="/contact" className="footer-link">Contact</Link>
+              <Link href="/careers" className="footer-link">Careers</Link>
             </div>
           </div>
 
@@ -55,8 +59,8 @@ const Footer = () => {
           <div className="footer-section">
             <h3 className="footer-title">Products</h3>
             <div className="footer-links">
-              <Link to="/products/residential" className="footer-link">Home Elevators</Link>
-              <Link to="/products/commercial" className="footer-link">Commercial Elevators</Link>
+              <Link href="/products/home" className="footer-link">Home Elevators</Link>
+              <Link href="/products/commercial" className="footer-link">Commercial Elevators</Link>
               
             </div>
           </div>
@@ -95,8 +99,8 @@ const Footer = () => {
               © 2025 Capricorn Elevators. All rights reserved.
             </p>
             <div className="footer-legal">
-              <Link to="/privacy" className="legal-link">Privacy Policy</Link>
-              <Link to="/terms" className="legal-link">Terms & Conditions</Link>
+              <Link href="/privacy" className="legal-link">Privacy Policy</Link>
+              <Link href="/terms" className="legal-link">Terms & Conditions</Link>
              
             </div>
           </div>

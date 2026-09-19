@@ -1,5 +1,6 @@
+'use client';
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Monitor, Shield, Wrench, Zap, Star, Settings, ChevronRight } from 'lucide-react';
 import './PVEHotspotSection.css';
 
@@ -166,7 +167,7 @@ const PVEHotspotSection = () => {
                 muted
                 playsInline
               >
-                <source src={elevatorHotspotVideo} type="video/mp4" />
+                <source src={elevatorHotspotVideo?.src || elevatorHotspotVideo} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               <div className="pve-elevator-overlay" />
@@ -197,7 +198,7 @@ const PVEHotspotSection = () => {
                       <div className="pve-feature-header">
                         <div className="pve-feature-image-container">
                           <img 
-                            src={feature.image} 
+                            src={feature.image?.src || feature.image} 
                             alt={feature.title}
                             className="pve-feature-image"
                           />
@@ -232,7 +233,7 @@ const PVEHotspotSection = () => {
                           </div>
                         </div>
                       </div>
-                      <Link to="/contact" className="pve-cta-button">
+                      <Link href="/contact" className="pve-cta-button">
                         Request a Quote
                         <ChevronRight size={16} />
                       </Link>

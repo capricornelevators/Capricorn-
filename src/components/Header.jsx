@@ -1,14 +1,27 @@
+'use client';
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ChevronDown, Menu, X, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 import logo from '../assets/logo1.png';
 import brochurePdf from '../assets/images/Brochure. Capricorn.PDF';
+import BrochureModal from './BrochureModal';
 import './Header.css';
 
-const Header = () => {
+const Header = ({ onOpenBrochure }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isBrochureModalOpen, setIsBrochureModalOpen] = useState(false);
+
+  const handleBrochureClick = (e) => {
+    e.preventDefault();
+    closeMenu();
+    if (onOpenBrochure) {
+      onOpenBrochure();
+    } else {
+      setIsBrochureModalOpen(true);
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,139 +73,199 @@ const Header = () => {
   };
 
   return (
-    <header className={`header ${isScrolled ? 'header-scrolled' : ''}`}>
-      <div className="header-container">
-        <div className="header-content">
-          <Link to="/" className="header-logo" onClick={closeMenu}>
-            <div className="logo-container">
-              <img
-                src={logo}
-                alt="Capricorn Elevators"
-                className="logo-image"
-              />
-            </div>
-          </Link>
-
-          <nav className="header-nav">
-            <Link to="/" className="nav-link" onClick={closeMenu}>
-              Home
-            </Link>
-
-            <Link to="/about" className="nav-link" onClick={closeMenu}>
-              About
-            </Link>
-
-            {/* Products Dropdown */}
-            <div className="nav-dropdown">
-              <button
-                className="nav-dropdown-trigger"
-                onClick={() => {
-                  setActiveDropdown(activeDropdown === 'products' ? null : 'products');
-                }}
-              >
-                Products
-                <ChevronDown
-                  size={14}
-                  className={`dropdown-icon ${activeDropdown === 'products' ? 'rotated' : ''}`}
+    <>
+      <header className={`header ${isScrolled ? 'header-scrolled' : ''} ${isMenuOpen ? 'header-menu-open' : ''}`}>
+        <div className="header-container">
+          <div className="header-content">
+            <Link href="/" className="header-logo" onClick={closeMenu}>
+              <div className="logo-container">
+                <img
+                  src={logo?.src || logo}
+                  alt="Capricorn Elevators"
+                  className="logo-image"
                 />
-              </button>
-              {activeDropdown === 'products' && (
-                <div className="nav-dropdown-menu">
-                  <Link to="/products/home" className="dropdown-item" onClick={() => setActiveDropdown(null)}>
-                    Home Lifts
-                  </Link>
-                  <Link to="/products/commercial" className="dropdown-item" onClick={() => setActiveDropdown(null)}>
-                    Commercial
-                  </Link>
-                </div>
-              )}
-            </div>
-
-            <Link to="/services" className="nav-link" onClick={closeMenu}>
-              Services
-            </Link>
-            <Link to="/gallery" className="nav-link" onClick={closeMenu}>
-              Gallery
+              </div>
             </Link>
 
-            <Link to="/contact" className="nav-link" onClick={closeMenu}>
-              Contact
-            </Link>
+            <nav className="header-nav">
+              <Link href="/" className="nav-link" onClick={closeMenu}>
+                Home
+              </Link>
 
-            <Link to="/careers" className="nav-link" onClick={closeMenu}>
-              Careers
-            </Link>
+              <Link href="/about" className="nav-link" onClick={closeMenu}>
+                About
+              </Link>
 
-            <a
-              href={brochurePdf}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="nav-link header-brochure-link"
-              onClick={closeMenu}
-            >
-              View Catalogue
-            </a>
-          </nav>
+              {/* Products Dropdown */}
+              <div className="nav-dropdown">
+                <button
+                  className="nav-dropdown-trigger"
+                  onClick={() => {
+                    setActiveDropdown(activeDropdown === 'products' ? null : 'products');
+                  }}
+                >
+                  Products
+                  <ChevronDown
+                    size={14}
+                    className={`dropdown-icon ${activeDropdown === 'products' ? 'rotated' : ''}`}
+                  />
+                </button>
+                {activeDropdown === 'products' && (
+                  <div className="nav-dropdown-menu">
+                    <Link href="/products/home" className="dropdown-item" onClick={() => setActiveDropdown(null)}>
+                      Home Lifts
+                    </Link>
+                    <Link href="/products/commercial" className="dropdown-item" onClick={() => setActiveDropdown(null)}>
+                      Commercial
+                    </Link>
+                  </div>
+                )}
+              </div>
 
-          <button
-            className="mobile-menu-btn"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle mobile menu"
-          >
-            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
-        </div>
-      </div>
+              <Link href="/services" className="nav-link" onClick={closeMenu}>
+                Services
+              </Link>
+              <Link href="/gallery" className="nav-link" onClick={closeMenu}>
+                Gallery
+              </Link>
 
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="mobile-menu">
-          <div className="mobile-menu-content">
-            <Link to="/" onClick={closeMenu}>Home</Link>
+              <Link href="/contact" className="nav-link" onClick={closeMenu}>
+                Contact
+              </Link>
 
-            <Link to="/about" onClick={closeMenu}>About</Link>
+              <Link href="/careers" className="nav-link" onClick={closeMenu}>
+                Careers
+              </Link>
 
-            <div className="mobile-dropdown">
               <button
-                className="mobile-dropdown-trigger"
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  toggleMobileDropdown('products');
-                }}
+                type="button"
+                className="nav-link header-brochure-link"
+                onClick={handleBrochureClick}
               >
-                <span className="mobile-dropdown-title">Products</span>
-                <ChevronDown
-                  size={16}
-                  className={`mobile-dropdown-icon ${activeDropdown === 'products' ? 'rotated' : ''}`}
-                />
+                View Catalogue
               </button>
-              {activeDropdown === 'products' && (
-                <div className="mobile-dropdown-items">
-                  <Link to="/products/home" onClick={closeMenu}>Home Lift</Link>
-                  <Link to="/products/commercial" onClick={closeMenu}>Commercial</Link>
-                </div>
-              )}
-            </div>
+            </nav>
 
-            <Link to="/services" onClick={closeMenu}>Services</Link>
-            <Link to="/gallery" onClick={closeMenu}>Gallery</Link>
-            <Link to="/contact" onClick={closeMenu}>Contact</Link>
-            <Link to="/careers" onClick={closeMenu}>Careers</Link>
-
-            <a
-              href={brochurePdf}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mobile-brochure-link"
-              onClick={closeMenu}
+            <button
+              className="mobile-menu-btn"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle mobile menu"
             >
-              <button className="btn-secondary mobile-get-quote">View Catalogue</button>
-            </a>
+              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
           </div>
         </div>
-      )}
-    </header>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="mobile-menu">
+            <div className="mobile-menu-header">
+              <Link href="/" className="mobile-logo-link" onClick={closeMenu}>
+                <div className="mobile-logo-pill">
+                  <img
+                    src={logo?.src || logo}
+                    alt="Capricorn Elevators"
+                    className="mobile-logo-image"
+                  />
+                </div>
+              </Link>
+              <button
+                className="mobile-close-btn"
+                onClick={closeMenu}
+                aria-label="Close mobile menu"
+              >
+                <X size={24} />
+              </button>
+            </div>
+
+            <div className="mobile-menu-body">
+              <nav className="mobile-nav-list">
+                <Link href="/" className="mobile-nav-item" onClick={closeMenu}>
+                  <span>Home</span>
+                  <ArrowRight size={22} className="mobile-item-arrow" />
+                </Link>
+
+                <Link href="/about" className="mobile-nav-item" onClick={closeMenu}>
+                  <span>About</span>
+                  <ArrowRight size={22} className="mobile-item-arrow" />
+                </Link>
+
+                <div className="mobile-dropdown">
+                  <button
+                    className="mobile-dropdown-trigger"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      toggleMobileDropdown('products');
+                    }}
+                  >
+                    <span className="mobile-dropdown-title">Products</span>
+                    <ChevronDown
+                      size={22}
+                      className={`mobile-dropdown-icon ${activeDropdown === 'products' ? 'rotated' : ''}`}
+                    />
+                  </button>
+                  {activeDropdown === 'products' && (
+                    <div className="mobile-dropdown-items">
+                      <Link href="/products/home" className="mobile-sub-item" onClick={closeMenu}>
+                        <span>Home Lifts</span>
+                        <ArrowRight size={18} />
+                      </Link>
+                      <Link href="/products/commercial" className="mobile-sub-item" onClick={closeMenu}>
+                        <span>Commercial</span>
+                        <ArrowRight size={18} />
+                      </Link>
+                    </div>
+                  )}
+                </div>
+
+                <Link href="/services" className="mobile-nav-item" onClick={closeMenu}>
+                  <span>Services</span>
+                  <ArrowRight size={22} className="mobile-item-arrow" />
+                </Link>
+
+                <Link href="/gallery" className="mobile-nav-item" onClick={closeMenu}>
+                  <span>Gallery</span>
+                  <ArrowRight size={22} className="mobile-item-arrow" />
+                </Link>
+
+                <Link href="/contact" className="mobile-nav-item" onClick={closeMenu}>
+                  <span>Contact</span>
+                  <ArrowRight size={22} className="mobile-item-arrow" />
+                </Link>
+
+                <Link href="/careers" className="mobile-nav-item" onClick={closeMenu}>
+                  <span>Careers</span>
+                  <ArrowRight size={22} className="mobile-item-arrow" />
+                </Link>
+              </nav>
+
+              <div className="mobile-menu-footer">
+                <button
+                  type="button"
+                  className="mobile-catalogue-btn"
+                  onClick={handleBrochureClick}
+                >
+                  <span>View Catalogue</span>
+                  <ArrowRight size={20} />
+                </button>
+
+                <div className="mobile-social-links">
+                  <a href="https://www.linkedin.com/company/capricornelevators" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  <a href="https://www.instagram.com/capricornelevators/?igsh=bXNtemo1bmtvNTNm#" target="_blank" rel="noopener noreferrer">Instagram</a>
+                  <a href="https://www.youtube.com/@capricornelevators" target="_blank" rel="noopener noreferrer">YouTube</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </header>
+
+      <BrochureModal
+        isOpen={isBrochureModalOpen}
+        onClose={() => setIsBrochureModalOpen(false)}
+      />
+    </>
   );
 };
 

@@ -1,3 +1,4 @@
+'use client';
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronRight, Zap, Shield, Settings, Award, Info, Star, Building } from 'lucide-react';
 import './TechnicalSpecifications.css';

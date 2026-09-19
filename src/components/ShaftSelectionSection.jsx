@@ -1,3 +1,4 @@
+'use client';
 import React, { useState, useEffect, useRef } from 'react';
 import { Building, Home, Zap, Settings, Shield, CheckCircle, Star, Award, Users, Eye } from 'lucide-react';
 
@@ -178,7 +179,7 @@ const ShaftSelection = () => {
                 {currentImages.map((elevator, index) => (
                   <div key={index} className="image-card">
                     <img 
-                      src={elevator.src} 
+                      src={elevator.src?.src || elevator.src} 
                       alt={elevator.title}
                       onError={(e) => {
                         e.target.src = `https://via.placeholder.com/300x200/2a2a2a/d4b347?text=${elevator.title}`;

@@ -1,3 +1,4 @@
+'use client';
 import React, { useState, useEffect } from 'react';
 import { Globe, Building, Award } from 'lucide-react';
 import './WorldMap.css';
@@ -65,7 +66,7 @@ const WorldMap = () => {
       <div className="interactive-world-map">
         <div className="map-background">
           <img 
-            src={worldMapImage} 
+            src={worldMapImage?.src || worldMapImage} 
             alt="World Map" 
             className="world-map-image"
             draggable={false}
@@ -103,7 +104,7 @@ const WorldMap = () => {
               <div className="tooltip-header">
                 <div className="tooltip-flag">
                   <img 
-                    src={location.flagImage} 
+                    src={location.flagImage?.src || location.flagImage} 
                     alt={`${location.name} flag`} 
                     className="flag-img"
                     onError={(e) => {

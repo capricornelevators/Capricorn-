@@ -1,0 +1,6 @@
+:HL["/_next/static/css/ef46db3751d8e999.css","style"]
+:HL["/_next/static/css/65aa3619a1925c9d.css","style"]
+:HL["/_next/static/css/123e1d752fe8bef2.css","style"]
+:HL["/_next/static/css/088ef2093a2d7a87.css","style"]
+:HL["https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Cormorant:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"services","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"OcSnGwYNH9GKstfPALzXX"}

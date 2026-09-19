@@ -1,0 +1,414 @@
+/* Brochure Modal Overlay - ABOVE HEADER Z-INDEX */
+.brochure-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 9999999999; /* Higher than header z-index */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: brochureModalFadeIn 0.25s ease-out;
+}
+
+@keyframes brochureModalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Modal Card (Pure Black, No Border Radius, Smaller Size, No Yellow Overline) */
+.brochure-modal-card {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  width: 100%;
+  max-width: 780px; /* Increased popup width as requested */
+  max-height: 90vh;
+  background: #000000; /* Pure black */
+  border: 1px solid #222222; /* Subtle dark border, no yellow overline */
+  border-radius: 0 !important; /* NO BORDER RADIUS */
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.95);
+  position: relative;
+  animation: brochureModalScaleUp 0.25s ease-out;
+  color: #ffffff;
+}
+
+@keyframes brochureModalScaleUp {
+  from {
+    transform: scale(0.97);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Close Button (Square, No Border Radius) */
+.brochure-modal-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 10;
+  background: #111111;
+  border: 1px solid #333333;
+  color: #cccccc;
+  width: 32px;
+  height: 32px;
+  border-radius: 0 !important; /* NO BORDER RADIUS */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.brochure-modal-close-btn:hover {
+  background: #222222;
+  color: #ffffff;
+  border-color: #555555;
+}
+
+/* Left Panel: Image Panel (Sharp Edges, Pure Black Contrast) */
+.brochure-modal-image-panel {
+  position: relative;
+  height: 100%;
+  min-height: 440px;
+  overflow: hidden;
+  background: #000000;
+  border-radius: 0 !important;
+}
+
+.brochure-modal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.75);
+  border-radius: 0 !important;
+}
+
+.brochure-modal-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.85) 75%,
+    #000000 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 24px 20px;
+}
+
+.brochure-modal-img-content {
+  color: #ffffff;
+}
+
+.brochure-img-tag {
+  display: inline-block;
+  padding: 3px 8px;
+  background: #1a1a1a;
+  border: 1px solid #333333;
+  color: #d1d5db;
+  border-radius: 0 !important; /* NO BORDER RADIUS */
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.brochure-modal-img-content h3 {
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+}
+
+.brochure-modal-img-content p {
+  font-size: 0.8rem;
+  color: #a1a1aa;
+  margin: 0;
+  line-height: 1.35;
+}
+
+/* Right Panel: Form Panel (Pure Black) */
+.brochure-modal-form-panel {
+  padding: 28px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: auto;
+  background: #000000; /* Pure black */
+}
+
+.brochure-modal-form-header {
+  margin-bottom: 18px;
+}
+
+.brochure-badge {
+  display: inline-block;
+  color: #a1a1aa; /* Muted gray instead of bright gold */
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+
+.brochure-modal-form-header h2 {
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+}
+
+.brochure-modal-form-header p {
+  font-size: 0.82rem;
+  color: #71717a;
+  margin: 0;
+}
+
+/* Form Layout */
+.brochure-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.brochure-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.brochure-form-group label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #d4d4d8;
+}
+
+/* Input wrappers - Sharp 0px border radius, Dark neutral border */
+.brochure-input-wrapper,
+.brochure-select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.brochure-input-icon {
+  position: absolute;
+  left: 10px;
+  color: #94a3b8; /* Less yellow - soft neutral gray icon */
+  pointer-events: none;
+  z-index: 2;
+}
+
+.brochure-input-wrapper input,
+.brochure-select-wrapper select {
+  width: 100%;
+  background: #0f0f0f;
+  border: 1px solid #27272a; /* Dark border, no yellow outline */
+  border-radius: 0 !important; /* NO BORDER RADIUS */
+  padding: 9px 10px 9px 34px;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.brochure-select-wrapper select {
+  padding-left: 10px;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 14px;
+}
+
+.brochure-select-wrapper select option {
+  background: #0a0a0a;
+  color: #ffffff;
+}
+
+.brochure-input-wrapper input:focus,
+.brochure-select-wrapper select:focus {
+  border-color: #52525b; /* Subtle dark focus outline, no bright yellow */
+  background: #141414;
+}
+
+.brochure-input-wrapper input::placeholder {
+  color: #52525b;
+  font-size: 0.82rem;
+}
+
+/* Phone Row */
+.brochure-phone-row {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 8px;
+}
+
+.brochure-country-select select {
+  padding: 9px 20px 9px 8px !important;
+  font-size: 0.78rem;
+  border-radius: 0 !important;
+}
+
+/* Errors */
+.brochure-field-error {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #ef4444;
+  font-size: 0.72rem;
+  margin-top: 2px;
+}
+
+.brochure-error-message {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 0 !important;
+  color: #fca5a5;
+  font-size: 0.78rem;
+}
+
+/* Submit Button - Sharp 0px Border Radius, Sleek Dark Style with Subtle Gold Hover */
+.brochure-submit-btn {
+  margin-top: 6px;
+  width: 100%;
+  padding: 11px 18px;
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 0 !important; /* NO BORDER RADIUS */
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: none;
+}
+
+.brochure-submit-btn:hover:not(:disabled) {
+  background: #e2e8f0;
+  color: #000000;
+}
+
+.brochure-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.brochure-spinner {
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-top-color: #000000;
+  border-radius: 50%;
+  animation: brochureSpin 0.8s linear infinite;
+}
+
+@keyframes brochureSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* Success State */
+.brochure-success-container {
+  text-align: center;
+  padding: 16px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brochure-success-icon {
+  color: #22c55e;
+  margin-bottom: 10px;
+}
+
+.brochure-success-container h3 {
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+}
+
+.brochure-success-container p {
+  color: #a1a1aa;
+  font-size: 0.85rem;
+  margin: 0 0 16px 0;
+}
+
+.brochure-success-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.brochure-download-btn {
+  padding: 10px 16px;
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 0 !important;
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.brochure-secondary-btn {
+  padding: 9px 16px;
+  background: #111111;
+  border: 1px solid #333333;
+  color: #cccccc;
+  border-radius: 0 !important;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 640px) {
+  .brochure-modal-card {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+  .brochure-modal-image-panel {
+    display: none;
+  }
+  .brochure-modal-form-panel {
+    padding: 24px 18px 20px;
+  }
+  .brochure-phone-row {
+    grid-template-columns: 90px 1fr;
+  }
+}

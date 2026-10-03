@@ -1,4 +1,6 @@
 import { SITE_URL } from '../lib/seo';
+import { LANDER_SLUGS } from '../data/landers';
+import { CITY_SLUGS } from '../data/cities';
 
 // Required by Next 16 when output: 'export' — emit this route at build time.
 export const dynamic = 'force-static';
@@ -20,7 +22,23 @@ const routes = [
 export default function sitemap() {
   const lastModified = new Date();
 
-  return routes.map(({ path, priority, changeFrequency }) => ({
+  const all = [
+    ...routes,
+    // Keyword landing pages
+    ...LANDER_SLUGS.map((slug) => ({
+      path: `/${slug}/`,
+      priority: 0.8,
+      changeFrequency: 'monthly',
+    })),
+    // City landing pages
+    ...CITY_SLUGS.map((slug) => ({
+      path: `/elevator-company-in-${slug}/`,
+      priority: 0.7,
+      changeFrequency: 'monthly',
+    })),
+  ];
+
+  return all.map(({ path, priority, changeFrequency }) => ({
     url: `${SITE_URL}${path}`,
     lastModified,
     changeFrequency,

@@ -148,3 +148,36 @@ export function collectionPageSchema({ name, description, path }) {
     isPartOf: { '@id': `${SITE_URL}/#website` },
   };
 }
+
+/** FAQPage. Only emit when the questions and answers are genuinely on the page. */
+export function faqSchema(faqs) {
+  if (!faqs?.length) return null;
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  };
+}
+
+/**
+ * LocalBusiness scoped to a city we serve. `areaServed` is the honest construction
+ * here: Capricorn operates from the Ernakulam office, so a city page must not
+ * assert a branch address it does not have.
+ */
+export function cityServiceSchema({ city, path, description }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: `Elevator installation, modernization and AMC in ${city}`,
+    description,
+    url: `${SITE_URL}${path}`,
+    serviceType: 'Elevator installation and maintenance',
+    provider: { '@id': `${SITE_URL}/#localbusiness` },
+    areaServed: { '@type': 'City', name: city },
+  };
+}

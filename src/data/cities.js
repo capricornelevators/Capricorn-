@@ -465,6 +465,11 @@ export const CITIES = [
         body:
           'Dust in the dry months is a real factor for controller cabinets, brake surfaces and door tracks in industrial and semi rural locations. Enclosure ratings and cleaning intervals should allow for it.',
       },
+      {
+        heading: 'Wind through the gap',
+        body:
+          'The Palakkad Gap funnels wind hard enough to support the wind farms around Kanjikode. That matters twice. An external or glazed shaft needs its wind loading checked properly instead of assumed from a coastal standard. And crane lifts during installation get cancelled on windy days, so the programme should carry slack for it instead of promising a date the weather will not allow.',
+      },
     ],
     areas: [
       'Palakkad town', 'Ottapalam', 'Shoranur', 'Chittur', 'Mannarkkad', 'Pattambi',
@@ -522,6 +527,11 @@ export const CITIES = [
         heading: 'Hillside plots',
         body:
           'Houses on sloping plots often have entrances at two different levels and half landings between floors. The stop arrangement has to come from a measured survey, because the levels a lift must serve frequently do not match the stair landings.',
+      },
+      {
+        heading: 'Paper reels in the printing trade',
+        body:
+          'Kottayam is a publishing and printing centre, and a paper reel is a hard load for a goods lift. It is heavy, it is concentrated on a small contact area, and it is usually moved on a trolley that has to cross the sill. That calls for a reinforced car floor, a heavy duty sill and tight levelling, which is a different specification from a lift sized on total weight alone.',
       },
     ],
     areas: [

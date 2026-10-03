@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import LanderLayout from '../../components/LanderLayout';
 import JsonLd from '../../components/JsonLd';
 import { LANDERS, getLander } from '../../data/landers';
-import { CITIES, getCity, HQ } from '../../data/cities';
+import { CITIES, getCity } from '../../data/cities';
 import { pageMetadata, ORG } from '../../lib/seo';
 import {
   breadcrumbSchema,
@@ -129,17 +129,12 @@ function CityView({ city: c, slug }) {
   const path = `/${slug}/`;
   const faqs = c.faqs;
 
+  // No generated "areas we cover" section. It read as the same paragraph on every
+  // city with the name swapped, and it repeated the areas FAQ further down the page.
+  // The service area is covered once, in that city's own FAQ.
   const sections = [
     { heading: `Elevators in ${c.name}`, body: c.localContext },
     ...c.engineering,
-    {
-      heading: `Areas we cover around ${c.name}`,
-      body: `${c.areas.join(', ')} and the wider ${c.district} district. ${
-        c.isHQ
-          ? `Our office is at ${HQ}, so ${c.name} sites are the quickest for us to reach for surveys and service calls.`
-          : `Surveys, installation and maintenance visits to ${c.name} are scheduled from our Ernakulam office. Tell us your timescale when you enquire and we will confirm what we can commit to.`
-      }`,
-    },
   ];
 
   const aside = (

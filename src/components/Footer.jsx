@@ -57,11 +57,46 @@ const Footer = () => {
 
           {/* Products */}
           <div className="footer-section">
-            <h3 className="footer-title">Products</h3>
+            <h3 className="footer-title">Lifts We Supply</h3>
             <div className="footer-links">
-              <Link href="/products/home" className="footer-link">Home Elevators</Link>
-              <Link href="/products/commercial" className="footer-link">Commercial Elevators</Link>
-              
+              <Link href="/home-lifts/" className="footer-link">Home Lifts</Link>
+              <Link href="/passenger-lifts/" className="footer-link">Passenger Lifts</Link>
+              <Link href="/hospital-lifts/" className="footer-link">Hospital Lifts</Link>
+              <Link href="/capsule-lifts/" className="footer-link">Capsule Lifts</Link>
+              <Link href="/glass-lifts/" className="footer-link">Glass Lifts</Link>
+              <Link href="/goods-lifts/" className="footer-link">Goods Lifts</Link>
+              <Link href="/dumbwaiters/" className="footer-link">Dumbwaiters</Link>
+              <Link href="/hydraulic-lifts/" className="footer-link">Hydraulic Lifts</Link>
+              <Link href="/wheelchair-lifts/" className="footer-link">Wheelchair Lifts</Link>
+            </div>
+          </div>
+
+          {/* Service and price pages. These were only reachable from the sitemap
+              before, which gave them almost no internal link equity. */}
+          <div className="footer-section">
+            <h3 className="footer-title">Service &amp; Pricing</h3>
+            <div className="footer-links">
+              <Link href="/elevator-amc/" className="footer-link">Elevator AMC</Link>
+              <Link href="/elevator-modernization/" className="footer-link">Modernization</Link>
+              <Link href="/home-lift-price-kerala/" className="footer-link">Home Lift Price in Kerala</Link>
+              <Link href="/products/home" className="footer-link">Home Elevator Range</Link>
+              <Link href="/products/commercial" className="footer-link">Commercial Range</Link>
+            </div>
+          </div>
+
+          <div className="footer-section">
+            <h3 className="footer-title">Where We Work</h3>
+            <div className="footer-links">
+              <Link href="/elevator-company-in-kochi/" className="footer-link">Kochi</Link>
+              <Link href="/elevator-company-in-thiruvananthapuram/" className="footer-link">Thiruvananthapuram</Link>
+              <Link href="/elevator-company-in-kozhikode/" className="footer-link">Kozhikode</Link>
+              <Link href="/elevator-company-in-thrissur/" className="footer-link">Thrissur</Link>
+              <Link href="/elevator-company-in-kollam/" className="footer-link">Kollam</Link>
+              <Link href="/elevator-company-in-kannur/" className="footer-link">Kannur</Link>
+              <Link href="/elevator-company-in-alappuzha/" className="footer-link">Alappuzha</Link>
+              <Link href="/elevator-company-in-palakkad/" className="footer-link">Palakkad</Link>
+              <Link href="/elevator-company-in-kottayam/" className="footer-link">Kottayam</Link>
+              <Link href="/elevator-company-in-malappuram/" className="footer-link">Malappuram</Link>
             </div>
           </div>
 

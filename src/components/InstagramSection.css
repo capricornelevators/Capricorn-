@@ -1,0 +1,90 @@
+.ig {
+  padding: 3.5rem 0;
+  background: linear-gradient(150deg, #14130f 0%, #232017 70%, #2c2718 100%);
+  color: #fff;
+}
+
+.ig-inner {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-inline: 1.5rem;
+}
+
+.ig-head {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.ig-icon {
+  flex-shrink: 0;
+  color: #d4b347;
+}
+
+.ig-title {
+  margin: 0;
+  font-family: var(--font-heading, 'Playfair Display', serif);
+  font-size: clamp(1.4rem, 2.8vw, 2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.ig-handle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #d4b347;
+  text-decoration: none;
+}
+
+.ig-handle:hover {
+  text-decoration: underline;
+}
+
+.ig-body {
+  max-width: 62ch;
+  margin: 0 0 1.75rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.ig-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
+  margin: 0 0 1.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.ig-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 0.4rem;
+  display: block;
+  transition: opacity 0.2s ease;
+}
+
+.ig-grid a:hover img {
+  opacity: 0.85;
+}
+
+.ig-cta {
+  display: inline-block;
+  padding: 0.85rem 1.6rem;
+  border-radius: 60px;
+  background: #d4b347;
+  color: #14130f;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.ig-cta:hover {
+  transform: translateY(-2px);
+}

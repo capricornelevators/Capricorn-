@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import Header from './Header';
 import Footer from './Footer';
+import InstagramSection from './InstagramSection';
+import { INSTAGRAM_POSTS } from '../data/company';
 import './LanderLayout.css';
 
 /**
@@ -194,6 +196,8 @@ export default function LanderLayout({
             </div>
           </div>
         </section>
+
+        <InstagramSection posts={INSTAGRAM_POSTS} />
 
         {related.length > 0 && (
           <section className="lander-container lander-related">

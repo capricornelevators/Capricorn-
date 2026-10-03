@@ -4,7 +4,7 @@ import JsonLd from '../../components/JsonLd';
 import VideoTestimonial from '../../components/VideoTestimonial';
 import { LANDERS, getLander } from '../../data/landers';
 import { CITIES, getCity } from '../../data/cities';
-import { MODELS, HOME_MODELS } from '../../data/models';
+import { MODELS, HOME_MODELS, COMMERCIAL_MODELS } from '../../data/models';
 import { REASONS, PROCESS, COST_NOTE } from '../../data/company';
 import { pageMetadata, ORG } from '../../lib/seo';
 import {
@@ -75,6 +75,17 @@ function ContactCard() {
 function LanderView({ lander: l, slug }) {
   const path = `/${slug}/`;
 
+  // Show the range that matches the page. A home lift page should not open with
+  // commercial models, and vice versa.
+  const models =
+    l.models === 'home'
+      ? HOME_MODELS
+      : l.models === 'commercial'
+        ? COMMERCIAL_MODELS
+        : l.models === 'all'
+          ? MODELS
+          : [];
+
   const aside = (
     <>
       <div className="lander-card">
@@ -119,9 +130,21 @@ function LanderView({ lander: l, slug }) {
         lede={l.lede}
         sections={l.sections}
         specs={l.specs}
+        reasonsTitle="Why customers choose Capricorn"
+        reasons={REASONS}
+        modelsTitle={models.length ? 'Our range' : undefined}
+        models={models}
+        processTitle={l.showProcess ? 'From enquiry to handover' : undefined}
+        process={l.showProcess ? PROCESS : []}
+        costTitle={l.showCost ? 'What it costs' : undefined}
+        costBody={l.showCost ? COST_NOTE : undefined}
         faqs={l.faqs}
         aside={aside}
         related={related}
+        serviceAreas={{
+          title: 'Where we work',
+          body: `We supply, install and maintain lifts across ${CITIES.map((c) => c.name).join(', ')} and the rest of Kerala, from our office in Vyttila, Ernakulam.`,
+        }}
       />
     </>
   );

@@ -15,6 +15,9 @@
 export const LANDERS = [
   {
     slug: 'home-lifts',
+    models: 'home',
+    showProcess: true,
+    showCost: true,
     title: 'Home Lifts and Home Elevators in Kerala',
     metaTitle: 'Home Lifts in Kerala',
     metaDescription:
@@ -85,6 +88,9 @@ export const LANDERS = [
 
   {
     slug: 'home-lift-price-kerala',
+    models: 'all',
+    showProcess: true,
+    showCost: false,
     title: 'Home Lift Price in Kerala',
     metaTitle: 'Home Lift Price in Kerala',
     metaDescription:
@@ -139,6 +145,9 @@ export const LANDERS = [
 
   {
     slug: 'passenger-lifts',
+    models: 'commercial',
+    showProcess: true,
+    showCost: true,
     title: 'Passenger Lifts and Commercial Elevators in Kerala',
     metaTitle: 'Passenger Lifts in Kerala',
     metaDescription:
@@ -199,6 +208,9 @@ export const LANDERS = [
 
   {
     slug: 'hospital-lifts',
+    models: 'commercial',
+    showProcess: true,
+    showCost: true,
     title: 'Hospital and Bed Lifts in Kerala',
     metaTitle: 'Hospital Lifts and Bed Elevators in Kerala',
     metaDescription:
@@ -268,6 +280,9 @@ export const LANDERS = [
 
   {
     slug: 'capsule-lifts',
+    models: 'all',
+    showProcess: true,
+    showCost: true,
     title: 'Capsule Lifts in Kerala',
     metaTitle: 'Capsule Lifts in Kerala',
     metaDescription:
@@ -327,6 +342,9 @@ export const LANDERS = [
 
   {
     slug: 'glass-lifts',
+    models: 'home',
+    showProcess: true,
+    showCost: true,
     title: 'Glass Lifts and Panoramic Elevators in Kerala',
     metaTitle: 'Glass Lifts in Kerala',
     metaDescription:
@@ -382,6 +400,9 @@ export const LANDERS = [
 
   {
     slug: 'goods-lifts',
+    models: null,
+    showProcess: true,
+    showCost: true,
     title: 'Goods Lifts and Freight Elevators in Kerala',
     metaTitle: 'Goods Lifts in Kerala',
     metaDescription:
@@ -437,6 +458,9 @@ export const LANDERS = [
 
   {
     slug: 'dumbwaiters',
+    models: null,
+    showProcess: true,
+    showCost: true,
     title: 'Dumbwaiters and Kitchen Lifts in Kerala',
     metaTitle: 'Dumbwaiters and Kitchen Lifts in Kerala',
     metaDescription:
@@ -492,6 +516,9 @@ export const LANDERS = [
 
   {
     slug: 'hydraulic-lifts',
+    models: null,
+    showProcess: true,
+    showCost: true,
     title: 'Hydraulic Lifts in Kerala',
     metaTitle: 'Hydraulic Lifts in Kerala',
     metaDescription:
@@ -551,6 +578,9 @@ export const LANDERS = [
 
   {
     slug: 'wheelchair-lifts',
+    models: 'home',
+    showProcess: true,
+    showCost: true,
     title: 'Wheelchair Accessible Lifts in Kerala',
     metaTitle: 'Wheelchair Accessible Lifts in Kerala',
     metaDescription:
@@ -612,6 +642,9 @@ export const LANDERS = [
 
   {
     slug: 'elevator-amc',
+    models: null,
+    showProcess: false,
+    showCost: false,
     title: 'Elevator AMC in Kerala, All Brands',
     metaTitle: 'Elevator AMC in Kerala, All Brands',
     metaDescription:
@@ -680,6 +713,9 @@ export const LANDERS = [
 
   {
     slug: 'elevator-modernization',
+    models: null,
+    showProcess: false,
+    showCost: false,
     title: 'Elevator Modernization in Kerala',
     metaTitle: 'Elevator Modernization in Kerala',
     metaDescription:

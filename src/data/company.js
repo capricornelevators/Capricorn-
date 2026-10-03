@@ -48,3 +48,14 @@ export const PROCESS = [
 
 export const COST_NOTE =
   'We do not publish a fixed price, because the shaft, the drive and the finish change it too much for a phone estimate to mean anything. What we do is visit, measure the shaft, pit and headroom, and give you a written quotation against a drawing you have approved. If you are comparing us with someone else, check whether their figure includes the shaft work, the electrical supply to the controller, the rescue device and GST, because that is usually where two very different numbers come from.';
+
+/**
+ * Instagram posts shown in the grid on the Instagram section.
+ *
+ * Empty until real images are exported into public/instagram/. See the README
+ * in that folder. Instagram CDN URLs are signed and expire, so the images have
+ * to be local files rather than hotlinks.
+ *
+ * Each entry: { src: '/instagram/01.jpg', alt: 'what is actually in the photo' }
+ */
+export const INSTAGRAM_POSTS = [];

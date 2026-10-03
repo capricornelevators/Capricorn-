@@ -491,6 +491,13 @@ const Contact = () => {
           transform: `translateY(${scrollY * -0.15}px)`,
           opacity: Math.max(0, 1 - scrollY / 700)
         }}>
+          <h1 className="contact-hero-title">
+            Contact Capricorn Elevators
+          </h1>
+          <p className="contact-hero-subtitle">
+            Talk to our elevator experts in Kochi about home lifts, commercial
+            elevators and annual maintenance contracts.
+          </p>
         </div>
 
         <div className="contact-scroll-indicator">

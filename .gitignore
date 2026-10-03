@@ -26,3 +26,6 @@ dist-ssr
 *.sw?
 src/assets/*.mp4
 src/assets/*.MOV
+
+# Next.js static export output — build artifact, should not be versioned
+out/

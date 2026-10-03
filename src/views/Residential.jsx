@@ -25,6 +25,7 @@ import grandeurSignatureImage3 from '../assets/sign3.jpeg';
 import royaleImage1 from '../assets/royalee.jpeg';
 import royaleImage2 from '../assets/royale2.jpeg';
 import royaleImage3 from '../assets/royale3.jpeg';
+import residentialPosterImage from '../assets/residential-elavator.jpg';
 
 const Residential = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -175,7 +176,9 @@ const Residential = () => {
       <section ref={heroRef} className="residential-hero">
         {/* Video Background */}
         <div className="residential-hero-video-container">
-          <video 
+          <video
+            poster={residentialPosterImage?.src || residentialPosterImage}
+            preload="metadata" 
             ref={videoRef}
             className="residential-hero-video"
             autoPlay 

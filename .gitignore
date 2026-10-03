@@ -29,3 +29,6 @@ src/assets/*.MOV
 
 # Next.js static export output — build artifact, should not be versioned
 out/
+
+# Originals kept by scripts/optimize-images.mjs
+.image-backup/

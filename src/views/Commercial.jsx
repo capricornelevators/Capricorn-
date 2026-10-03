@@ -17,6 +17,7 @@ import vertexImage3 from '../assets/vertex2.jpeg';
 import presidentialImage1 from '../assets/press.jpeg';
 import presidentialImage2 from '../assets/press4.jpeg';
 import presidentialImage3 from '../assets/press2.jpeg';
+import commercialPosterImage from '../assets/commercial-elavator.jpg';
 
 const Commercial = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -123,7 +124,9 @@ const Commercial = () => {
       <section ref={heroRef} className="comm-hero">
         {/* Video Background */}
         <div className="comm-hero-video-container">
-          <video 
+          <video
+            poster={commercialPosterImage?.src || commercialPosterImage}
+            preload="metadata" 
             ref={videoRef}
             className="comm-hero-video"
             autoPlay 

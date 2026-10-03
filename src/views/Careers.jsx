@@ -532,7 +532,9 @@ const Careers = () => {
       {/* Hero Section with Video Background */}
       <section ref={heroRef} className="cap-careers-hero-section">
         <div className="cap-video-container">
-          <video ref={videoRef} className="cap-hero-video" autoPlay muted loop playsInline>
+          <video
+            poster={teamImage?.src || teamImage}
+            preload="metadata" ref={videoRef} className="cap-hero-video" autoPlay muted loop playsInline>
             <source src={careersVideo?.src || careersVideo} type="video/mp4" />
             Your browser does not support the video tag.
           </video>

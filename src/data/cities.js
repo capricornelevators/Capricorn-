@@ -30,19 +30,19 @@ export const CITIES = [
       'Kochi has the most mixed building stock in Kerala. High rise apartments on reclaimed ground near the backwaters. IT campus buildings around Infopark. Older three and four storey commercial blocks in the city centre with no lift at all. Gated villa developments spreading east to Kakkanad and north to Aluva. The retrofit market here is as big as the new build one.',
     engineering: [
       {
-        heading: 'Low ground and high water',
+        heading: "What you get for a flood-prone site",
         body:
-          'Much of Kochi sits barely above sea level on filled or reclaimed land. The 2018 floods showed what that means for a lift pit. Pits in low lying areas need waterproofing, a drain or sump, and controller equipment mounted clear of any likely water level. On flood exposed sites, agree up front what the lift does when water is detected. Parking the car at an upper landing is better than losing the controller.',
+          "If your building is on low ground near the backwaters, the pit is what you should ask about. We waterproof and drain it, fit a sump, and keep the controller above any likely water level. We can also set the lift to park at an upper landing if water is detected. A flooded pit on an unprotected lift usually means a new controller, which is the expensive part.",
       },
       {
-        heading: 'Salt air from the backwaters',
+        heading: "Finishes that survive the salt air",
         body:
-          'Close to the backwaters and the sea the air carries salt most of the year. We specify hairline or matte stainless for exposed car and frame parts, sealed door tracks and corrosion resistant fixings. This is what decides whether the lift still looks right in year five.',
+          "Near the water, plain painted steel starts showing rust at the door sills within a few years. We quote hairline or matte stainless on the exposed car and frame parts, sealed door tracks and corrosion resistant fixings as standard. If you are comparing quotes from anyone, ask what finish is included. It is the main reason two prices differ.",
       },
       {
-        heading: 'Retrofits in the old commercial core',
+        heading: "Adding a lift to an older building",
         body:
-          'Plenty of buildings around the city centre were built three or four storeys with no shaft. Adding a lift usually means a self supporting shaft in a light well, a stair void or against the rear wall. The harder problem is often delivery, because many of those streets cannot take a lorry.',
+          "Plenty of three and four storey buildings around the city centre were built with no shaft. You can still have a lift. We build a self supporting shaft in a light well, the stair void or against the rear wall, so there is no need to open up the structure. We handle delivery into narrow city centre streets as part of the job.",
       },
     ],
     areas: [
@@ -89,19 +89,19 @@ export const CITIES = [
       'Thiruvananthapuram combines a dense institutional and government building stock with established residential areas of large individual houses at Kowdiar, Vazhuthacaud and Sasthamangalam, and newer apartments out towards Kazhakkoottam and Technopark. Institutional and healthcare work makes up a bigger share of demand here than anywhere else in Kerala.',
     engineering: [
       {
-        heading: 'Hospital and institutional duty',
+        heading: "Bed lifts for hospitals and clinics",
         body:
-          'The concentration of hospitals here means bed lifts with real stretcher clearances, essential supply backup and accurate levelling for trolley transfer. These are sized around the loaded bed, not a passenger count. Getting the clear door width wrong cannot be corrected afterwards.',
+          "We size a bed lift around your longest loaded trolley with an attendant beside it, not around a passenger figure. That gives you a car a bed actually fits in and a clear door opening it passes through while being steered. We put it on your essential supply with a rescue device, so a power cut does not strand a patient between floors.",
       },
       {
-        heading: 'Slopes and split levels',
+        heading: "Houses on sloping plots",
         body:
-          'The city is noticeably undulating and houses on sloping plots often have split levels and half landings. The lift may need to serve levels that do not line up with the stair landings. That has to come out of a measured survey, not a drawing.',
+          "Most of the city is built on slopes, so split levels and half landings are normal here. A lift can still serve them. We measure the real floor levels at the survey and set the stops to match, so you are not told halfway through that one level cannot be reached.",
       },
       {
-        heading: 'Retrofits into large older houses',
+        heading: "A lift in a large older house",
         body:
-          'Many of the bigger houses in the older residential areas were built across three floors with no provision for a lift, and are now lived in by families with elderly parents. A glass or structural shaft in the stair void is usually the least disruptive route and avoids rebuilding through finished rooms.',
+          "If you have a three storey house at Kowdiar, Vazhuthacaud or Sasthamangalam and elderly parents who cannot manage the stairs, you do not need to rebuild. A glass or structural shaft goes into the stair void, keeps the daylight, and leaves the finished rooms alone.",
       },
     ],
     areas: [
@@ -148,24 +148,24 @@ export const CITIES = [
       'The commercial heart of Kozhikode runs along Mavoor Road, the Beach Road area and the old bazaar quarters. Four and five storey trading buildings sit on tight plots with no setback and no service yard. The city also carries a dense private healthcare sector. Outside the core it spreads into established residential neighbourhoods and down the coast to Beypore and Feroke.',
     engineering: [
       {
-        heading: 'Tight plots and no delivery frontage',
+        heading: "Your shop stays open during installation",
         body:
-          'Buildings in the trading quarters often have no off street space at all. Car panels, rails and the machine have to come in through a shop front during restricted hours, sometimes at night, and go up by hand or through a light well. That shapes the component sizes we specify and the delivery sequence, and it has to be agreed before anything is ordered.',
+          "Most of our city centre work here is lifts going into buildings with a business trading underneath. You do not have to close. We phase the work around your trading hours, seal the shaft and contain dust at each floor, and bring material in outside business hours. The stair goes out of use, not the shop.",
       },
       {
-        heading: 'Working above a trading business',
+        heading: "Lifts for buildings with no off street access",
         body:
-          'Putting a lift into a working building means the shop below cannot close for three weeks. We phase the work around trading hours, contain dust and noise at each floor, and seal the shaft so business continues. The sequencing matters more here than the equipment choice.',
+          "Tight plots with no setback and no service yard are normal in the trading quarters. That does not rule out a lift. We size the components to come up through the stair or a light well and plan the delivery around the street, and we confirm all of it at the survey before you commit.",
       },
       {
-        heading: 'Private hospital work',
+        heading: "Hospital and clinic lifts",
         body:
-          'The private hospitals here need bed lifts sized around a loaded trolley with an attendant and equipment, accurate levelling for transfers, and essential supply backup. Many are in buildings that grew floor by floor, so the lift has to work with the structure that exists.',
+          "For the private hospitals here we supply bed lifts sized to a loaded trolley with an attendant, with accurate levelling so trolley transfers are smooth, and backup supply so a power cut does not strand anyone. We work with buildings that have grown floor by floor rather than requiring an ideal shaft.",
       },
       {
-        heading: 'Coastal exposure',
+        heading: "Coastal finishes",
         body:
-          'The municipal area reaches the shore at Beypore and the beach quarter. Within a few kilometres of the sea we specify corrosion resistant car and frame finishes, sealed landing door tracks and protected fixings.',
+          "Within a few kilometres of the sea at Beypore or the beach quarter, ask for corrosion resistant car and frame finishes and sealed door tracks. We include them. They are what decides how the lift looks in five years.",
       },
     ],
     areas: [
@@ -212,19 +212,19 @@ export const CITIES = [
       'Thrissur is the centre of the gold and textile retail trade in Kerala. The showrooms around the Round are multi storey buildings where the lift is part of how customers experience the shop. The district also has a large stock of traditional and modern family homes, and steady construction in the towns around it.',
     engineering: [
       {
-        heading: 'A showroom lift is a different brief',
+        heading: "Showroom lifts that suit the shop",
         body:
-          'It carries customers, often several at once, between sales floors. It has to suit a high value retail interior, so glass or well finished stone and steel instead of a utility car. It needs the capacity and door timing to take a group without feeling cramped. That is why capsule and glass lifts are common here.',
+          "A jewellery or textile showroom lift is part of what customers see, so a utility car is the wrong product. We supply glass and finished stone or steel cars with the capacity and door timing to take a group of customers together without anyone feeling crowded. Capsule and glass lifts are the usual choice here.",
       },
       {
-        heading: 'Keep stock out of the customer lift',
+        heading: "Keep stock out of the customer lift",
         body:
-          'Retail buildings that move stock in the customer lift end up with a scratched car and a lift that is busy when customers want it. Where the building allows, a separate goods lift or dumbwaiter for stock protects both.',
+          "If staff move stock in the customer lift it gets scratched and it is busy when customers want it. Where the building allows, we quote a separate goods lift or dumbwaiter for stock. It costs less than refinishing a damaged showroom car.",
       },
       {
-        heading: 'Houses built around a courtyard',
+        heading: "Houses built around a courtyard",
         body:
-          'Older Thrissur houses are often built around a central courtyard, which limits where a shaft can go without ruining the thing that makes the house work. A compact external or stair void shaft is usually the answer, placed so the courtyard and its light are untouched.',
+          "If your house is built around a central courtyard, the courtyard is usually the thing worth protecting. We place a compact shaft externally or in the stair void so the courtyard and its light stay exactly as they are.",
       },
     ],
     areas: [
@@ -271,19 +271,19 @@ export const CITIES = [
       'Kollam sits between the Arabian Sea and Ashtamudi Lake, with a commercial core, a long established cashew processing industry and residential development spreading inland. The industrial side is what makes the demand here different.',
     engineering: [
       {
-        heading: 'Water on two sides',
+        heading: "Goods lifts specified for how you load",
         body:
-          'With the sea on one side and Ashtamudi Lake on the other, much of Kollam gets high humidity and salt exposure at the same time, plus a high water table in low lying areas. Pit waterproofing and corrosion resistant specification both matter here, and neither should be cut from a quotation to make the number look better.',
+          "Tell us whether goods go in by hand, on a pallet truck, or on a forklift that drives into the car. Forklift loading needs a reinforced floor and heavy duty sill, and it has to be in the order. If it is added to the brief later the lift has to be changed, so this one question saves the most money on a goods lift.",
       },
       {
-        heading: 'Goods lifts for processing and warehousing',
+        heading: "Protecting the pit near the water",
         body:
-          'These need specifying around how the lift is loaded. A pallet truck wheeled across the sill, or a forklift driving fully into the car, needs a reinforced floor and a heavy duty sill that a standard goods lift does not have. Say which it is before ordering.',
+          "Close to the lake or the coast the water table is high and a standard pit will take water. We tank and drain it and fit a sump. Where a deep watertight pit is not realistic on your site, we quote a reduced pit arrangement instead, so the problem does not arise.",
       },
       {
-        heading: 'Dust and fibre in the machine space',
+        heading: "Maintenance in a processing plant",
         body:
-          'In processing buildings, airborne dust and fibre get into controller cabinets and onto brake surfaces. Enclosure ratings should suit the real environment and the maintenance interval should be set around it, not taken from a standard schedule.',
+          "In a cashew or processing building, dust and fibre reach the controller and the brake. That means the lift needs servicing more often than a lift in an office, and we set the contract interval to match. Budget for it rather than being surprised by breakdown calls.",
       },
     ],
     areas: [
@@ -330,24 +330,19 @@ export const CITIES = [
       'Kannur district runs from the Mattannur airport corridor inland, through the old trading and weaving town of Thalassery, to the coast at Payyanur and Taliparamba. Hotel and serviced accommodation development around the airport has grown. The handloom and textile sector occupies large multi floor premises, and Thalassery has a stock of nineteenth and early twentieth century buildings now being converted.',
     engineering: [
       {
-        heading: 'Hotel lifts carry luggage',
+        heading: "Hotel lifts that work with luggage",
         body:
-          'A guest lift that takes four people comfortably stops working when two of them have suitcases. Size the capacity and car depth for luggage. Add protective wall panels or removable blankets at the rear. Specify quiet door operation, because bedrooms open straight onto the lift lobby. Separate housekeeping movement from guest traffic where the building allows.',
+          "A lift rated for four people stops working when two of them have suitcases. For hotels and serviced apartments we size the car for guests plus luggage, panel the rear so trolleys do not mark it, and specify quiet doors because bedrooms open onto the lobby. Where the building allows, we keep housekeeping off the guest lift.",
       },
       {
-        heading: 'Laterite walls will not hold a rail bracket',
+        heading: "Converting an older Thalassery building",
         body:
-          'Much of the district is built in laterite block, which is cheap and local but far weaker in tension than concrete. Guide rail brackets cannot simply be bolted to it. They need concrete inserts, a cast band at each bracket level, or an independent steel structure to carry the rail loads. We confirm this at the survey, because a fixing that pulls out only shows up under load.',
+          "If you are converting a heritage building, a lift does not have to be cut through the structure. We build a free standing shaft in a courtyard or rear service area that carries its own loads, with the openings at each landing kept to the minimum. The building keeps its character and you get the lift.",
       },
       {
-        heading: 'Thalassery conversions',
+        heading: "Home lifts for a house built in stages",
         body:
-          'Converting an older Thalassery building usually means a lift cannot be cut through the structure without losing what made it worth converting. A free standing shaft in a courtyard or rear service area, structurally independent of the old fabric, is normally the workable answer, with landing openings kept to the minimum.',
-      },
-      {
-        heading: 'Textile and handloom premises',
-        body:
-          'Weaving and finishing put lint into the air, and lint gets into controller cabinets, onto brake surfaces and into door tracks. Specify the controller enclosure for it and clean more often than a standard schedule says.',
+          "Many houses here were extended upward over several years, so floor heights vary and there is no continuous vertical void. We measure what is actually there at the survey and design around it, so the quotation you get is for your house rather than a standard drawing.",
       },
     ],
     areas: [
@@ -360,8 +355,8 @@ export const CITIES = [
         a: 'Capacity and car depth that work with luggage, not just passenger count. Protective rear panelling. Quiet doors, because bedrooms open onto the lobby. Separate service movement where the building allows it.',
       },
       {
-        q: 'Can a lift be fixed to laterite block walls?',
-        a: 'Not directly. Laterite is weak in tension, so rail brackets need concrete inserts, a cast band at bracket levels, or an independent steel structure to carry the loads. We settle this at the survey.',
+        q: 'Do you quote for hotels and serviced apartments?',
+        a: 'Yes. Tell us the number of floors, how many rooms the lift serves and whether housekeeping will use it too, and we will size it from that.',
       },
       {
         q: 'Can a lift go into an old building in Thalassery without damaging it?',
@@ -393,19 +388,19 @@ export const CITIES = [
       'Alappuzha is built across a network of backwaters and canals and lies very low relative to sea level. It carries a large hospitality sector alongside its residential and commercial buildings, and resort developments regularly need lifts where a conventional deep pit is not practical.',
     engineering: [
       {
-        heading: 'The pit is the whole problem',
+        heading: "A lift where the water table is high",
         body:
-          'With the water table often close to the surface, a conventional pit will take water unless it is tanked, drained and fitted with a sump and pump. This is the most important decision on an Alappuzha installation. Where a deep pit cannot be kept watertight, a reduced pit arrangement avoids the issue completely and is usually the better answer.',
+          "Alappuzha is the hardest place in Kerala to put in a conventional pit, and you should ask any supplier how they will handle it. We tank and drain the pit and fit a sump and pump. Where that cannot be made reliable on your site, we quote a reduced pit lift instead so there is no pit to flood.",
       },
       {
-        heading: 'Salt, all the time',
+        heading: "Finishes that last in constant salt air",
         body:
-          'Constant salt laden humid air attacks painted steel, plain fixings and door track assemblies. Stainless on exposed components, sealed tracks and protected electrical enclosures are the baseline here, not options.',
+          "Here the salt never lets up. Painted steel and plain fixings will not survive it. We include stainless on exposed parts, sealed door tracks and protected electrical enclosures. If a quotation looks cheaper, check whether this is in it.",
       },
       {
-        heading: 'Resort access and duty',
+        heading: "Resorts reached by narrow road or by water",
         body:
-          'Resort buildings need lifts that are quiet, well finished and able to take luggage as well as guests. Many sites are reachable only by narrow roads or across water, so we work out delivery and installation access at the survey instead of assuming it.',
+          "If your property is only reachable down a narrow road or across the backwaters, tell us at enquiry. We size components and plan transport and lifting around the access you actually have, and confirm it at the survey. It affects the programme, not whether you can have a lift.",
       },
     ],
     areas: [
@@ -451,24 +446,24 @@ export const CITIES = [
       'Palakkad sits in the gap in the Western Ghats, with an industrial belt, extensive agricultural trade and growing residential and commercial construction around the town. It is drier and noticeably hotter than coastal Kerala for much of the year.',
     engineering: [
       {
-        heading: 'Heat, not salt',
+        heading: "Inland, so you are not paying for coastal protection",
         body:
-          'Away from the coast, salt corrosion stops being the governing concern and ambient temperature takes over. Machine spaces and controller cabinets need real ventilation. Hydraulic installations need attention to oil temperature, because hot oil thins, performance drifts and the controller can trip on thermal protection. An oil cooler is a sensible specification here and unnecessary elsewhere in Kerala.',
+          "Away from the coast the corrosion package that coastal sites need is largely unnecessary. If you are being quoted full marine specification for a building in Palakkad town, ask why. We specify for the site you have, which here usually means spending the money on ventilation and heat handling instead.",
       },
       {
-        heading: 'Industrial goods handling',
+        heading: "Hydraulic lifts and the summer heat",
         body:
-          'The industrial belt generates goods lift demand, and those need specifying around real loading. Reinforced car floors and heavy duty sills where pallet trucks or forklifts cross the threshold, with the door type matched to the duty cycle.',
+          "If you are considering hydraulic, the heat here matters. Hot oil thins, the ride changes and the controller can trip out in the afternoon. We ventilate the power pack space properly and fit an oil cooler where the duty justifies it, so the lift behaves the same in April as it does in July.",
       },
       {
-        heading: 'Dry season dust',
+        heading: "Goods lifts for the industrial belt",
         body:
-          'Dust in the dry months is a real factor for controller cabinets, brake surfaces and door tracks in industrial and semi rural locations. Enclosure ratings and cleaning intervals should allow for it.',
+          "Tell us the heaviest load, its pallet, and whether a pallet truck or forklift crosses the sill. That decides the floor construction and the sill, and it has to be in the order rather than added later.",
       },
       {
-        heading: 'Wind through the gap',
+        heading: "Maintenance where it gets dusty",
         body:
-          'The Palakkad Gap funnels wind hard enough to support the wind farms around Kanjikode. That matters twice. An external or glazed shaft needs its wind loading checked properly instead of assumed from a coastal standard. And crane lifts during installation get cancelled on windy days, so the programme should carry slack for it instead of promising a date the weather will not allow.',
+          "In industrial and semi rural locations dry season dust reaches the controller and the door tracks. We set the service interval around that, so you get fewer breakdown calls instead of a contract that looks cheaper and costs more in downtime.",
       },
     ],
     areas: [
@@ -514,24 +509,24 @@ export const CITIES = [
       'Kottayam is a long established centre for healthcare, education and publishing, set in rubber growing country with undulating terrain. Residential demand comes largely from plantation sector families, often on sloping plots where the house is built across split levels.',
     engineering: [
       {
-        heading: 'Bed lifts for the medical sector',
+        heading: "Bed lifts for hospitals",
         body:
-          'Stretcher capable lifts are core work here. Car depth sized to a loaded bed with an attendant, clear door openings from 1100 mm, accurate levelling for trolley transfer, and essential supply backup with a rescue device.',
+          "We size a hospital lift from your longest loaded bed plus the person steering it and an attendant with equipment. You get a car the bed fits and a door it passes through while turning, with accurate levelling so transfers are smooth and backup supply so a power cut does not strand a patient.",
       },
       {
-        heading: 'Institutional traffic is peaky',
+        heading: "Sizing a lift for a college building",
         body:
-          'Colleges generate sharp surges between classes and almost nothing between them. Sizing for average use produces queues at exactly the moments the building gets judged on. A realistic peak calculation and group control matter more here than headline capacity.',
+          "Campus buildings are empty for an hour then everyone moves at once. A lift sized on average use will queue at exactly the moment people judge the building. We size on the peak between sessions, and where two lifts share a lobby we add group control so the nearer car is not the only one answering.",
       },
       {
-        heading: 'Hillside plots',
+        heading: "Homes on hillside plots",
         body:
-          'Houses on sloping plots often have entrances at two different levels and half landings between floors. The stop arrangement has to come from a measured survey, because the levels a lift must serve frequently do not match the stair landings.',
+          "Sloping plots here often mean two entrance levels and half landings. A lift can serve them, but the stops have to be set from measured floor levels. We do that at the survey so there are no surprises once the shaft is up.",
       },
       {
-        heading: 'Paper reels in the printing trade',
+        heading: "Goods lifts for the printing trade",
         body:
-          'Kottayam is a publishing and printing centre, and a paper reel is a hard load for a goods lift. It is heavy, it is concentrated on a small contact area, and it is usually moved on a trolley that has to cross the sill. That calls for a reinforced car floor, a heavy duty sill and tight levelling, which is a different specification from a lift sized on total weight alone.',
+          "A paper reel is heavy, concentrated on a small contact area, and usually crosses the sill on a trolley. If that is your load, say so, because it needs a reinforced floor and heavy duty sill. A lift quoted on total weight alone will not take it for long.",
       },
     ],
     areas: [
@@ -577,24 +572,24 @@ export const CITIES = [
       'Malappuram is the most populous district in Kerala and spans two very different environments. The coastal belt at Tirur and Ponnani, and the inland, forested east around Nilambur. Kottakkal is a long established centre for ayurvedic treatment drawing patients from across India and abroad, and the district has a dense network of colleges and residential campuses.',
     engineering: [
       {
-        heading: 'Treatment centres need patient capable lifts',
+        heading: "Lifts for treatment centres",
         body:
-          'Ayurveda hospitals move patients who are often elderly, post treatment, covered in oil and unsteady. That calls for a seat, a handrail on at least one side, extended door dwell time, a low mounted control panel reachable when seated, and above all a floor that is not slippery when wet with treatment oil. Polished stone in that setting is a hazard.',
+          "In an ayurveda hospital the floor matters more than anything else in the car, because patients come out of treatment covered in oil. We specify a non slip floor that stays safe when wet, with a seat, a handrail and extended door timing so elderly patients are not rushed.",
       },
       {
-        heading: 'Campus traffic is peaky',
+        heading: "Sizing a lift for a campus",
         body:
-          'Hostels and academic blocks surge between sessions and sit idle in between. Sizing on average use produces queues at the worst possible moment. A realistic peak calculation, and group control where two or more lifts share a lobby, matter more than headline capacity.',
+          "Hostel and academic blocks surge between sessions and sit idle in between. We size on that peak, not the average, and add group control where lifts share a lobby, so students are not queuing in the five minutes that matter.",
       },
       {
-        heading: 'One district, two climates',
+        heading: "Pay for the coast only if you are on it",
         body:
-          'Tirur and Ponnani on the coast need the full salt exposure specification. Inland towards Nilambur that is largely unnecessary, and ventilation and monsoon humidity become the governing concerns instead. Specifying coastal protection for an inland site adds cost for nothing. Leaving it off a coastal site is a false economy.',
+          "The district runs from the sea at Tirur and Ponnani to the hills at Nilambur. A building on the coast needs corrosion resistant finishes and sealed door tracks. A building inland does not, and should not be charged for them. We specify for where your building actually is.",
       },
       {
-        heading: 'Settle the shaft while the building goes up',
+        heading: "Decide the shaft while you are still building",
         body:
-          'A large share of work here is new construction. Agreeing shaft position, clear dimensions and pit depth at slab stage costs almost nothing and removes every compromise a retrofit forces.',
+          "If your structure is still going up, now is the cheapest moment to fix the shaft position, clear size and pit depth. Settling it at slab stage costs almost nothing and avoids every compromise that a retrofit forces on you later.",
       },
     ],
     areas: [

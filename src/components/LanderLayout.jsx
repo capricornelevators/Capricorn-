@@ -27,6 +27,7 @@ export default function LanderLayout({
   specs,
   faqs = [],
   faqsTitle = 'Frequently asked questions',
+  beforeFaqs,
   aside,
   serviceAreas,
   related = [],
@@ -151,6 +152,8 @@ export default function LanderLayout({
                 </div>
               </section>
             )}
+
+            {beforeFaqs}
 
             {faqs.length > 0 && (
               <section className="lander-section">

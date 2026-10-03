@@ -181,3 +181,29 @@ export function cityServiceSchema({ city, path, description }) {
     areaServed: { '@type': 'City', name: city },
   };
 }
+
+/**
+ * VideoObject for a customer testimonial.
+ *
+ * name, description, thumbnailUrl, uploadDate and duration are all required for
+ * a video rich result. Every value here must come from the real video. Do not
+ * describe what a customer says on camera unless someone has watched it and
+ * written it down.
+ */
+export function videoSchema(video, { page }) {
+  if (!video?.id) return null;
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: video.title,
+    description: video.description,
+    thumbnailUrl: [`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`],
+    uploadDate: video.uploadDate,
+    duration: video.duration,
+    embedUrl: `https://www.youtube.com/embed/${video.id}`,
+    contentUrl: `https://www.youtube.com/watch?v=${video.id}`,
+    publisher: { '@id': `${SITE_URL}/#organization` },
+    isPartOf: { '@type': 'WebPage', '@id': `${SITE_URL}${page}` },
+  };
+}

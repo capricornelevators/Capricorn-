@@ -429,6 +429,23 @@ export const CITIES = [
         a: 'Yes. Alappuzha town, Cherthala, Kayamkulam, Mavelikkara, Haripad and Ambalappuzha.',
       },
     ],
+    // Customer testimonial filmed in Alappuzha, on Capricorn's own YouTube channel.
+    // title, uploadDate and duration were read from the live video, not guessed.
+    // customer and quote are intentionally empty: nobody here has watched the
+    // video and transcribed it, and inventing a customer name or a quote on a
+    // testimonial would be fabricating a review. Fill these in from the client
+    // and they will render under the player and in the caption.
+    video: {
+      id: 'Zqd8-gDeo4w',
+      title: 'Capricorn Elevators customer testimonial, Alappuzha',
+      description:
+        'A Capricorn Elevators customer in Alappuzha talks about their home elevator installation.',
+      uploadDate: '2025-12-17',
+      duration: 'PT2M4S',
+      customer: null,
+      customerDetail: null,
+      quote: null,
+    },
     projects: [],
   },
 

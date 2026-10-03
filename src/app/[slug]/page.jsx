@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import LanderLayout from '../../components/LanderLayout';
 import JsonLd from '../../components/JsonLd';
+import VideoTestimonial from '../../components/VideoTestimonial';
 import { LANDERS, getLander } from '../../data/landers';
 import { CITIES, getCity } from '../../data/cities';
 import { MODELS, HOME_MODELS } from '../../data/models';
@@ -11,6 +12,7 @@ import {
   cityServiceSchema,
   faqSchema,
   serviceSchema,
+  videoSchema,
 } from '../../lib/schema';
 
 /**
@@ -158,6 +160,7 @@ function CityView({ city: c, slug }) {
         data={cityServiceSchema({ city: c.name, path, description: c.metaDescription })}
       />
       <JsonLd data={faqSchema(faqs)} />
+      <JsonLd data={videoSchema(c.video, { page: path })} />
       <JsonLd data={breadcrumbSchema([{ name: `Elevators in ${c.name}`, path }])} />
       <LanderLayout
         h1={`Elevator Company in ${c.name}`}
@@ -174,6 +177,14 @@ function CityView({ city: c, slug }) {
         sections={c.sections ?? []}
         faqs={faqs}
         faqsTitle={`Elevators in ${c.name}: common questions`}
+        beforeFaqs={
+          c.video ? (
+            <VideoTestimonial
+              video={c.video}
+              heading={`A Capricorn customer in ${c.name}`}
+            />
+          ) : null
+        }
         serviceAreas={{
           title: `Areas we serve around ${c.name}`,
           body: `${c.areas.join(', ')} and the rest of ${c.district}.`,

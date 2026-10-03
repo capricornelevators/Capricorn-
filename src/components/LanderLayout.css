@@ -263,3 +263,97 @@
   border-color: var(--lander-gold);
   color: var(--lander-ink);
 }
+
+/* Intro paragraph */
+.lander-intro {
+  margin: 0 0 2.5rem;
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+/* Reasons grid */
+.lander-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.lander-tile {
+  padding: 1.25rem;
+  border: 1px solid var(--lander-line);
+  border-left: 3px solid var(--lander-gold);
+  border-radius: 0.5rem;
+  background: #fbfaf6;
+}
+
+.lander-tile h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--lander-ink);
+}
+
+.lander-tile p {
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+/* Model cards */
+.lander-models {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.lander-model {
+  padding: 1.5rem;
+  border: 1px solid var(--lander-line);
+  border-radius: 0.5rem;
+}
+
+.lander-model h3 {
+  margin: 0 0 0.2rem;
+  font-family: var(--font-heading, 'Playfair Display', serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--lander-ink);
+}
+
+.lander-model-sub {
+  margin: 0 0 0.85rem !important;
+  color: var(--lander-gold);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.lander-model p {
+  margin: 0 0 1rem;
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.lander-model .lander-table {
+  font-size: 0.92rem;
+}
+
+.lander-model .lander-table th {
+  width: 30%;
+}
+
+/* Process steps */
+.lander-steps {
+  margin: 0;
+  padding-left: 1.3rem;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.lander-steps li {
+  margin-bottom: 0.6rem;
+}
+
+.lander-steps strong {
+  color: var(--lander-ink);
+}

@@ -26,9 +26,9 @@ export const CITIES = [
       'Elevator company in Kochi. Home lifts, commercial elevators, modernization and maintenance for all brands, from our office in Vyttila, Ernakulam.',
     lede:
       'Our office is in Vyttila. Kochi is where we do most of our work: home lifts in the villa developments around Kakkanad and Aluva, passenger lifts in the apartment towers at Marine Drive and Edappally, and maintenance contracts across the commercial corridor.',
-    localContext:
+    intro:
       'Kochi has the most mixed building stock in Kerala. High rise apartments on reclaimed ground near the backwaters. IT campus buildings around Infopark. Older three and four storey commercial blocks in the city centre with no lift at all. Gated villa developments spreading east to Kakkanad and north to Aluva. The retrofit market here is as big as the new build one.',
-    engineering: [
+    sections: [
       {
         heading: "What you get for a flood-prone site",
         body:
@@ -85,9 +85,9 @@ export const CITIES = [
       'Elevators in Thiruvananthapuram. Home lifts, passenger and hospital lifts, modernization and maintenance for all brands across the capital.',
     lede:
       'We supply, install and maintain lifts across Thiruvananthapuram from our Ernakulam office. The capital has a different mix to the rest of Kerala: government and institutional buildings, the Technopark campuses, a large medical sector, and residential streets of big older houses.',
-    localContext:
+    intro:
       'Thiruvananthapuram combines a dense institutional and government building stock with established residential areas of large individual houses at Kowdiar, Vazhuthacaud and Sasthamangalam, and newer apartments out towards Kazhakkoottam and Technopark. Institutional and healthcare work makes up a bigger share of demand here than anywhere else in Kerala.',
-    engineering: [
+    sections: [
       {
         heading: "Bed lifts for hospitals and clinics",
         body:
@@ -144,9 +144,9 @@ export const CITIES = [
       'Elevators in Kozhikode. Lifts for the city trade core and private hospitals, home lifts, modernization and maintenance for all elevator brands.',
     lede:
       'Passenger lifts, hospital lifts and home elevators across Kozhikode. A large share of our work here is lifts going into multi storey trading buildings and private hospitals, not new residential towers.',
-    localContext:
+    intro:
       'The commercial heart of Kozhikode runs along Mavoor Road, the Beach Road area and the old bazaar quarters. Four and five storey trading buildings sit on tight plots with no setback and no service yard. The city also carries a dense private healthcare sector. Outside the core it spreads into established residential neighbourhoods and down the coast to Beypore and Feroke.',
-    engineering: [
+    sections: [
       {
         heading: "Your shop stays open during installation",
         body:
@@ -208,9 +208,9 @@ export const CITIES = [
       'Elevators in Thrissur. Showroom and capsule lifts for the jewellery trade, home lifts, commercial passenger lifts, modernization and maintenance.',
     lede:
       'Lifts for Thrissur homes, showrooms and commercial buildings. The city has a demand profile we do not see elsewhere, because its multi floor jewellery and textile showrooms need lifts that carry customers comfortably and look like part of the shop.',
-    localContext:
+    intro:
       'Thrissur is the centre of the gold and textile retail trade in Kerala. The showrooms around the Round are multi storey buildings where the lift is part of how customers experience the shop. The district also has a large stock of traditional and modern family homes, and steady construction in the towns around it.',
-    engineering: [
+    sections: [
       {
         heading: "Showroom lifts that suit the shop",
         body:
@@ -267,9 +267,9 @@ export const CITIES = [
       'Elevators in Kollam. Goods lifts for processing and warehousing, home lifts, commercial lifts, modernization and maintenance for all brands.',
     lede:
       'Home lifts, passenger lifts and goods lifts across Kollam, with maintenance for lifts of any make. Goods lifts make up a bigger share of our work here than in most Kerala districts, because of the processing and warehousing sector.',
-    localContext:
+    intro:
       'Kollam sits between the Arabian Sea and Ashtamudi Lake, with a commercial core, a long established cashew processing industry and residential development spreading inland. The industrial side is what makes the demand here different.',
-    engineering: [
+    sections: [
       {
         heading: "Goods lifts specified for how you load",
         body:
@@ -326,9 +326,9 @@ export const CITIES = [
       'Elevators in Kannur. Hotel and commercial lifts near the airport corridor, home lifts, heritage building retrofits in Thalassery, and maintenance.',
     lede:
       'Passenger lifts, hotel lifts and home elevators across Kannur district. Since the airport opened at Mattannur, hotel and commercial construction along that corridor has become a steady part of the work here.',
-    localContext:
+    intro:
       'Kannur district runs from the Mattannur airport corridor inland, through the old trading and weaving town of Thalassery, to the coast at Payyanur and Taliparamba. Hotel and serviced accommodation development around the airport has grown. The handloom and textile sector occupies large multi floor premises, and Thalassery has a stock of nineteenth and early twentieth century buildings now being converted.',
-    engineering: [
+    sections: [
       {
         heading: "Hotel lifts that work with luggage",
         body:
@@ -384,9 +384,9 @@ export const CITIES = [
       'Elevators in Alappuzha. Lifts for resorts, hotels and homes where the water table is high and salt exposure is constant, plus maintenance for all brands.',
     lede:
       'Lifts for resorts, hotels, hospitals and homes in Alappuzha. This is the hardest environment in Kerala to install a lift in, and it is worth being direct about why. The water table is high, the ground is soft and the air carries salt all year.',
-    localContext:
+    intro:
       'Alappuzha is built across a network of backwaters and canals and lies very low relative to sea level. It carries a large hospitality sector alongside its residential and commercial buildings, and resort developments regularly need lifts where a conventional deep pit is not practical.',
-    engineering: [
+    sections: [
       {
         heading: "A lift where the water table is high",
         body:
@@ -442,9 +442,9 @@ export const CITIES = [
       'Elevators in Palakkad. Industrial goods lifts, passenger and home lifts for an inland, hot and dry district, with maintenance for all elevator brands.',
     lede:
       'Passenger lifts, goods lifts and home lifts across Palakkad. This is the one major Kerala market that is genuinely inland, and the specification priorities are different from the coast in ways worth stating plainly.',
-    localContext:
+    intro:
       'Palakkad sits in the gap in the Western Ghats, with an industrial belt, extensive agricultural trade and growing residential and commercial construction around the town. It is drier and noticeably hotter than coastal Kerala for much of the year.',
-    engineering: [
+    sections: [
       {
         heading: "Inland, so you are not paying for coastal protection",
         body:
@@ -505,9 +505,9 @@ export const CITIES = [
       'Elevators in Kottayam. Hospital and institutional lifts, home lifts for hillside plots, modernization and maintenance for all elevator brands.',
     lede:
       'Lifts for hospitals, colleges, commercial buildings and homes across Kottayam. The district has an unusually high concentration of medical and educational buildings, which pushes demand towards bed lifts and institutional passenger lifts.',
-    localContext:
+    intro:
       'Kottayam is a long established centre for healthcare, education and publishing, set in rubber growing country with undulating terrain. Residential demand comes largely from plantation sector families, often on sloping plots where the house is built across split levels.',
-    engineering: [
+    sections: [
       {
         heading: "Bed lifts for hospitals",
         body:
@@ -568,9 +568,9 @@ export const CITIES = [
       'Elevators in Malappuram. Lifts for the Kottakkal treatment sector, college campuses, home lifts, and maintenance for all elevator brands.',
     lede:
       'Lifts for the healthcare and education sectors in Malappuram, alongside residential work. The district has an unusual concentration of ayurveda hospitals and treatment centres around Kottakkal, and one of the largest student populations in Kerala.',
-    localContext:
+    intro:
       'Malappuram is the most populous district in Kerala and spans two very different environments. The coastal belt at Tirur and Ponnani, and the inland, forested east around Nilambur. Kottakkal is a long established centre for ayurvedic treatment drawing patients from across India and abroad, and the district has a dense network of colleges and residential campuses.',
-    engineering: [
+    sections: [
       {
         heading: "Lifts for treatment centres",
         body:

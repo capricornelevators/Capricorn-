@@ -3,6 +3,8 @@ import LanderLayout from '../../components/LanderLayout';
 import JsonLd from '../../components/JsonLd';
 import { LANDERS, getLander } from '../../data/landers';
 import { CITIES, getCity } from '../../data/cities';
+import { MODELS, HOME_MODELS } from '../../data/models';
+import { REASONS, PROCESS, COST_NOTE } from '../../data/company';
 import { pageMetadata, ORG } from '../../lib/seo';
 import {
   breadcrumbSchema,
@@ -129,18 +131,10 @@ function CityView({ city: c, slug }) {
   const path = `/${slug}/`;
   const faqs = c.faqs;
 
-  // No generated "areas we cover" section. It read as the same paragraph on every
-  // city with the name swapped, and it repeated the areas FAQ further down the page.
-  // The service area is covered once, in that city's own FAQ.
-  const sections = [
-    { heading: `Elevators in ${c.name}`, body: c.localContext },
-    ...c.engineering,
-  ];
-
   const aside = (
     <>
       <div className="lander-card">
-        <h3>Demand in {c.name}</h3>
+        <h3>What we supply in {c.name}</h3>
         <ul>
           {c.demand.map((d) => (
             <li key={d}>{d}</li>
@@ -168,12 +162,27 @@ function CityView({ city: c, slug }) {
       <LanderLayout
         h1={`Elevator Company in ${c.name}`}
         lede={c.lede}
-        sections={sections}
+        intro={c.intro}
+        reasonsTitle={`Why customers in ${c.name} choose Capricorn`}
+        reasons={REASONS}
+        modelsTitle={`Our elevator range in ${c.name}`}
+        models={MODELS}
+        processTitle={`How we install a lift in ${c.name}`}
+        process={PROCESS}
+        costTitle={`What does an elevator cost in ${c.name}?`}
+        costBody={COST_NOTE}
+        sections={c.sections ?? []}
         faqs={faqs}
+        faqsTitle={`Elevators in ${c.name}: common questions`}
+        serviceAreas={{
+          title: `Areas we serve around ${c.name}`,
+          body: `${c.areas.join(', ')} and the rest of ${c.district}.`,
+        }}
         aside={aside}
         related={related}
-        ctaTitle={`Request a site visit in ${c.name}`}
-        ctaBody="Tell us the building, the floors and what the lift is for. We survey the site, measure the shaft, pit and headroom, and quote from real dimensions."
+        relatedTitle="Elevators elsewhere in Kerala"
+        ctaTitle={`Book a site visit in ${c.name}`}
+        ctaBody="Tell us the building and the number of floors. We measure the shaft, pit and headroom on site and quote against a drawing you approve."
       />
     </>
   );

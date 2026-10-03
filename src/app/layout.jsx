@@ -2,6 +2,7 @@ import '../index.css';
 import '../App.css';
 import 'aos/dist/aos.css';
 import JsonLd from '../components/JsonLd';
+import Analytics from '../components/Analytics';
 import { organizationSchema } from '../lib/schema';
 import { ORG, SITE_URL } from '../lib/seo';
 
@@ -38,6 +39,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body suppressHydrationWarning>
+        <Analytics />
         <JsonLd data={organizationSchema()} />
         <div className="App">
           {children}

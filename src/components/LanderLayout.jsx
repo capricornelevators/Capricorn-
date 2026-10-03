@@ -4,20 +4,19 @@ import Footer from './Footer';
 import './LanderLayout.css';
 
 /**
- * Shared chrome for the keyword and city landing pages. The *content* is supplied
- * per page from src/data — this component only lays it out.
+ * Shared chrome for the keyword and city landing pages. Content comes from
+ * src/data. This component only lays it out.
  */
 export default function LanderLayout({
   h1,
   lede,
-  badge,
   sections = [],
   specs,
   faqs = [],
   aside,
   related = [],
   ctaTitle = 'Request a quotation',
-  ctaBody = 'Tell us the building, the floors and what the lift is for. We arrange a technical site visit and quote from measured dimensions, not estimates.',
+  ctaBody = 'Tell us the building, how many floors, and what the lift is for. We visit the site, measure the shaft, pit and headroom, and quote from those measurements.',
 }) {
   return (
     <div className="lander-page">
@@ -26,7 +25,6 @@ export default function LanderLayout({
       <main>
         <section className="lander-hero">
           <div className="lander-container">
-            {badge && <span className="lander-badge">{badge}</span>}
             <h1 className="lander-h1">{h1}</h1>
             <p className="lander-lede">{lede}</p>
             <div className="lander-hero-actions">

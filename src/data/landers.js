@@ -1,78 +1,83 @@
 /**
- * Product / service landing pages.
+ * Product and service landing pages, one per search intent.
  *
- * One entry per search intent, mapped from the keyword research in
- * docs/seo/02-keyword-plan.md. Each lander must carry its own specs, FAQs and
- * body copy — these are not a template with the product name swapped out.
+ * House style for this file:
+ *   - No em dashes. Use a full stop or a comma.
+ *   - Short sentences. Say the thing, then stop.
+ *   - Every claim must be checkable, or it does not go in.
+ *   - No prices, no project counts, no client names until the client supplies them.
  *
- * Specifications below describe the equipment classes Capricorn supplies
- * (capacities taken from the model data in src/views/Commercial.jsx and
- * src/views/Residential.jsx). Prices are deliberately absent: none are
- * published yet. Add them to `priceNote` once the client signs off on bands.
+ * Capacities come from the model data in src/views/Commercial.jsx and
+ * src/views/Residential.jsx. Delivery and install timings come from the process
+ * steps in src/views/Services.jsx.
  */
 
 export const LANDERS = [
   {
     slug: 'home-lifts',
-    title: 'Home Lifts & Home Elevators in Kerala',
+    title: 'Home Lifts and Home Elevators in Kerala',
     metaTitle: 'Home Lifts in Kerala',
     metaDescription:
-      'Home lifts and residential elevators for Kerala villas and apartments. Compact shafts, machine-room-less drives, power-failure rescue and AMC support.',
+      'Home lifts and residential elevators for Kerala homes. Compact shafts, machine-room-less drives, power failure rescue and maintenance for all brands.',
     h1: 'Home Lifts in Kerala',
     intent: 'home lift, home elevator, lift for home, residential lift',
     lede:
-      'A home lift turns a three-storey Kerala house into a single-level home for everyone living in it. Capricorn supplies machine-room-less residential elevators sized for the plots and stair cores that are typical of villas across Ernakulam, Thrissur and Kozhikode — including retrofits into houses that were built without a shaft.',
+      'Capricorn supplies and installs home lifts across Kerala, for new houses and for houses that were built without a shaft. Most of our residential work is three to six passenger lifts serving two or three floors.',
     sections: [
       {
-        heading: 'What suits a Kerala home',
+        heading: 'Sizing for a Kerala home',
         body:
-          'Most Kerala homes need a 3 to 6 passenger lift serving G+1 or G+2. Below 6 passengers you can usually avoid a machine room entirely, which matters when the stair core is already built. Where the house is finished and no shaft exists, a self-supporting structural shaft can be erected in the stairwell void or on an external wall, with the cabin glazed so it reads as part of the architecture rather than an add-on.',
+          'A 3 to 6 passenger lift covers almost every house we survey. Under 6 passengers you can usually avoid a machine room, which keeps the installation inside the existing stair core. If the house is already built, a self supporting shaft can go in the stairwell void or against an outside wall. Glazing the shaft keeps light in the stairwell.',
       },
       {
-        heading: 'Humidity and the coast',
+        heading: 'Salt air and humidity',
         body:
-          'Anything within a few kilometres of the backwaters or the sea sees salt-laden air year round. That drives real specification choices: hairline or matte stainless rather than mild steel for the car and frame, sealed landing door tracks, and powder-coated guide brackets. Monsoon humidity also argues for a controller cabinet with a heater or a dehumidifying element, particularly in houses that stay locked for months while the owners are abroad.',
+          'Houses near the coast or the backwaters need corrosion resistant parts. We specify hairline or matte stainless for the car and frame, sealed landing door tracks, and powder coated guide brackets. Houses that stay locked for months while the family is abroad also need a controller cabinet that handles humidity.',
       },
       {
         heading: 'Power cuts',
         body:
-          'An automatic rescue device is not optional in Kerala. On mains failure the lift should run on battery to the nearest landing, open the doors and hold them open. Confirm this is included rather than quoted as an extra — it is the single feature homeowners regret omitting.',
+          'Every lift we supply includes an automatic rescue device. On mains failure it runs the car to the nearest landing on battery, opens the doors and holds them open. Check that any quotation you compare includes this. It is often priced as an extra.',
+      },
+      {
+        heading: 'What happens after you call',
+        body:
+          'We visit the site and measure the shaft, pit and headroom. You get a drawing for approval before anything is manufactured. Delivery is within three months of the order. Installation takes 10 to 20 days once the shaft is ready, then testing and commissioning before handover.',
       },
     ],
     specs: {
       caption: 'Typical residential configuration',
       rows: [
-        ['Passenger capacity', '3 – 8 persons (272 – 630 kg)'],
+        ['Passenger capacity', '3 to 8 persons (272 to 630 kg)'],
         ['Floors served', 'G+1 to G+5'],
         ['Drive', 'Gearless machine-room-less traction, or hydraulic for low rise'],
-        ['Travel speed', '0.3 – 1.0 m/s'],
-        ['Shaft (indicative)', 'From approx. 1200 × 1200 mm clear for a 3-passenger car'],
-        ['Pit / headroom', 'Reduced-pit options available for retrofits'],
-        ['Doors', 'Automatic sliding, swing, full-vision or frameless glass'],
+        ['Travel speed', '0.3 to 1.0 m/s'],
+        ['Shaft, indicative', 'From about 1200 x 1200 mm clear for a 3 passenger car'],
+        ['Doors', 'Automatic sliding, swing, full vision or frameless glass'],
         ['Cabin finishes', 'Stainless steel, marble, granite, wood panel, glass'],
-        ['Power supply', 'Single or three phase, with automatic rescue device'],
+        ['Safety', 'Automatic rescue device, overload detection, door sensors'],
       ],
     },
     faqs: [
       {
         q: 'How much space does a home lift need?',
-        a: 'A 3-passenger machine-room-less lift typically needs around 1200 × 1200 mm of clear shaft. Smaller footprints are possible with reduced-capacity cars and compact door arrangements. A site visit confirms the usable shaft once wall thickness, plumb and the stair opening are measured.',
+        a: 'A 3 passenger machine-room-less lift usually needs about 1200 x 1200 mm of clear shaft. Smaller is possible with a reduced capacity car. We confirm the usable shaft on site once wall thickness and the stair opening are measured.',
       },
       {
         q: 'Can a lift be added to a house that is already built?',
-        a: 'Yes. The usual approaches are a self-supporting shaft in the stairwell void, an external shaft against a side wall, or taking a corner of stacked rooms. A structural glass shaft avoids heavy civil work and keeps daylight in the stairwell.',
+        a: 'Yes. The usual options are a self supporting shaft in the stairwell void, an external shaft against a side wall, or a corner taken from stacked rooms on each floor.',
       },
       {
         q: 'Does it need a machine room?',
-        a: 'For the capacities most homes use, no. A gearless machine-room-less drive sits inside the shaft, which is what makes retrofits practical.',
+        a: 'No, for the capacities most homes use. The gearless drive sits inside the shaft.',
       },
       {
         q: 'What happens during a power cut?',
-        a: 'The automatic rescue device brings the car to the nearest landing on battery power and opens the doors. It should be specified as standard.',
+        a: 'The automatic rescue device takes the car to the nearest landing on battery power and opens the doors.',
       },
       {
-        q: 'How long does installation take?',
-        a: 'Capricorn delivers within three months of order placement, with installation taking 10 to 20 days once the shaft is ready. Testing and commissioning follow before handover.',
+        q: 'How long does it take?',
+        a: 'Delivery within three months of order. Installation takes 10 to 20 days once the shaft is ready.',
       },
     ],
     related: ['home-lift-price-kerala', 'glass-lifts', 'wheelchair-lifts', 'elevator-amc'],
@@ -83,50 +88,50 @@ export const LANDERS = [
     title: 'Home Lift Price in Kerala',
     metaTitle: 'Home Lift Price in Kerala',
     metaDescription:
-      'What drives home lift cost in Kerala: floors served, drive type, shaft work, cabin finishes, doors, GST and AMC. Request a site-specific quotation.',
-    h1: 'Home Lift Price in Kerala — What Actually Drives the Cost',
+      'What changes the price of a home lift in Kerala: floors, drive type, shaft work, doors, cabin finish, GST and maintenance. How to read a lift quotation.',
+    h1: 'Home Lift Price in Kerala',
     intent: 'home lift price in kerala, home elevator cost, lift price kerala',
     lede:
-      'Published price ranges for home lifts in Kerala vary so widely that they are close to useless on their own. The number that matters is the one for your house, and it is driven by a short list of decisions. This page explains each of them so you can read any quotation — ours or anyone else\'s — and understand what you are being charged for.',
+      'Published price ranges for home lifts in Kerala run from about 10 lakh to 50 lakh, which is too wide to plan with. This page explains what moves the number, so you can read any quotation and see what you are paying for.',
     priceNote:
-      'Capricorn does not publish fixed prices because the shaft, drive and finish combination changes the figure substantially. A written quotation follows the free technical site visit.',
+      'We quote after a site visit, not over the phone. The shaft, drive and finish change the figure too much for a phone estimate to be useful.',
     sections: [
       {
-        heading: 'The seven things that move the price',
+        heading: 'Seven things that change the price',
         body:
-          'Floors served — each additional stop adds guide rail, wiring, a landing door and a door operator. Drive type — gearless machine-room-less traction costs more than hydraulic up front and less to run over ten years. Shaft — an existing masonry shaft is the cheapest case; a self-supporting steel or structural glass shaft is a separate line item. Doors — a swing door is the least expensive, automatic sliding is mid-range, full-vision and frameless glass are the premium. Cabin finish — stainless is the baseline; marble, granite, wood panelling and mood lighting all add. Capacity — going from 3 to 6 passengers changes the machine, the rails and often the shaft. Site conditions — pit depth, headroom, three-phase availability and crane access for delivery.',
+          'Floors served. Each stop adds rail, wiring, a landing door and a door operator. Drive type. Gearless traction costs more to buy than hydraulic and less to run. Shaft. An existing masonry shaft is cheapest, a fabricated steel or glass shaft is a separate line item. Doors. Swing is cheapest, automatic sliding is mid range, frameless glass is the top. Cabin finish. Stainless is the baseline, stone and wood panelling add. Capacity. Going from 3 to 6 passengers changes the machine, the rails and often the shaft. Site conditions. Pit depth, headroom, three phase supply and crane access for delivery.',
       },
       {
-        heading: 'What should be in the quotation',
+        heading: 'What a quotation should name',
         body:
-          'Insist that the quote names: the drive and its manufacturer, the controller, the capacity in both persons and kilograms, the door type and clear opening, the automatic rescue device, the warranty period, what the first year of maintenance covers, and whether civil work, shaft fabrication, electrical supply to the controller and GST are included or excluded. Most of the gap between two very different quotations for "the same" lift sits in those exclusions.',
+          'Ask for the drive and its manufacturer, the controller, capacity in persons and kilograms, door type and clear opening, the automatic rescue device, warranty period, what the first year of maintenance covers, and whether civil work, shaft fabrication, electrical supply to the controller and GST are in or out. Most of the gap between two very different quotations sits in those exclusions.',
       },
       {
-        heading: 'Running cost, not just purchase cost',
+        heading: 'Ten year cost, not purchase price',
         body:
-          'Over a ten year life the annual maintenance contract, the electricity consumption of the drive, and the eventual cost of spares availability matter more than a difference of a few percent at purchase. A lift from a manufacturer who cannot supply a controller board in five years is the expensive option, whatever the invoice said.',
+          'Over ten years the maintenance contract, the electricity the drive uses and the availability of spares matter more than a few percent at purchase. A lift whose controller board cannot be sourced in five years is the expensive one.',
       },
     ],
     faqs: [
       {
-        q: 'Why will nobody give a fixed price over the phone?',
-        a: 'Because the shaft is the variable. Until someone has measured the stair core, the pit depth and the headroom, any figure is a guess that will change.',
+        q: 'Why will nobody quote a price on the phone?',
+        a: 'Because the shaft is the variable. Until someone has measured the stair core, pit depth and headroom, any figure will change.',
       },
       {
-        q: 'Is a hydraulic lift cheaper than traction?',
-        a: 'Usually lower to buy for two or three stops, and higher to run — it draws more power on every upward trip. For G+2 and above, gearless traction is normally the better ten-year cost.',
+        q: 'Is hydraulic cheaper than traction?',
+        a: 'Usually cheaper to buy for two or three stops and more expensive to run, because there is no counterweight. For G+2 and above, gearless traction is normally the better ten year cost.',
       },
       {
         q: 'Does the price include civil work?',
-        a: 'Check each quotation specifically. Shaft construction, the pit, electrical supply up to the controller and scaffolding are commonly excluded and quoted separately.',
+        a: 'Check each quotation. Shaft construction, the pit, electrical supply to the controller and scaffolding are commonly excluded.',
       },
       {
         q: 'Is GST included?',
-        a: 'Elevators attract GST. Ask whether the figure quoted is inclusive, because this alone accounts for a visible difference between quotations.',
+        a: 'Ask. It accounts for a visible part of the difference between two quotations.',
       },
       {
-        q: 'What does an annual maintenance contract add?',
-        a: 'Budget for it from year one. Capricorn offers Standard and Comprehensive packages; the comprehensive package covers parts that the standard package bills separately.',
+        q: 'What does maintenance add per year?',
+        a: 'Budget for it from year one. We offer a Standard package with parts billed separately and a Comprehensive package that includes parts within an agreed scope.',
       },
     ],
     related: ['home-lifts', 'elevator-amc', 'hydraulic-lifts'],
@@ -134,59 +139,59 @@ export const LANDERS = [
 
   {
     slug: 'passenger-lifts',
-    title: 'Passenger Lifts & Commercial Elevators in Kerala',
+    title: 'Passenger Lifts and Commercial Elevators in Kerala',
     metaTitle: 'Passenger Lifts in Kerala',
     metaDescription:
-      'Passenger elevators for offices, hotels, apartments and retail buildings in Kerala. 4 to 26 passenger capacities, gearless drives, full AMC support.',
+      'Passenger elevators for offices, hotels, apartments and retail buildings in Kerala. 4 to 26 passenger capacities, gearless drives, maintenance for all brands.',
     h1: 'Passenger Lifts in Kerala',
     intent: 'passenger lift, passenger elevator, commercial elevator, building lift',
     lede:
-      'Passenger lifts for apartment blocks, offices, hotels and retail buildings across Kerala. Capricorn\'s commercial range covers 4 to 26 passengers, with gearless drives and controller options sized to the traffic the building actually sees rather than the nameplate capacity alone.',
+      'Passenger lifts for apartment blocks, offices, hotels and retail buildings. Our commercial range runs from 4 to 26 passengers, with simplex, duplex and group control.',
     sections: [
       {
-        heading: 'Sizing by traffic, not by floor count',
+        heading: 'Size on traffic, not floor count',
         body:
-          'A twelve-floor apartment block with two flats per floor and an eight-floor office with forty desks per floor have completely different traffic patterns. Handling capacity over a five minute peak, not the number of landings, determines whether a building needs one lift or two and what speed they should run at. For residential towers the evening peak governs; for offices it is the morning arrival.',
+          'A twelve floor apartment block with two flats per floor and an eight floor office with forty desks per floor need different lifts. What governs is how many people need to move in the busiest five minutes. For apartments that is the evening. For offices it is the morning arrival.',
       },
       {
         heading: 'Group control',
         body:
-          'Where two or more lifts serve the same lobby, a group controller dispatches the car that will answer the call soonest rather than simply the nearest. On a building with real traffic this is the difference between an acceptable wait and daily complaints, and it is far cheaper to specify at order stage than to retrofit.',
+          'Where two or more lifts serve one lobby, a group controller sends the car that will answer soonest instead of the nearest one. On a busy building that decides whether people complain. It costs far less to specify at order stage than to add later.',
       },
       {
-        heading: 'What the building needs to provide',
+        heading: 'What the building has to provide',
         body:
-          'A plumb shaft within tolerance, the specified pit depth and headroom, a three-phase supply terminated at the controller position, lighting and a socket in the pit and at the machine position, and a clear route for delivery of the car and rails. Delays on commercial sites are almost always shaft readiness rather than equipment.',
+          'A plumb shaft within tolerance, the specified pit depth and headroom, three phase supply terminated at the controller position, lighting and a socket in the pit and at the machine, and a clear route to deliver the car and rails. Delays on commercial sites are almost always shaft readiness, not equipment.',
       },
     ],
     specs: {
       caption: 'Commercial passenger range',
       rows: [
         ['Passenger capacity', '4, 6, 8, 10, 15, 18, 20, 26 persons'],
-        ['Drive', 'Gearless traction, machine-room-less or with machine room'],
-        ['Travel speed', '1.0 – 2.5 m/s depending on rise'],
-        ['Control', 'Simplex, duplex or group control'],
-        ['Doors', 'Automatic centre or side opening, 800 – 1100 mm clear'],
-        ['Cabin', 'Stainless steel, glass, stone or laminate finishes'],
-        ['Safety', 'ARD, overload detection, door obstruction sensors, firemans return'],
+        ['Drive', 'Gearless traction, with or without machine room'],
+        ['Travel speed', '1.0 to 2.5 m/s depending on rise'],
+        ['Control', 'Simplex, duplex or group'],
+        ['Doors', 'Automatic centre or side opening, 800 to 1100 mm clear'],
+        ['Cabin', 'Stainless steel, glass, stone or laminate'],
+        ['Safety', 'Automatic rescue device, overload detection, door sensors'],
       ],
     },
     faqs: [
       {
         q: 'How many lifts does an apartment building need?',
-        a: 'It depends on population and peak traffic rather than floors alone. As a rough guide, a single lift struggles once a residential block passes roughly eight floors with multiple flats per floor. A traffic calculation at design stage settles it.',
+        a: 'It follows from population and peak traffic, not floor count. As a guide, one lift starts to struggle past about eight floors with several flats per floor. A traffic calculation at design stage settles it.',
       },
       {
         q: 'Machine room or machine-room-less?',
-        a: 'Machine-room-less saves the headroom structure and is standard for most mid-rise buildings. A machine room still makes sense for higher capacities, long rises and buildings where service access matters more than roof space.',
+        a: 'Machine-room-less suits most mid rise buildings and saves the headroom structure. A machine room still makes sense for high capacities and long rises.',
       },
       {
-        q: 'What speed is appropriate?',
-        a: 'Up to about six floors, 1.0 m/s is adequate. Beyond that, speed should rise with the travel so journey time stays acceptable.',
+        q: 'What speed do we need?',
+        a: 'Up to about six floors, 1.0 m/s is enough. Above that, speed should rise with the travel so journey time stays acceptable.',
       },
       {
-        q: 'Is a firemans lift required?',
-        a: 'Fire safety requirements depend on building height and occupancy under the applicable building rules. This should be confirmed with your architect and the local authority at design stage, not after installation.',
+        q: 'Do we need a firemans lift?',
+        a: 'That depends on building height and occupancy under the applicable rules. Confirm it with your architect and the local authority at design stage.',
       },
     ],
     related: ['hospital-lifts', 'capsule-lifts', 'elevator-modernization', 'elevator-amc'],
@@ -194,69 +199,68 @@ export const LANDERS = [
 
   {
     slug: 'hospital-lifts',
-    title: 'Hospital & Bed Lifts in Kerala',
-    metaTitle: 'Hospital Lifts & Bed Elevators in Kerala',
+    title: 'Hospital and Bed Lifts in Kerala',
+    metaTitle: 'Hospital Lifts and Bed Elevators in Kerala',
     metaDescription:
-      'Hospital bed lifts for Kerala healthcare buildings — stretcher clearances, car sizes, door widths and capacities explained, with installation and AMC.',
+      'Hospital bed lifts for Kerala healthcare buildings. Stretcher clearances, car depth, door widths and capacities, with installation and maintenance.',
     h1: 'Hospital Lifts and Bed Elevators in Kerala',
     intent: 'hospital lift, bed elevator, stretcher lift, hospital lift size',
     lede:
-      'A hospital lift is specified around a loaded bed with staff and equipment alongside it, not around a passenger count. Get the car depth or the door width wrong and the lift is unusable for its only important job. This page sets out the dimensions that govern the decision, because almost nobody publishes them.',
+      'A hospital lift is sized around a loaded bed with staff beside it, not around a passenger count. Get the car depth or the door width wrong and it cannot do the one job it exists for. Here are the dimensions that decide it.',
     sections: [
       {
-        heading: 'Start from the bed, then work outward',
+        heading: 'Start from the bed',
         body:
-          'Measure the longest trolley or bed in service, including any headboard and the IV pole. Add clearance at the foot for a staff member to stand and steer, and add space along one side for an attendant plus a monitor or oxygen cylinder. That envelope sets the internal car depth and width. A car that fits the bed exactly and nothing else will force staff to tilt patients to get in, which is precisely what the lift exists to avoid.',
+          'Measure the longest trolley or bed in use, including the headboard and any IV pole. Add clearance at the foot for a staff member to stand and steer. Add space along one side for an attendant with a monitor or an oxygen cylinder. That gives the internal car size. This is why bed lifts are deep rather than wide.',
       },
       {
-        heading: 'The door is the usual mistake',
+        heading: 'The door is where it usually goes wrong',
         body:
-          'Car depth gets the attention and door width gets forgotten. The clear door opening has to pass the bed at its widest point while it is being steered, not while it is standing still. A 1100 mm clear opening is a common minimum for bed lifts; wider is better where the lobby in front of the lift is tight and the bed has to be turned as it enters.',
+          'Car depth gets attention. Door width gets forgotten. The clear opening has to pass the bed at its widest while it is being steered, not while it is standing still. From 1100 mm is a common minimum. Go wider if the lobby is tight and the bed has to turn as it enters.',
       },
       {
-        heading: 'Ride quality is clinical, not cosmetic',
+        heading: 'Levelling',
         body:
-          'Smooth acceleration and accurate levelling matter more in a hospital than anywhere else. A lift that stops 20 mm below the landing is a jolt for a patient on a trolley and a trip hazard for staff pushing it. Specify levelling accuracy and insist it is verified at commissioning.',
+          'A lift that stops 20 mm low is a jolt for a patient on a trolley and a trip hazard for the person pushing it. Specify levelling accuracy and have it verified at commissioning.',
       },
       {
-        heading: 'Power and redundancy',
+        heading: 'Power',
         body:
-          'Hospital lifts should be on the essential services supply with generator backup, with an automatic rescue device as a second line of defence. For buildings with more than one bed lift, avoid putting both on the same distribution board.',
+          'Hospital lifts belong on the essential services supply with generator backup, plus an automatic rescue device as a second layer. If the building has two bed lifts, keep them off the same distribution board.',
       },
     ],
     specs: {
       caption: 'Indicative bed lift configuration',
       rows: [
-        ['Capacity', '1000 – 2000 kg (approx. 15 – 26 persons)'],
-        ['Car depth', 'Sized to pass a loaded bed with attendant — commonly 2000 mm or more'],
-        ['Clear door opening', 'From 1100 mm; wider where lobby space is tight'],
-        ['Door type', 'Automatic, usually two-speed side opening to maximise clear width'],
-        ['Speed', '0.5 – 1.5 m/s depending on rise'],
-        ['Levelling', 'Accurate re-levelling for trolley transfer'],
-        ['Finishes', 'Antibacterial and cleanable surfaces, handrails, bumper rails'],
-        ['Power', 'Essential supply with generator backup plus automatic rescue device'],
+        ['Capacity', '1000 to 2000 kg (about 15 to 26 persons)'],
+        ['Car depth', 'Sized to take a loaded bed with an attendant, commonly 2000 mm or more'],
+        ['Clear door opening', 'From 1100 mm, wider where lobby space is tight'],
+        ['Door type', 'Automatic, usually two speed side opening for maximum clear width'],
+        ['Speed', '0.5 to 1.5 m/s depending on rise'],
+        ['Finishes', 'Cleanable surfaces, handrails, bumper rails'],
+        ['Power', 'Essential supply with generator backup, plus automatic rescue device'],
       ],
     },
     faqs: [
       {
         q: 'What size should a hospital lift be?',
-        a: 'It is set by the bed, not by a standard passenger figure. Measure the longest trolley in service, add clearance at the foot for the person steering and along one side for an attendant with equipment. That gives the internal car dimensions, which is why bed lifts are deep rather than wide.',
+        a: 'It is set by the bed. Measure the longest trolley in use, add clearance at the foot for the person steering and along one side for an attendant with equipment. That gives the internal car dimensions.',
       },
       {
-        q: 'What door width is needed for a stretcher?',
-        a: 'A clear opening from 1100 mm is a common minimum so the bed passes at its widest point while being steered. Where the lift lobby is narrow and the bed must turn as it enters, go wider.',
+        q: 'What door width does a stretcher need?',
+        a: 'A clear opening from 1100 mm is a common minimum, so the bed passes at its widest while being steered. Go wider where the lobby is narrow and the bed has to turn.',
       },
       {
         q: 'What capacity is typical?',
-        a: 'Bed lifts generally fall between 1000 and 2000 kg. The capacity follows from the car size once the bed envelope is fixed.',
+        a: 'Between 1000 and 2000 kg. The capacity follows the car size once the bed envelope is fixed.',
       },
       {
-        q: 'Can a hospital lift carry passengers too?',
-        a: 'Yes, and in smaller facilities it often has to. Where budget allows, keep at least one lift dedicated to bed movement so clinical transfers do not wait behind visitor traffic.',
+        q: 'Can it carry passengers too?',
+        a: 'Yes, and in smaller facilities it has to. Where budget allows, keep one lift for bed movement so transfers do not queue behind visitors.',
       },
       {
         q: 'What happens in a power failure?',
-        a: 'The lift should sit on the essential services supply backed by the generator, with an automatic rescue device as a second layer so the car reaches a landing and opens even if both fail.',
+        a: 'The lift should sit on the essential supply backed by the generator, with an automatic rescue device so the car still reaches a landing if both fail.',
       },
     ],
     related: ['passenger-lifts', 'goods-lifts', 'elevator-amc'],
@@ -267,55 +271,55 @@ export const LANDERS = [
     title: 'Capsule Lifts in Kerala',
     metaTitle: 'Capsule Lifts in Kerala',
     metaDescription:
-      'Panoramic capsule lifts for homes, hotels and showrooms in Kerala. Glass cabin options, structural shafts, and what the glazing means for heat and cleaning.',
+      'Panoramic capsule lifts for homes, hotels and showrooms in Kerala. Glass cabin options, structural shafts, solar control glazing and cleaning access.',
     h1: 'Capsule Lifts in Kerala',
     intent: 'capsule lift, panoramic lift, capsule lift for home',
     lede:
-      'A capsule lift is a passenger lift with a glazed car in a glazed shaft, usually curved or faceted, placed where it will be seen — a hotel atrium, a showroom, or the stairwell of a house built around a double-height space. The engineering is conventional; the decisions that matter are about glass.',
+      'A capsule lift is a passenger lift with a glazed car in a glazed shaft, usually curved or faceted. The engineering is ordinary. The decisions that matter are about the glass.',
     sections: [
       {
         heading: 'Where it works',
         body:
-          'Capsule lifts earn their cost when there is something to look at and when the lift itself is part of the architecture. In an atrium or against an external wall with a view they transform the space. Boxed into an internal shaft with walls close on all sides, the glazing is wasted and a standard car with a glass rear panel gives most of the effect for far less.',
+          'A capsule lift pays for itself where there is something to look at. An atrium, a stairwell around a double height space, or an external wall with a view. Boxed into an internal shaft with walls close on all sides, the glazing is wasted. A standard car with a glass rear panel gives most of the effect for much less.',
       },
       {
-        heading: 'Heat, glare and the Kerala sun',
+        heading: 'Heat and glare',
         body:
-          'An externally glazed shaft on a west or south elevation becomes an oven by afternoon. Specify heat-reflective or laminated solar-control glass and plan for ventilation at the shaft head. Without it, the car is uncomfortable, the controller runs hot and the lift ages faster than it should.',
+          'A glazed shaft on a west or south wall gets very hot by afternoon. Specify heat reflective or solar control laminated glass and ventilate the shaft head. Without that the car is uncomfortable and the controller runs hot.',
       },
       {
-        heading: 'Cleaning and maintenance access',
+        heading: 'Cleaning access',
         body:
-          'Glass has to be cleaned on both faces, and an external capsule shaft needs a realistic plan for that from day one — access from landings, or a maintenance route at the head. Decide this during design. Retrofitting access to a finished glass tower is expensive and usually ugly.',
+          'Glass needs cleaning on both faces. Decide how that will happen during design, whether from the landings or by a maintenance route at the head. Adding access to a finished glass tower afterwards is expensive and usually looks it.',
       },
     ],
     specs: {
       caption: 'Typical capsule configuration',
       rows: [
-        ['Capacity', '3 – 13 persons'],
+        ['Capacity', '3 to 13 persons'],
         ['Shaft', 'Structural glass, or steel structure with glazed infill'],
-        ['Glazing', 'Laminated safety glass; solar control for external elevations'],
+        ['Glazing', 'Laminated safety glass, solar control on external walls'],
         ['Drive', 'Gearless machine-room-less traction'],
-        ['Doors', 'Automatic sliding, full-vision or frameless glass'],
-        ['Shape', 'Semi-circular, faceted or rectangular with glazed faces'],
+        ['Doors', 'Automatic sliding, full vision or frameless glass'],
+        ['Shape', 'Semi circular, faceted, or rectangular with glazed faces'],
       ],
     },
     faqs: [
       {
         q: 'Is a capsule lift suitable for a home?',
-        a: 'Yes, where the house has a stairwell or atrium worth looking into or out from. In a fully enclosed internal shaft a glazed car adds cost without the visual benefit.',
+        a: 'Yes where the house has a stairwell or atrium worth looking into. In a fully enclosed internal shaft it adds cost without the visual benefit.',
       },
       {
         q: 'Does the glass get hot?',
-        a: 'On an external elevation facing the afternoon sun, yes, unless you specify solar-control laminated glass and ventilate the shaft head. Plan for it at design stage.',
+        a: 'On a wall facing the afternoon sun, yes, unless you specify solar control laminated glass and ventilate the shaft head.',
       },
       {
         q: 'Is glass safe for a lift car?',
-        a: 'Laminated safety glass is used throughout. It holds together if broken, which is why it is the required specification rather than toughened glass alone.',
+        a: 'Laminated safety glass is used throughout. It holds together if broken, which is why toughened glass alone is not used.',
       },
       {
         q: 'How is it cleaned?',
-        a: 'Through a planned access route agreed at design — from the landings for internal shafts, or a dedicated maintenance arrangement at the head for external ones.',
+        a: 'Through an access route agreed at design stage, either from the landings or at the shaft head.',
       },
     ],
     related: ['glass-lifts', 'home-lifts', 'passenger-lifts'],
@@ -323,54 +327,54 @@ export const LANDERS = [
 
   {
     slug: 'glass-lifts',
-    title: 'Glass Lifts & Panoramic Elevators in Kerala',
+    title: 'Glass Lifts and Panoramic Elevators in Kerala',
     metaTitle: 'Glass Lifts in Kerala',
     metaDescription:
-      'Glass home elevators and panoramic lifts in Kerala — structural glass shafts, frameless doors, and the glazing specification that keeps them comfortable.',
+      'Glass home elevators and panoramic lifts in Kerala. Structural glass shafts for retrofits, frameless doors, and privacy options for bedroom landings.',
     h1: 'Glass Lifts in Kerala',
     intent: 'glass lift, glass elevator home, panoramic elevator',
     lede:
-      'Glass lifts keep daylight in a stairwell instead of blocking it with a masonry box. For retrofits in finished houses this is often the deciding factor: a structural glass shaft can stand in the stair void without the heavy civil work a concrete shaft would need.',
+      'A glass shaft keeps daylight in a stairwell instead of blocking it with a masonry box. For retrofits into finished houses this is often what decides it, because a self supporting glass shaft avoids the civil work a concrete shaft needs.',
     sections: [
       {
-        heading: 'Structural glass shaft versus glazed infill',
+        heading: 'Structural glass or glazed infill',
         body:
-          'A structural glass shaft uses the glass and its framing as part of the supporting structure, giving the cleanest appearance with minimal visible steel. A steel frame with glazed infill is more forgiving of site tolerances and usually less expensive. Both work; the choice is budget against how much metal you are willing to see.',
+          'A structural glass shaft uses the glass and its framing as part of the structure. It looks cleanest and shows least steel. A steel frame with glazed infill is more forgiving of site tolerances and costs less. Both work. The choice is budget against how much metal you want to see.',
       },
       {
-        heading: 'Retrofit into an existing house',
+        heading: 'Retrofit into a finished house',
         body:
-          'The common pattern in Kerala villas is a self-supporting glass shaft dropped into the void at the centre of a dog-leg stair, or placed against an external wall with landings cut at each floor. Because the structure is self-supporting, the existing slab usually needs local strengthening at the base rather than wholesale rebuilding.',
+          'The common pattern is a self supporting shaft dropped into the void at the centre of a dog leg stair, or placed against an outside wall with a landing cut at each floor. Because the shaft carries itself, the existing slab usually needs local strengthening at the base and nothing more.',
       },
       {
-        heading: 'Privacy and glare',
+        heading: 'Privacy',
         body:
-          'Full glazing on a bedroom landing is rarely what people want once they live with it. Fritted, tinted or partially opaque panels at specific levels solve this without losing the daylight that justified the glass in the first place.',
+          'Full glazing past a bedroom landing is rarely what people want once they live with it. Fritted, tinted or opaque panels at those levels fix it without losing the daylight that justified the glass.',
       },
     ],
     specs: {
       caption: 'Glass lift options',
       rows: [
-        ['Glass', 'Laminated safety glass throughout; solar control where exposed'],
-        ['Shaft', 'Structural glass or steel frame with glazed infill'],
-        ['Doors', 'Full-vision or frameless glass, automatic sliding'],
-        ['Capacity', '3 – 8 persons typical for residential'],
+        ['Glass', 'Laminated safety glass, solar control where exposed'],
+        ['Shaft', 'Structural glass, or steel frame with glazed infill'],
+        ['Doors', 'Full vision or frameless glass, automatic sliding'],
+        ['Capacity', '3 to 8 persons typical for a house'],
         ['Drive', 'Gearless machine-room-less traction'],
-        ['Options', 'Fritted or tinted panels for privacy at selected landings'],
+        ['Privacy options', 'Fritted or tinted panels at selected landings'],
       ],
     },
     faqs: [
       {
-        q: 'Can a glass lift be added to a finished house?',
-        a: 'Yes — a self-supporting glass shaft in the stair void or against an external wall is the standard retrofit approach, and avoids building a masonry shaft through the house.',
+        q: 'Can a glass lift go into a finished house?',
+        a: 'Yes. A self supporting glass shaft in the stair void or against an outside wall is the standard retrofit, and avoids building a masonry shaft through the house.',
       },
       {
         q: 'Does a glass shaft need its own foundation?',
-        a: 'Usually local strengthening at the base rather than a new foundation, since the shaft is self-supporting. The site visit confirms what the existing slab can take.',
+        a: 'Usually local strengthening at the base, not a new foundation. The site visit confirms what the existing slab can take.',
       },
       {
         q: 'Is it private enough for a bedroom floor?',
-        a: 'Specify fritted or tinted panels at those landings. You keep the daylight and lose the fishbowl effect.',
+        a: 'Specify fritted or tinted panels at those landings.',
       },
     ],
     related: ['capsule-lifts', 'home-lifts', 'home-lift-price-kerala'],
@@ -378,54 +382,54 @@ export const LANDERS = [
 
   {
     slug: 'goods-lifts',
-    title: 'Goods Lifts & Freight Elevators in Kerala',
+    title: 'Goods Lifts and Freight Elevators in Kerala',
     metaTitle: 'Goods Lifts in Kerala',
     metaDescription:
-      'Goods and freight lifts for Kerala warehouses, factories and retail — capacities, loading method, floor construction and door types that survive daily use.',
+      'Goods and freight lifts for Kerala warehouses, factories and retail. Capacities, loading method, car floor construction and door types for heavy use.',
     h1: 'Goods Lifts in Kerala',
     intent: 'goods lift, freight elevator, industrial lift, material lift',
     lede:
-      'Goods lifts fail for predictable reasons: the car floor was specified for the stated load but not for a loaded pallet truck driving across it, or the doors were not built for being hit. Specifying how the lift is actually loaded matters more than the capacity figure.',
+      'Goods lifts fail for predictable reasons. The car floor was specified for the stated load but not for a pallet truck driving across it, or the doors were not built to be hit. How the lift gets loaded matters more than the capacity figure.',
     sections: [
       {
-        heading: 'How it is loaded decides the specification',
+        heading: 'How it gets loaded',
         body:
-          'Hand-loaded boxes, a pallet truck, a forklift driving fully into the car, or a trolley wheeled across the threshold are four different lifts. Forklift loading in particular demands a reinforced car floor, a heavy-duty sill and tighter levelling, because the point load of a wheel crossing the gap is far more punishing than the distributed weight of the goods.',
+          'Hand loaded boxes, a pallet truck, a forklift driving fully into the car, and a trolley wheeled across the threshold are four different lifts. Forklift loading needs a reinforced car floor, a heavy duty sill and tighter levelling, because one wheel crossing the gap is a far harder point load than the weight of the goods spread across the floor.',
       },
       {
         heading: 'Protect the car',
         body:
-          'Stainless or chequered plate floors, steel kick plates to around a metre, and timber or rubber bumper rails are not luxuries on a goods lift. They are cheaper than refinishing a damaged car, and far cheaper than replacing a door panel that has been struck by a pallet.',
+          'Chequered plate floors, steel kick plates to about a metre, and timber or rubber bumper rails cost less than refinishing a damaged car, and much less than replacing a door panel hit by a pallet.',
       },
       {
         heading: 'Doors',
         body:
-          'Vertical bi-parting doors suit wide openings and heavy traffic. Horizontal sliding doors suit cleaner environments. Manual collapsible gates cost least and will be the first thing to fail where usage is heavy. Match the door to the duty cycle.',
+          'Vertical bi-parting doors suit wide openings and heavy traffic. Horizontal sliding doors suit cleaner environments. A manual collapsible gate costs least and will be the first thing to fail under heavy use. Match the door to the duty cycle.',
       },
     ],
     specs: {
       caption: 'Goods lift configuration',
       rows: [
-        ['Capacity', '250 kg (dumbwaiter class) up to 5000 kg and above'],
-        ['Loading', 'Hand, pallet truck, trolley or full forklift entry'],
-        ['Car floor', 'Chequered plate or reinforced for wheel loads'],
-        ['Doors', 'Vertical bi-parting, horizontal sliding or collapsible gate'],
+        ['Capacity', '250 kg up to 5000 kg and above'],
+        ['Loading', 'Hand, pallet truck, trolley, or full forklift entry'],
+        ['Car floor', 'Chequered plate, or reinforced for wheel loads'],
+        ['Doors', 'Vertical bi-parting, horizontal sliding, or collapsible gate'],
         ['Drive', 'Traction or hydraulic depending on rise and duty'],
-        ['Protection', 'Kick plates, bumper rails, heavy-duty sills'],
+        ['Protection', 'Kick plates, bumper rails, heavy duty sills'],
       ],
     },
     faqs: [
       {
-        q: 'What capacity do I need?',
-        a: 'Take the heaviest single load including its pallet and the handling equipment that enters the car, then add margin for how loading actually happens rather than how it is supposed to happen.',
+        q: 'What capacity do we need?',
+        a: 'Take the heaviest single load including its pallet and any handling equipment that enters the car, then add margin for how loading actually happens.',
       },
       {
         q: 'Can a forklift drive into the car?',
-        a: 'Only if the lift is specified for it — reinforced floor, heavy-duty sill and the forklift weight counted in the capacity. Say so before ordering; it cannot be added later.',
+        a: 'Only if the lift is specified for it, with a reinforced floor, heavy duty sill and the forklift weight counted in the capacity. Say so before ordering, because it cannot be added later.',
       },
       {
         q: 'Traction or hydraulic?',
-        a: 'Hydraulic suits low rises and very heavy loads. Traction suits taller rises and higher usage where running cost matters.',
+        a: 'Hydraulic suits low rises and very heavy loads. Traction suits taller rises and heavier usage where running cost matters.',
       },
     ],
     related: ['dumbwaiters', 'hospital-lifts', 'elevator-amc'],
@@ -433,54 +437,54 @@ export const LANDERS = [
 
   {
     slug: 'dumbwaiters',
-    title: 'Dumbwaiters & Kitchen Lifts in Kerala',
-    metaTitle: 'Dumbwaiters & Kitchen Lifts in Kerala',
+    title: 'Dumbwaiters and Kitchen Lifts in Kerala',
+    metaTitle: 'Dumbwaiters and Kitchen Lifts in Kerala',
     metaDescription:
-      'Dumbwaiters and kitchen lifts for Kerala restaurants, hotels and homes. Serving hatch heights, hygienic finishes and capacities from 50 to 300 kg.',
+      'Dumbwaiters and kitchen lifts for Kerala restaurants, hotels and homes. Hatch heights, hygienic stainless finishes and capacities from 50 to 300 kg.',
     h1: 'Dumbwaiters and Kitchen Lifts in Kerala',
     intent: 'dumbwaiter, kitchen lift, service lift, food lift',
     lede:
-      'A dumbwaiter moves food, crockery, linen or files between floors without anyone carrying a tray up a staircase. In restaurants and hotels it is a service-speed decision; in homes with a first-floor dining area it quietly removes the worst trip of the day.',
+      'A dumbwaiter moves food, crockery, linen or files between floors so nobody carries a tray up a staircase. In restaurants and hotels it is a service speed decision. In houses with a first floor dining room it removes the worst trip of the day.',
     sections: [
       {
-        heading: 'Set the sill height to the worktop',
+        heading: 'Set the hatch to worktop height',
         body:
-          'The single most common regret is a serving hatch at the wrong height. Set the landing sill level with the worktop so trays slide across instead of being lifted. Decide this with the kitchen layout, not after the joinery is installed.',
+          'The most common regret is a serving hatch at the wrong height. Set the landing sill level with the worktop so trays slide across instead of being lifted. Fix this with the kitchen layout, before the joinery is installed.',
       },
       {
         heading: 'Hygiene',
         body:
-          'For food service the car should be stainless throughout with coved internal corners and no exposed fasteners that trap residue. The car must be cleanable in place, quickly, because it will be cleaned at the end of a shift by someone in a hurry.',
+          'For food service the car should be stainless throughout, with coved internal corners and no exposed fasteners to trap residue. It will be cleaned at the end of a shift by someone in a hurry, so it has to clean quickly in place.',
       },
       {
         heading: 'Noise',
         body:
-          'A dumbwaiter next to a dining room needs attention to drive noise and door operation. Specify it; a rattling service lift twenty feet from the guests is a daily irritation that is hard to fix afterwards.',
+          'A dumbwaiter next to a dining room needs quiet drive and door operation specified up front. A rattling service lift twenty feet from the guests is hard to fix afterwards.',
       },
     ],
     specs: {
       caption: 'Dumbwaiter configuration',
       rows: [
-        ['Capacity', '50 – 300 kg'],
-        ['Stops', 'Typically 2 – 5'],
+        ['Capacity', '50 to 300 kg'],
+        ['Stops', 'Typically 2 to 5'],
         ['Sill height', 'Set to worktop level for tray transfer'],
         ['Car finish', 'Stainless steel, coved corners for food service'],
         ['Doors', 'Vertical bi-parting or horizontal sliding hatch'],
-        ['Controls', 'Call and send at each landing with car-present indication'],
+        ['Controls', 'Call and send at each landing, with car present indication'],
       ],
     },
     faqs: [
       {
         q: 'What is the difference between a dumbwaiter and a goods lift?',
-        a: 'A dumbwaiter is small and never carries people — typically up to 300 kg with a hatch at waist height. A goods lift is walk-in or drive-in and built for pallets and trolleys.',
+        a: 'A dumbwaiter is small and never carries people, typically up to 300 kg with a hatch at waist height. A goods lift is walk in or drive in, built for pallets and trolleys.',
       },
       {
         q: 'What height should the hatch be?',
-        a: 'Level with the worktop it serves, so trays slide rather than lift. Fix this with the kitchen layout.',
+        a: 'Level with the worktop it serves, so trays slide instead of being lifted.',
       },
       {
-        q: 'Can it be installed in an existing building?',
-        a: 'Usually yes. The shaft is small and often fits into a service duct, a cupboard stack or a corner of the kitchen.',
+        q: 'Can it go into an existing building?',
+        a: 'Usually. The shaft is small and often fits a service duct, a cupboard stack or a corner of the kitchen.',
       },
     ],
     related: ['goods-lifts', 'elevator-amc'],
@@ -491,55 +495,55 @@ export const LANDERS = [
     title: 'Hydraulic Lifts in Kerala',
     metaTitle: 'Hydraulic Lifts in Kerala',
     metaDescription:
-      'Hydraulic elevators in Kerala — where they beat traction, pit and headroom needs, running cost, oil temperature in the Kerala climate, and maintenance.',
+      'Hydraulic elevators in Kerala. Where they beat traction, pit and headroom needs, running cost, and why oil temperature matters in the Kerala climate.',
     h1: 'Hydraulic Lifts in Kerala',
     intent: 'hydraulic lift, hydraulic elevator, hydraulic lift for home',
     lede:
-      'Hydraulic lifts push the car up on a ram driven by an oil pump instead of hauling it on ropes. For two or three stops with heavy loads and low headroom they are often the right answer. For a tall rise with heavy daily use they are usually the wrong one.',
+      'A hydraulic lift pushes the car up on a ram driven by an oil pump, instead of hauling it on ropes. For two or three stops with heavy loads and low headroom it is often the right choice. For a tall rise in daily use it is usually the wrong one.',
     sections: [
       {
         heading: 'Where hydraulic wins',
         body:
-          'Low rise, typically up to four or five stops. Heavy loads relative to the building. Sites where headroom above the top landing is restricted, because a hydraulic lift needs much less overhead than traction. And retrofits where the structure cannot easily take the loads a traction machine imposes at the shaft head, since a hydraulic lift puts most of its load into the pit.',
+          'Low rise, up to about four or five stops. Heavy loads for the size of building. Sites with restricted headroom above the top landing, because a hydraulic lift needs much less overhead than traction. Retrofits where the structure cannot easily take a traction machine at the shaft head, since most of the hydraulic load goes into the pit instead.',
       },
       {
         heading: 'Where it loses',
         body:
-          'Running cost. Every upward trip is work done by the pump motor, and there is no counterweight helping. On a building with constant traffic the electricity difference against gearless traction is substantial over a decade. Speed is also limited, so journey times on taller rises become noticeable.',
+          'Running cost. Every upward trip is work done by the pump motor and there is no counterweight helping. On a building with constant traffic the electricity difference against gearless traction adds up over ten years. Speed is limited too, so journey times on a tall rise become noticeable.',
       },
       {
-        heading: 'Oil temperature matters here',
+        heading: 'Oil temperature in the Kerala climate',
         body:
-          'In the Kerala climate, with a machine room that may be poorly ventilated, hydraulic oil heats up with frequent use. Hot oil thins, performance drifts and the controller may trip on thermal protection. Specify adequate machine space ventilation and, for higher duty installations, an oil cooler. This is the most common complaint on hydraulic lifts that have been installed without thought for the room they sit in.',
+          'With frequent use and a poorly ventilated machine space, hydraulic oil heats up. Hot oil thins, performance drifts, and the controller can trip on thermal protection. Ventilate the power pack space properly. On higher duty installations, specify an oil cooler. This is the most common complaint on hydraulic lifts installed without thought for the room they sit in.',
       },
     ],
     specs: {
       caption: 'Hydraulic configuration',
       rows: [
-        ['Stops', 'Best suited to 2 – 5'],
-        ['Capacity', 'Wide range; well suited to heavy loads at low rise'],
+        ['Stops', 'Best suited to 2 to 5'],
+        ['Capacity', 'Wide range, suits heavy loads at low rise'],
         ['Speed', 'Typically up to 0.6 m/s'],
         ['Headroom', 'Lower requirement than traction'],
-        ['Pit', 'Required; depth depends on ram arrangement'],
-        ['Machine space', 'Power pack location flexible; needs ventilation'],
+        ['Pit', 'Required, depth depends on ram arrangement'],
+        ['Machine space', 'Power pack location is flexible, ventilation is not optional'],
       ],
     },
     faqs: [
       {
         q: 'Is hydraulic cheaper than traction?',
-        a: 'Often lower to purchase at two or three stops, and higher to run because there is no counterweight. Compare over ten years including electricity, not on the quotation alone.',
+        a: 'Often cheaper to buy at two or three stops and more expensive to run. Compare over ten years including electricity.',
       },
       {
         q: 'How many floors can a hydraulic lift serve?',
-        a: 'Practically, up to about four or five stops. Beyond that, speed and running cost make traction the better choice.',
+        a: 'Practically up to about four or five stops. Above that, speed and running cost make traction the better choice.',
       },
       {
         q: 'Does it need a machine room?',
-        a: 'It needs a space for the power pack, which is more flexible in location than a traction machine room, but it must be ventilated.',
+        a: 'It needs a ventilated space for the power pack. The location is more flexible than a traction machine room.',
       },
       {
         q: 'Does the oil need changing?',
-        a: 'Oil condition and level are checked as part of maintenance, with seals and the ram inspected for weeping. This is routine on a maintained lift and a failure point on an unmaintained one.',
+        a: 'Oil condition and level are checked at each maintenance visit, along with the seals and ram. This is routine on a maintained lift and a failure point on an unmaintained one.',
       },
     ],
     related: ['home-lifts', 'goods-lifts', 'elevator-amc'],
@@ -550,57 +554,57 @@ export const LANDERS = [
     title: 'Wheelchair Accessible Lifts in Kerala',
     metaTitle: 'Wheelchair Accessible Lifts in Kerala',
     metaDescription:
-      'Accessible lifts for wheelchair users and elderly family members in Kerala — car sizes, controls, door timing and handrails that make a lift genuinely usable.',
+      'Accessible lifts for wheelchair users and elderly family members in Kerala. Car size, control height, door timing and handrails that make a lift usable.',
     h1: 'Wheelchair Accessible Lifts in Kerala',
     intent: 'wheelchair lift, elevator for elderly, accessible lift, disabled lift',
     lede:
-      'Many lifts are technically accessible and practically not. A car a wheelchair can enter but not turn in, a control panel mounted at standing height, or doors that close too quickly for someone using a walker all defeat the purpose. These are specification choices, and they cost very little if they are made before the order.',
+      'Plenty of lifts are technically accessible and practically not. A car a wheelchair can enter but not turn in. A control panel at standing height. Doors that close before someone with a walker is through. These are specification choices and they cost very little if you make them before ordering.',
     sections: [
       {
         heading: 'Turning, not just entering',
         body:
-          'If the user cannot turn inside the car they must reverse out, which on a landing with a staircase behind them is both difficult and unsafe. Where the car cannot be made deep enough to turn, a through-car arrangement with doors on opposite sides solves it — the user enters at one face and leaves at the other without reversing.',
+          'If the user cannot turn inside the car they have to reverse out, which on a landing with a staircase behind them is unsafe. Where the car cannot be deep enough to turn, doors on opposite sides let the user enter at one face and leave at the other.',
       },
       {
         heading: 'Controls within reach',
         body:
-          'A seated user cannot reach a panel set for someone standing. Mount the car panel low enough to be used from a wheelchair, with large tactile buttons and braille marking. A horizontal panel layout is easier to reach along than a tall vertical one. Landing call buttons need the same treatment.',
+          'A seated user cannot reach a panel set for someone standing. Mount the car panel low, with large tactile buttons and braille. A horizontal layout is easier to reach along than a tall vertical one. Landing call buttons need the same treatment.',
       },
       {
-        heading: 'Door timing and handrails',
+        heading: 'Door timing and fittings',
         body:
-          'Default door dwell times are set for able-bodied passengers. They can and should be extended where the lift serves elderly or disabled users. Add a handrail on at least one side at a height that is useful when seated or unsteady, and a mirror on the rear wall so a user reversing out can see the landing behind them.',
+          'Default door dwell times assume able bodied passengers. They can be extended. Add a handrail on at least one side at a height useful when seated or unsteady, and a mirror on the rear wall so a user reversing out can see the landing.',
       },
       {
-        heading: 'Getting out when the power fails',
+        heading: 'Getting out in a power cut',
         body:
-          'An automatic rescue device matters most for exactly these users, who are least able to deal with being stranded. Pair it with a two-way emergency intercom that reaches someone who will actually answer, not just an alarm bell.',
+          'The automatic rescue device matters most for these users, who are least able to deal with being stranded. Pair it with a two way intercom that reaches someone who will answer, not just an alarm bell.',
       },
     ],
     specs: {
       caption: 'Accessibility specification',
       rows: [
-        ['Car size', 'Sized to allow a wheelchair to turn, or through-car doors'],
+        ['Car size', 'Sized so a wheelchair can turn, or doors on opposite sides'],
         ['Clear door opening', 'Wide enough for a powered wheelchair with clearance'],
-        ['Car controls', 'Low-mounted, tactile, braille marked, horizontal layout'],
+        ['Car controls', 'Low mounted, tactile, braille marked, horizontal layout'],
         ['Door dwell', 'Extended timing for slower boarding'],
-        ['Fittings', 'Handrail, rear mirror, non-slip floor'],
+        ['Fittings', 'Handrail, rear mirror, non slip floor'],
         ['Signals', 'Audible arrival and voice announcement'],
-        ['Emergency', 'Automatic rescue device and two-way intercom'],
+        ['Emergency', 'Automatic rescue device and two way intercom'],
       ],
     },
     faqs: [
       {
         q: 'How big does the car need to be for a wheelchair?',
-        a: 'Big enough to turn in, not merely to enter. Where depth is limited, a through-car with doors on opposite faces lets the user drive in one side and out the other without reversing.',
+        a: 'Big enough to turn in, not just to enter. Where depth is limited, doors on opposite faces let the user drive in one side and out the other.',
       },
       {
         q: 'Can an existing lift be made more accessible?',
-        a: 'Often, yes — relocating the car panel, extending door dwell time, adding a handrail, mirror and voice announcements are all retrofittable. Changing the car size is not.',
+        a: 'Often. Moving the car panel, extending door dwell time, and adding a handrail, mirror and voice announcements can all be retrofitted. Changing the car size cannot.',
       },
       {
-        q: 'Is this useful for elderly parents who are not wheelchair users?',
-        a: 'Very. Extended door timing, a handrail, a low panel and a seat are what make a lift comfortable for someone unsteady on their feet, which is the far more common case in Kerala homes.',
+        q: 'Is this useful for elderly parents who do not use a wheelchair?',
+        a: 'Yes, and that is the more common case. Extended door timing, a handrail, a low panel and a seat are what make a lift comfortable for someone unsteady on their feet.',
       },
     ],
     related: ['home-lifts', 'elevator-modernization', 'elevator-amc'],
@@ -608,55 +612,55 @@ export const LANDERS = [
 
   {
     slug: 'elevator-amc',
-    title: 'Elevator AMC in Kerala — All Brands',
-    metaTitle: 'Elevator AMC in Kerala — All Brands',
+    title: 'Elevator AMC in Kerala, All Brands',
+    metaTitle: 'Elevator AMC in Kerala, All Brands',
     metaDescription:
       'Annual maintenance contracts for elevators of any make in Kerala. What Standard and Comprehensive cover, how to compare AMC quotes, and response times.',
     h1: 'Elevator AMC in Kerala',
     intent: 'lift amc, elevator amc, lift maintenance, amc charges',
     lede:
-      'Capricorn services elevators regardless of who installed them. If your original supplier has become slow, expensive or unreachable, an AMC does not require replacing the lift — it requires someone willing to maintain the equipment you already own.',
+      'We service elevators whoever installed them. If your original supplier has become slow, expensive or hard to reach, you do not need to replace the lift. You need someone willing to maintain the equipment you already own.',
     sections: [
       {
-        heading: 'Standard versus Comprehensive',
+        heading: 'Standard and Comprehensive',
         body:
-          'The Standard package covers scheduled preventive visits, inspection, lubrication, adjustment and safety checks, with parts billed separately as they are needed. The Comprehensive package includes parts within the agreed scope, which converts an unpredictable repair bill into a fixed annual figure. For apartment associations and facility managers working to a budget, comprehensive is usually easier to defend even when the headline number is higher.',
+          'Standard covers scheduled preventive visits, inspection, lubrication, adjustment and safety checks, with parts billed as they are used. Comprehensive includes parts within an agreed scope, so an unpredictable repair bill becomes a fixed annual figure. For apartment associations working to a budget, comprehensive is usually easier to defend even when the headline number is higher.',
       },
       {
         heading: 'How to compare two AMC quotations',
         body:
-          'Ask each provider the same five questions. How many preventive visits per year, and are they scheduled or on request? What is the committed response time for a breakdown, and separately for a passenger entrapment? Which parts are included and which are excluded by name — rope, door operator, controller board, ARD battery? Is labour for repairs included or billed? And is there a surcharge for calls outside working hours? The cheapest contract is usually the one that excludes the expensive parts.',
+          'Ask both providers the same five questions. How many preventive visits a year, scheduled or on request. What is the committed response time for a breakdown, and separately for someone trapped in the car. Which parts are included and which are excluded by name, specifically rope, door operator, controller board and rescue device battery. Is repair labour included or billed. Is there a surcharge outside working hours. The cheapest contract is usually the one that excludes the expensive parts.',
       },
       {
-        heading: 'What preventive maintenance actually involves',
+        heading: 'What a preventive visit covers',
         body:
-          'Ropes and terminations inspected for wear and tension. Brake operation and lining checked. Door operator, gibs and safety edge adjusted — door faults cause the majority of breakdown calls. Guide shoes and rails lubricated. Levelling verified at each landing. Safety gear, overspeed governor and buffers checked. Emergency alarm, intercom and ARD battery tested. Controller inspected for heat and loose terminations.',
+          'Ropes and terminations checked for wear and tension. Brake operation and lining. Door operator, gibs and safety edge adjusted, since door faults cause most breakdown calls. Guide shoes and rails lubricated. Levelling checked at each landing. Safety gear, overspeed governor and buffers. Alarm, intercom and rescue device battery tested. Controller checked for heat and loose terminations.',
       },
       {
-        heading: 'Entrapment response is the number that matters',
+        heading: 'Entrapment response',
         body:
-          'Breakdowns are an inconvenience; someone trapped in a car is an emergency. Ask what the committed attendance time is for an entrapment, who holds the keys, and what happens at night and on Sundays. A contract that is silent on this is not a maintenance contract, it is a discount on parts.',
+          'A breakdown is an inconvenience. Someone trapped in a car is an emergency. Ask what the committed attendance time is, who holds the keys, and what happens at night and on Sundays. A contract that says nothing about this is a discount on parts, not a maintenance contract.',
       },
     ],
     specs: {
       caption: 'AMC packages',
       rows: [
-        ['Standard', 'Preventive visits, inspection, lubrication, adjustment; parts billed separately'],
+        ['Standard', 'Preventive visits, inspection, lubrication, adjustment. Parts billed separately'],
         ['Comprehensive', 'Preventive visits plus parts within the agreed scope'],
         ['Brands serviced', 'All makes, including lifts installed by other suppliers'],
-        ['Routine visits', 'Scheduled technical visits; frequency set in the contract'],
-        ['Breakdown support', 'Attendance committed in the contract — confirm entrapment response separately'],
+        ['Routine visits', 'Scheduled, frequency set in the contract'],
+        ['Breakdown support', 'Attendance committed in the contract'],
         ['Records', 'Visit reports and a maintenance log per lift'],
       ],
     },
     faqs: [
       {
         q: 'Will you service a lift installed by another company?',
-        a: 'Yes. Capricorn provides AMC for all elevator brands, including lifts installed by other suppliers.',
+        a: 'Yes. We provide maintenance for all elevator brands, including lifts installed by other suppliers.',
       },
       {
         q: 'What does an AMC cost?',
-        a: 'It depends on the make, capacity, number of floors, age and how hard the lift works. A site inspection establishes condition first — quoting an AMC without seeing the lift either overprices it or hides exclusions.',
+        a: 'It depends on make, capacity, number of floors, age and how hard the lift works. We inspect the lift first. Quoting without seeing it either overprices the contract or hides exclusions.',
       },
       {
         q: 'How often should a lift be serviced?',
@@ -664,10 +668,10 @@ export const LANDERS = [
       },
       {
         q: 'What is the difference between Standard and Comprehensive?',
-        a: 'Standard covers the visits and labour with parts billed as used. Comprehensive includes parts within the agreed scope, so the annual cost is predictable.',
+        a: 'Standard covers visits and labour with parts billed as used. Comprehensive includes parts within the agreed scope, so the annual cost is predictable.',
       },
       {
-        q: 'Can we switch providers mid-contract?',
+        q: 'Can we switch providers mid contract?',
         a: 'Once the existing contract ends, yes. We inspect the lift, document its condition, list anything needing correction, and quote from there.',
       },
     ],
@@ -679,60 +683,60 @@ export const LANDERS = [
     title: 'Elevator Modernization in Kerala',
     metaTitle: 'Elevator Modernization in Kerala',
     metaDescription:
-      'Modernize an ageing lift in Kerala — what to replace, what to keep, typical scope, downtime, and when modernization beats full replacement.',
+      'Modernize an ageing lift in Kerala. What to replace and what to keep, typical scope, downtime, and when modernization beats full replacement.',
     h1: 'Elevator Modernization in Kerala',
     intent: 'elevator modernization, lift upgrade, elevator retrofit',
     lede:
-      'A lift that is twenty years old is rarely worn out everywhere. Guide rails, the shaft and often the structure have decades left, while the controller, drive and doors are the parts causing the complaints. Modernization replaces what has aged and keeps what has not.',
+      'A twenty year old lift is rarely worn out everywhere. The rails, shaft and often the structure have decades left. The controller, drive and doors are what people are complaining about. Modernization replaces what has aged and keeps what has not.',
     sections: [
       {
-        heading: 'When to modernize instead of replace',
+        heading: 'When to modernize and when to replace',
         body:
-          'Modernize when the rails and shaft are sound, spares for the controller are getting hard to find, ride quality and levelling have deteriorated, energy consumption is high, or the doors are the recurring fault. Replace entirely when the shaft no longer suits the building, when capacity is fundamentally inadequate, or when corrosion has reached the structure. The site survey settles this — and an honest surveyor will sometimes tell you to replace.',
+          'Modernize if the rails and shaft are sound, spares for the controller are getting hard to find, ride quality and levelling have slipped, electricity consumption is high, or the doors keep failing. Replace if the shaft no longer suits the building, if capacity is fundamentally too small, or if corrosion has reached the structure. The survey settles it, and sometimes the answer is replace.',
       },
       {
         heading: 'Typical scope',
         body:
-          'Controller and drive to a modern VVVF system, which is where most of the ride quality and energy saving comes from. Door operator and landing door equipment, since doors cause most breakdowns. Car interior, lighting, and fixtures. Safety systems brought up to current expectation — ARD, door detection, intercom. Guide shoes and ropes if worn. Rails and the structure usually stay.',
+          'Controller and drive to a modern VVVF system, which is where most of the ride quality and energy saving comes from. Door operator and landing door equipment, since doors cause most breakdowns. Car interior, lighting and fixtures. Safety systems brought up to current expectation, including rescue device, door detection and intercom. Guide shoes and ropes if worn. Rails and structure usually stay.',
       },
       {
         heading: 'Downtime',
         body:
-          'The lift is out of service during the work, which matters enormously in an apartment block with elderly residents. Phase the programme, agree the outage window in writing before starting, and in buildings with two lifts do them one at a time so the building is never without.',
+          'The lift is out of service while the work runs, which matters in an apartment block with elderly residents. Agree the outage window in writing before starting. In a building with two lifts, do them one at a time so the building is never without.',
       },
       {
-        heading: 'What you actually get back',
+        heading: 'What you get back',
         body:
-          'Noticeably better ride and levelling, fewer door faults, lower electricity consumption from the VVVF drive and regenerative options, parts that will still be available in ten years, and a lift that stops embarrassing the building. For a residential association, the drop in breakdown calls is usually the change residents notice first.',
+          'Better ride and levelling. Fewer door faults. Lower electricity consumption from the VVVF drive. Parts that will still be available in ten years. For a residential association the drop in breakdown calls is usually what residents notice first.',
       },
     ],
     specs: {
       caption: 'Modernization scope',
       rows: [
-        ['Controller', 'Replace with modern microprocessor control'],
-        ['Drive', 'VVVF; gearless where the machine is being replaced'],
+        ['Controller', 'Replaced with modern microprocessor control'],
+        ['Drive', 'VVVF, gearless where the machine is replaced'],
         ['Doors', 'New operator, safety edge, landing door equipment'],
         ['Car', 'Interior, lighting, fixtures, handrail, flooring'],
-        ['Safety', 'ARD, door detection, intercom, alarm'],
+        ['Safety', 'Rescue device, door detection, intercom, alarm'],
         ['Usually retained', 'Guide rails, shaft, structure, car frame'],
       ],
     },
     faqs: [
       {
         q: 'How long is the lift out of service?',
-        a: 'It depends on scope. Agree the outage window in writing before work starts, and in buildings with two lifts phase them so one is always running.',
+        a: 'It depends on scope. Agree the outage window in writing before work starts. In a building with two lifts, phase them so one is always running.',
       },
       {
-        q: 'Can you modernize a lift from a different manufacturer?',
-        a: 'Yes. Modernization frequently involves replacing another maker\'s controller and drive while keeping the existing rails and structure.',
+        q: 'Can you modernize a lift from another manufacturer?',
+        a: 'Yes. Modernization often means replacing another maker\'s controller and drive while keeping the existing rails and structure.',
       },
       {
         q: 'Will it reduce the electricity bill?',
-        a: 'A VVVF drive replacing older control usually reduces consumption measurably, and the saving is larger on a lift that runs constantly.',
+        a: 'A VVVF drive replacing older control usually reduces consumption measurably, and the saving is bigger on a lift that runs constantly.',
       },
       {
         q: 'Is modernization cheaper than a new lift?',
-        a: 'Normally, because the rails, shaft and structure are retained and the civil work is minimal. Where the shaft itself is the problem, replacement can be the better value.',
+        a: 'Normally, because the rails, shaft and structure stay and the civil work is minimal. Where the shaft itself is the problem, replacement can be better value.',
       },
     ],
     related: ['elevator-amc', 'passenger-lifts', 'wheelchair-lifts'],

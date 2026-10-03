@@ -9,7 +9,7 @@ const CANONICAL = `${SITE_URL}/products/home/`;
 export const metadata = {
   title: 'Residential Elevators in Kerala',
   description:
-    'Luxury home elevators for Kerala villas and apartments — compact shafts, premium cabin finishes and safety systems built for Indian homes.',
+    'Home elevators for Kerala villas and apartments. Compact shafts, premium cabin finishes and safety systems built for Indian homes.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
@@ -18,7 +18,7 @@ export const metadata = {
     url: CANONICAL,
     title: 'Residential Elevators in Kerala',
     description:
-      'Luxury home elevators for Kerala villas and apartments — compact shafts, premium cabin finishes and safety systems built for Indian homes.',
+      'Home elevators for Kerala villas and apartments. Compact shafts, premium cabin finishes and safety systems built for Indian homes.',
   },
 };
 

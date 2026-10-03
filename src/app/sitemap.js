@@ -2,7 +2,7 @@ import { SITE_URL } from '../lib/seo';
 import { LANDER_SLUGS } from '../data/landers';
 import { CITY_SLUGS } from '../data/cities';
 
-// Required by Next 16 when output: 'export' — emit this route at build time.
+// Required by Next 16 when output: 'export'. Emit this route at build time.
 export const dynamic = 'force-static';
 
 // Generated at build time into out/sitemap.xml.

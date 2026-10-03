@@ -6,7 +6,7 @@ import { breadcrumbSchema, productSchema } from '../../../lib/schema';
 export const metadata = pageMetadata({
   title: 'Commercial Elevators in Kerala',
   description:
-    'Commercial passenger elevators for offices, hotels, hospitals and retail buildings in Kerala — high-traffic duty, energy efficient, fully serviced.',
+    'Commercial passenger elevators for offices, hotels, hospitals and retail buildings in Kerala. High traffic duty, energy efficient, fully serviced.',
   path: '/products/commercial/',
 });
 

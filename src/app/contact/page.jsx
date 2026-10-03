@@ -4,7 +4,7 @@ import { pageMetadata } from '../../lib/seo';
 import { breadcrumbSchema, contactPageSchema } from '../../lib/schema';
 
 export const metadata = pageMetadata({
-  title: 'Contact Us — Kochi, Kerala',
+  title: 'Contact Us in Kochi, Kerala',
   description:
     'Talk to our elevator experts in Kochi. Request a quote for a home lift, commercial elevator or an annual maintenance contract.',
   path: '/contact/',

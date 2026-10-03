@@ -6,7 +6,7 @@ import { breadcrumbSchema, productSchema } from '../../../lib/schema';
 export const metadata = pageMetadata({
   title: 'Home Lifts & Elevators in Kerala',
   description:
-    'Luxury home elevators for Kerala villas and apartments — compact shafts, premium cabin finishes and safety systems built for Indian homes.',
+    'Home elevators for Kerala villas and apartments. Compact shafts, premium cabin finishes and safety systems built for Indian homes.',
   path: '/products/home/',
 });
 

@@ -111,7 +111,6 @@ function LanderView({ lander: l, slug }) {
       <JsonLd data={faqSchema(l.faqs)} />
       <JsonLd data={breadcrumbSchema([{ name: l.metaTitle, path }])} />
       <LanderLayout
-        badge="Kerala"
         h1={l.h1}
         lede={l.lede}
         sections={l.sections}
@@ -138,7 +137,7 @@ function CityView({ city: c, slug }) {
       body: `${c.areas.join(', ')} and the wider ${c.district} district. ${
         c.isHQ
           ? `Our office is at ${HQ}, so ${c.name} sites are the quickest for us to reach for surveys and service calls.`
-          : `Surveys, installation and maintenance visits to ${c.name} are scheduled from our Ernakulam office — tell us your timescale when you enquire and we will confirm what we can commit to.`
+          : `Surveys, installation and maintenance visits to ${c.name} are scheduled from our Ernakulam office. Tell us your timescale when you enquire and we will confirm what we can commit to.`
       }`,
     },
   ];
@@ -172,7 +171,6 @@ function CityView({ city: c, slug }) {
       <JsonLd data={faqSchema(faqs)} />
       <JsonLd data={breadcrumbSchema([{ name: `Elevators in ${c.name}`, path }])} />
       <LanderLayout
-        badge={c.district === c.name ? 'Kerala' : `${c.district} district`}
         h1={`Elevator Company in ${c.name}`}
         lede={c.lede}
         sections={sections}

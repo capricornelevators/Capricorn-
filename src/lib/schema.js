@@ -1,5 +1,5 @@
 // JSON-LD builders. Every function returns a plain object that is rendered into a
-// <script type="application/ld+json"> tag. Keep values factual — Google penalises
+// <script type="application/ld+json"> tag. Keep values factual. Google penalises
 // schema that does not match the visible page.
 
 import { ORG, SITE_URL } from './seo';
@@ -165,9 +165,9 @@ export function faqSchema(faqs) {
 }
 
 /**
- * LocalBusiness scoped to a city we serve. `areaServed` is the honest construction
- * here: Capricorn operates from the Ernakulam office, so a city page must not
- * assert a branch address it does not have.
+ * LocalBusiness scoped to a city we serve. areaServed is the honest construction here.
+ * Capricorn works from the Ernakulam office, so a city page must not claim a
+ * branch address it does not have.
  */
 export function cityServiceSchema({ city, path, description }) {
   return {

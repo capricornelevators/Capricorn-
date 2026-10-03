@@ -4,9 +4,9 @@ import { pageMetadata } from '../../lib/seo';
 import { breadcrumbSchema } from '../../lib/schema';
 
 export const metadata = pageMetadata({
-  title: 'About Us — Elevator Company in Kochi',
+  title: 'About Us, Elevator Company in Kochi',
   description:
-    'Learn about Capricorn Elevators — our engineering standards, certifications and the team behind elevator installations across Kerala.',
+    'Capricorn Elevators of Kochi. Our engineering standards, certifications and the team behind lift installations across Kerala.',
   path: '/about/',
 });
 

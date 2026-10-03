@@ -1,5 +1,5 @@
 /**
- * Renders a JSON-LD block. Server component — no 'use client', so the markup is
+ * Renders a JSON-LD block. Server component, no 'use client', so the markup is
  * present in the statically exported HTML where crawlers can read it.
  */
 export default function JsonLd({ data }) {

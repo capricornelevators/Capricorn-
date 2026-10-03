@@ -4,7 +4,7 @@ import { pageMetadata } from '../../lib/seo';
 import { breadcrumbSchema } from '../../lib/schema';
 
 export const metadata = pageMetadata({
-  title: 'Careers — Jobs in Kochi, Kerala',
+  title: 'Careers and Jobs in Kochi, Kerala',
   description:
     'Join Capricorn Elevators. Openings in elevator installation, service engineering and sales across our Kerala operations.',
   path: '/careers/',

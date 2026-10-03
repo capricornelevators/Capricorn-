@@ -1,6 +1,6 @@
 import { SITE_URL } from '../lib/seo';
 
-// Required by Next 16 when output: 'export' — emit this route at build time.
+// Required by Next 16 when output: 'export'. Emit this route at build time.
 export const dynamic = 'force-static';
 
 export default function robots() {

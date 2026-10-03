@@ -6,7 +6,7 @@ import { breadcrumbSchema, collectionPageSchema } from '../../lib/schema';
 export const metadata = pageMetadata({
   title: 'Elevator Projects in Kerala',
   description:
-    'Browse completed Capricorn Elevators projects — residential home lifts, commercial elevators and specialised installations across Kerala.',
+    'Completed Capricorn Elevators projects across Kerala. Residential home lifts, commercial elevators and specialised installations.',
   path: '/gallery/',
 });
 

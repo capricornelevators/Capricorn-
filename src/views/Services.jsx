@@ -52,6 +52,7 @@ import preInstallationImage from '../assets/pre.jpg';
 import installationTimelineImage from '../assets/delivery.jpg';
 import testingImage from '../assets/testing.jpg';
 import ongoingSupportImage from '../assets/ongoing.jpg';
+import servicesPosterImage from '../assets/technical.jpg';
 
 const Services = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -415,7 +416,9 @@ const Services = () => {
       {/* Hero Section with Video Background */}
       <section ref={heroRef} className="services-hero">
         <div className="services-hero-video-container">
-          <video 
+          <video
+            poster={servicesPosterImage?.src || servicesPosterImage}
+            preload="metadata" 
             ref={videoRef}
             className="services-hero-video"
             autoPlay 

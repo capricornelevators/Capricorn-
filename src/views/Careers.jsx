@@ -19,6 +19,20 @@ const EMAILJS_CAREERS_CONFIG = {
   publicKey: 'Hz19e9XYQ6Y93PH_b'
 };
 
+// Decorative hero particles. These were generated with Math.random() during render,
+// so the server-rendered HTML never matched the client's and React threw a hydration
+// mismatch on every visit. Fixed positions keep the effect and the markup stable.
+const FLOATING_ELEMENTS = [
+  { left: '12%', top: '18%', animationDelay: '0s', animationDuration: '7.2s' },
+  { left: '27%', top: '72%', animationDelay: '0.8s', animationDuration: '8.6s' },
+  { left: '41%', top: '34%', animationDelay: '1.6s', animationDuration: '6.4s' },
+  { left: '55%', top: '81%', animationDelay: '2.4s', animationDuration: '9.1s' },
+  { left: '63%', top: '12%', animationDelay: '0.4s', animationDuration: '7.8s' },
+  { left: '78%', top: '58%', animationDelay: '1.2s', animationDuration: '6.9s' },
+  { left: '86%', top: '26%', animationDelay: '2.0s', animationDuration: '8.3s' },
+  { left: '94%', top: '67%', animationDelay: '2.8s', animationDuration: '7.5s' },
+];
+
 const Careers = () => {
   const [scrollY, setScrollY] = useState(0);
   const [activeJob, setActiveJob] = useState(null);
@@ -518,7 +532,9 @@ const Careers = () => {
       {/* Hero Section with Video Background */}
       <section ref={heroRef} className="cap-careers-hero-section">
         <div className="cap-video-container">
-          <video ref={videoRef} className="cap-hero-video" autoPlay muted loop playsInline>
+          <video
+            poster={teamImage?.src || teamImage}
+            preload="metadata" ref={videoRef} className="cap-hero-video" autoPlay muted loop playsInline>
             <source src={careersVideo?.src || careersVideo} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -526,13 +542,8 @@ const Careers = () => {
         </div>
 
         <div className="cap-hero-bg-elements">
-          {[...Array(8)].map((_, i) => (
-            <div key={i} className="cap-floating-element" style={{
-              left: `${Math.random() * 100}%`, 
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`, 
-              animationDuration: `${6 + Math.random() * 4}s`
-            }} />
+          {FLOATING_ELEMENTS.map((style, i) => (
+            <div key={i} className="cap-floating-element" style={style} />
           ))}
         </div>
 
@@ -540,6 +551,11 @@ const Careers = () => {
           transform: `translateY(${scrollY * -0.2}px)`,
           opacity: Math.max(0, 1 - scrollY / 600)
         }}>
+          <h1 className="cap-hero-title">
+            <span className="cap-hero-title-line-1">Build Your Career</span>
+            <span className="cap-hero-title-line-2">at Capricorn Elevators</span>
+          </h1>
+
           <div className="cap-hero-stats">
             <div className="cap-stat-item">
               <Globe size={20} />

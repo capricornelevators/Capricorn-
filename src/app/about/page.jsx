@@ -1,10 +1,20 @@
 import About from '../../views/About';
+import JsonLd from '../../components/JsonLd';
+import { pageMetadata } from '../../lib/seo';
+import { breadcrumbSchema } from '../../lib/schema';
 
-export const metadata = {
-  title: 'About Us | Capricorn Elevators',
-  description: 'Learn about Capricorn Elevators - Over 25 years of excellence in vertical transportation and elevator engineering.',
-};
+export const metadata = pageMetadata({
+  title: 'About Us, Elevator Company in Kochi',
+  description:
+    'Capricorn Elevators of Kochi. Our engineering standards, certifications and the team behind lift installations across Kerala.',
+  path: '/about/',
+});
 
 export default function AboutPage() {
-  return <About />;
+  return (
+    <>
+      <JsonLd data={breadcrumbSchema([{ name: 'About', path: '/about/' }])} />
+      <About />
+    </>
+  );
 }

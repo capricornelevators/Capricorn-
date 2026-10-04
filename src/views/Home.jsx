@@ -25,6 +25,7 @@ import aboutImage from '../assets/16.jpeg';
 import worldMapImage from '../assets/map.png';
 import indiaFlag from '../assets/India.png';
 import uaeFlag from '../assets/uae.png';
+import heroFallbackImage from '../assets/1.jpeg';
 
 // EmailJS Configuration
 const EMAILJS_CONFIG = {
@@ -586,7 +587,9 @@ const Home = () => {
       {/* Hero Section with Video Background */}
       <section ref={heroRef} className="hero-section">
         <div className="video-container">
-          <video ref={videoRef} className="hero-video" autoPlay muted loop playsInline>
+          <video
+            poster={heroFallbackImage?.src || heroFallbackImage}
+            preload="metadata" ref={videoRef} className="hero-video" autoPlay muted loop playsInline>
             <source src={bannerVideo?.src || bannerVideo} type="video/mp4" />
             Your browser does not support the video tag.
           </video>

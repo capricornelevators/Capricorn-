@@ -21,6 +21,7 @@ import certificationImage1 from '../assets/one.jpeg';
 import certificationImage2 from '../assets/two.jpeg';
 import certificationImage3 from '../assets/three.jpeg';
 import certificationImage4 from '../assets/four.jpeg';
+import aboutPosterImage from '../assets/aboutus.png';
 
 const About = () => {
   // States
@@ -232,7 +233,9 @@ const About = () => {
       {/* Hero Section with Video Background */}
       <section ref={heroRef} className={`about-hero-section ${heroVisible ? 'visible' : ''}`}>
         <div className="about-video-container">
-          <video ref={videoRef} className="about-hero-video" autoPlay muted loop playsInline>
+          <video
+            poster={aboutPosterImage?.src || aboutPosterImage}
+            preload="metadata" ref={videoRef} className="about-hero-video" autoPlay muted loop playsInline>
             <source src={aboutHeroVideo?.src || aboutHeroVideo} type="video/mp4" />
             Your browser does not support the video tag.
           </video>

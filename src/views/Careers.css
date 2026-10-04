@@ -5,7 +5,6 @@
    Theme: Gold (#d4b347) and White with Dark Background
 ============================================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
 
 /* CSS Variables */
 :root {
@@ -1404,4 +1403,24 @@ body {
   .cap-success-icon {
     animation: none !important;
   }
+}
+/* Hero H1 — restores the page's main heading (was missing, leaving the page with no h1) */
+.cap-hero-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0 0 1.5rem;
+  font-family: var(--font-heading, 'Playfair Display', serif);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--white, #fff);
+}
+
+.cap-hero-title-line-1 {
+  font-size: clamp(2.25rem, 6vw, 3.75rem);
+}
+
+.cap-hero-title-line-2 {
+  font-size: clamp(1.75rem, 4.5vw, 2.75rem);
+  color: var(--primary-gold, #d4b347);
 }

@@ -13,6 +13,7 @@ import './Gallery.css';
 
 // Import assets
 import galleryHeroVideo from '../assets/about.mp4';
+import galleryPosterImage from '../assets/3.jpeg';
 
 const Gallery = () => {
   // States
@@ -106,6 +107,8 @@ const Gallery = () => {
       >
         <div className="gallery-video-container">
           <video
+            poster={galleryPosterImage?.src || galleryPosterImage}
+            preload="metadata"
             ref={videoRef}
             className="gallery-hero-video"
             autoPlay

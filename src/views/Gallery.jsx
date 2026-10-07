@@ -134,8 +134,8 @@ const Gallery = () => {
             <span className="gallery-hero-subtitle">Project Gallery</span>
           </div>
           <h1 className="gallery-hero-title">
-            <span className="title-line-1">Our Finest</span>
-            <span className="title-line-2">Installations</span>
+            <span className="title-line-1">Elevator Installations</span>
+            <span className="title-line-2">Across Kerala</span>
           </h1>
           <p className="gallery-hero-description">
             Explore our portfolio of premium elevator installations across residential,

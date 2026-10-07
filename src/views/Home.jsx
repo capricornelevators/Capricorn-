@@ -622,8 +622,8 @@ const Home = () => {
             <span className="hero-subtitle">Capricorn Elevators</span>
           </div>
           <h1 className="hero-title">
-            <span className="title-line-1">Elevators Built for</span>
-            <span className="title-line-2">Your Needs</span>
+            <span className="title-line-1">Home &amp; Commercial Elevators</span>
+            <span className="title-line-2">in Kochi, Kerala</span>
           </h1>
           <div className="hero-taglines" ref={heroDescRef}>
             <p className="hero-tagline-paragraph">
@@ -670,7 +670,7 @@ const Home = () => {
                       <img src={product.image?.src || product.image} alt={product.title} />
                     </div>
                     <div className="elite-product-label">
-                      <h4>{product.id === 'residential' ? 'Home Lift' : 'Commercial'}</h4>
+                      <span className="elite-product-label-text">{product.id === 'residential' ? 'Home Lift' : 'Commercial'}</span>
                     </div>
                   </div>
 
@@ -702,7 +702,7 @@ const Home = () => {
                     <img src={products[0].image?.src || products[0].image} alt={products[0].title} />
                   </div>
                   <div className="elite-product-label">
-                    <h4>Home Lift</h4>
+                    <span className="elite-product-label-text">Home Lift</span>
                   </div>
                 </div>
 
@@ -717,7 +717,7 @@ const Home = () => {
                     <img src={products[1].image?.src || products[1].image} alt={products[1].title} />
                   </div>
                   <div className="elite-product-label">
-                    <h4>Commercial</h4>
+                    <span className="elite-product-label-text">Commercial</span>
                   </div>
                 </div>
               </div>
@@ -897,7 +897,7 @@ const Home = () => {
                         <div className="tooltip-country-code">{location.code}</div>
                       </div>
                       <div className="tooltip-content">
-                        <h4>{location.name}</h4>
+                        <span className="tooltip-country-name">{location.name}</span>
                         <p>{location.city}</p>
                         <div className="tooltip-stats">
                           <span>{location.offices} Offices</span>

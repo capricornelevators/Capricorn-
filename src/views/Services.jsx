@@ -444,9 +444,9 @@ const Services = () => {
           </div>
           
           <h1 className="services-hero-title">
-            <span className="services-hero-title-line-1">Shaping the Future of</span>
-            <span className="services-hero-title-line-2">Industries with Advanced</span>
-            <span className="services-hero-title-line-3">Elevator Solutions</span>
+            <span className="services-hero-title-line-1">Elevator Services</span>
+            <span className="services-hero-title-line-2">in Kerala</span>
+            <span className="services-hero-title-line-3">AMC, Modernization &amp; Installation</span>
           </h1>
           
           <p className="services-hero-description">

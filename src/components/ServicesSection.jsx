@@ -322,9 +322,9 @@ return (
                   {service.icon}
                 </div>
                 <div className="customization-service-nav-content">
-                  <h4 className="customization-service-nav-title">
+                  <span className="customization-service-nav-title">
                     {service.title}
-                  </h4>
+                  </span>
                   <p className="customization-service-nav-subtitle">
                     {service.subtitle}
                   </p>

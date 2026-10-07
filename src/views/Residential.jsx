@@ -205,8 +205,8 @@ const Residential = () => {
           </div>
           
           <h1 className="residential-hero-title">
-            <span className="residential-hero-title-line-1">Luxury Home</span>
-            <span className="residential-hero-title-line-2">Elevators</span>
+            <span className="residential-hero-title-line-1">Luxury Home Elevators</span>
+            <span className="residential-hero-title-line-2">in Kerala</span>
           </h1>
           
           <p className="residential-hero-description">

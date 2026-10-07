@@ -153,8 +153,8 @@ const Commercial = () => {
           </div>
           
           <h1 className="comm-hero-title">
-            <span className="comm-hero-title-line-1">Commercial</span>
-            <span className="comm-hero-title-line-2">Elevators</span>
+            <span className="comm-hero-title-line-1">Commercial Elevators</span>
+            <span className="comm-hero-title-line-2">in Kerala</span>
           </h1>
           
           <p className="comm-hero-description">

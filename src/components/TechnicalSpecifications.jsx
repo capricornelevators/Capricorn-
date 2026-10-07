@@ -110,7 +110,7 @@ const TechnicalSpecifications = () => {
         <div className="specs-layout">
           {/* Navigation */}
           <div className="specs-navigation">
-            <h4 className="nav-title">Specification Categories</h4>
+            <h3 className="nav-title">Specification Categories</h3>
             {Object.entries(specifications).map(([key, section]) => (
               <button
                 key={key}

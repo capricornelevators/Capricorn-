@@ -250,8 +250,8 @@ const About = () => {
             <span className="about-hero-subtitle">About Capricorn Elevators</span>
           </div>
           <h1 className="about-hero-title">
-            <span className="title-line-1">Elevating Standards</span>
-            <span className="title-line-2">Since 1999</span>
+            <span className="title-line-1">About Capricorn Elevators</span>
+            <span className="title-line-2">Lift Manufacturer in Kochi Since 1999</span>
           </h1>
           <p className="about-hero-description">
             With over 25 years of excellence in vertical transportation, we are committed to 

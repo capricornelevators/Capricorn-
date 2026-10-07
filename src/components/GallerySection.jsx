@@ -134,7 +134,7 @@ const GallerySection = () => {
         <div className="site-gallery-overlay">
           <div className="site-gallery-card-content">
             <span className="site-gallery-card-tag">{item.category.toUpperCase()}</span>
-            <h3 className="site-gallery-card-title">{item.title}</h3>
+            <p className="site-gallery-card-title">{item.title}</p>
           </div>
           <div className="site-gallery-expand-icon">
             {item.type === 'video' ? <Play size={20} fill="#000000" /> : <Maximize2 size={18} />}
@@ -168,7 +168,7 @@ const GallerySection = () => {
         {/* Section Header */}
         <div className="site-gallery-header" data-aos="fade-up">
           <span className="site-gallery-label">OUR WORK</span>
-          <h2 className="site-gallery-title">Gallery</h2>
+          <h2 className="site-gallery-title">Our Elevator Installations in Kerala</h2>
           <p className="site-gallery-subtitle">
             Explore our portfolio of signature residential, commercial, and panoramic elevator installations.
           </p>
@@ -192,7 +192,11 @@ const GallerySection = () => {
           <div className="gallery-marquee-container" key="marquee-container">
             <div className="gallery-marquee-track">
               {[0, 1].map((loopIdx) => (
-                <div key={`loop-${loopIdx}`} className="gallery-marquee-set">
+                <div
+                  key={`loop-${loopIdx}`}
+                  className="gallery-marquee-set"
+                  aria-hidden={loopIdx === 1 ? 'true' : undefined}
+                >
                   {columns.map((col, cIdx) => renderColumn(col, `marquee-${loopIdx}-${cIdx}`))}
                 </div>
               ))}

@@ -120,7 +120,7 @@ const WorldMap = () => {
               </div>
 
               <div className="tooltip-content">
-                <h4 className="location-name">{location.name}</h4>
+                <h3 className="location-name">{location.name}</h3>
                 <p className="location-city">{location.city}</p>
                 <p className="location-description">{location.description}</p>
                 

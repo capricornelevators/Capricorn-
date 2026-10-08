@@ -535,3 +535,18 @@
     right: 0;
   }
 }
+
+/* Supporting text under each gallery caption. The gallery had 42 cards and
+   almost no readable text; these explain what each installation actually is. */
+.site-gallery-card-desc {
+  margin: 0.45rem 0 0;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+@media (max-width: 640px) {
+  .site-gallery-card-desc {
+    font-size: 0.78rem;
+  }
+}

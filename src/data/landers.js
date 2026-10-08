@@ -15,6 +15,7 @@
 export const LANDERS = [
   {
     slug: 'home-lifts',
+    showGlossary: true,
     models: 'home',
     showProcess: true,
     showCost: true,
@@ -88,6 +89,7 @@ export const LANDERS = [
 
   {
     slug: 'home-lift-price-kerala',
+    showGlossary: true,
     models: 'all',
     showProcess: true,
     showCost: false,
@@ -145,6 +147,7 @@ export const LANDERS = [
 
   {
     slug: 'passenger-lifts',
+    showGlossary: true,
     models: 'commercial',
     showProcess: true,
     showCost: true,
@@ -202,12 +205,18 @@ export const LANDERS = [
         q: 'Do we need a firemans lift?',
         a: 'That depends on building height and occupancy under the applicable rules. Confirm it with your architect and the local authority at design stage.',
       },
-    ],
+          {
+        q: "How long does a commercial lift take to install?",
+        a:
+          "Delivery is within three months of the order, with installation taking 10 to 20 days once the shaft is ready. On commercial sites the shaft being ready is almost always what sets the date, not the equipment.",
+      },
+],
     related: ['hospital-lifts', 'capsule-lifts', 'elevator-modernization', 'elevator-amc'],
   },
 
   {
     slug: 'hospital-lifts',
+    showGlossary: true,
     models: 'commercial',
     showProcess: true,
     showCost: true,
@@ -280,6 +289,7 @@ export const LANDERS = [
 
   {
     slug: 'capsule-lifts',
+    showGlossary: true,
     models: 'all',
     showProcess: true,
     showCost: true,
@@ -336,12 +346,18 @@ export const LANDERS = [
         q: 'How is it cleaned?',
         a: 'Through an access route agreed at design stage, either from the landings or at the shaft head.',
       },
-    ],
+          {
+        q: "How many people does a capsule lift carry?",
+        a:
+          "Typically 3 to 13, the same range as a conventional passenger lift of equivalent size. The glazing changes how it looks, not how much it carries.",
+      },
+],
     related: ['glass-lifts', 'home-lifts', 'passenger-lifts'],
   },
 
   {
     slug: 'glass-lifts',
+    showGlossary: true,
     models: 'home',
     showProcess: true,
     showCost: true,
@@ -394,12 +410,23 @@ export const LANDERS = [
         q: 'Is it private enough for a bedroom floor?',
         a: 'Specify fritted or tinted panels at those landings.',
       },
-    ],
+          {
+        q: "Does a glass lift need more maintenance than a standard one?",
+        a:
+          "The machinery is the same, so the service interval does not change. What is extra is cleaning, because the glass is seen from both sides, and that should be planned at design stage rather than improvised later.",
+      },
+      {
+        q: "Is a glass lift more expensive than a conventional one?",
+        a:
+          "Usually, yes. The glass, its framing and the fabrication cost more than a masonry shaft with a standard car. Against that, a self-supporting glass shaft often avoids civil work, so on a retrofit the gap narrows.",
+      },
+],
     related: ['capsule-lifts', 'home-lifts', 'home-lift-price-kerala'],
   },
 
   {
     slug: 'goods-lifts',
+    showGlossary: true,
     models: null,
     showProcess: true,
     showCost: true,
@@ -452,12 +479,23 @@ export const LANDERS = [
         q: 'Traction or hydraulic?',
         a: 'Hydraulic suits low rises and very heavy loads. Traction suits taller rises and heavier usage where running cost matters.',
       },
-    ],
+          {
+        q: "How fast does a goods lift need to be?",
+        a:
+          "Slower than a passenger lift in almost every case. Loading and unloading takes far longer than the travel, so speed rarely limits throughput. Spend the budget on the floor, the sill and the doors instead.",
+      },
+      {
+        q: "Can a goods lift carry people?",
+        a:
+          "Only if it is specified and certified to carry them. A goods-only lift is not a passenger lift, and using it as one is a safety issue. Tell us at enquiry if staff will ride with the load.",
+      },
+],
     related: ['dumbwaiters', 'hospital-lifts', 'elevator-amc'],
   },
 
   {
     slug: 'dumbwaiters',
+    showGlossary: true,
     models: null,
     showProcess: true,
     showCost: true,
@@ -510,12 +548,23 @@ export const LANDERS = [
         q: 'Can it go into an existing building?',
         a: 'Usually. The shaft is small and often fits a service duct, a cupboard stack or a corner of the kitchen.',
       },
-    ],
+          {
+        q: "How much space does a dumbwaiter need?",
+        a:
+          "Very little. The shaft is often small enough to fit a service duct, a cupboard stack or a corner of the kitchen, which is why dumbwaiters are practical in buildings that could never take a passenger lift.",
+      },
+      {
+        q: "Does a dumbwaiter need a pit?",
+        a:
+          "Usually only a shallow one, and some floor-level models need none at all. That is normally what makes them workable in an existing building.",
+      },
+],
     related: ['goods-lifts', 'elevator-amc'],
   },
 
   {
     slug: 'hydraulic-lifts',
+    showGlossary: true,
     models: null,
     showProcess: true,
     showCost: true,
@@ -572,12 +621,18 @@ export const LANDERS = [
         q: 'Does the oil need changing?',
         a: 'Oil condition and level are checked at each maintenance visit, along with the seals and ram. This is routine on a maintained lift and a failure point on an unmaintained one.',
       },
-    ],
+          {
+        q: "Is a hydraulic lift noisier than traction?",
+        a:
+          "The pump is the noise source, and it runs on the way up. Siting the power pack away from bedrooms and living rooms, and specifying the space properly, is what keeps it acceptable in a house.",
+      },
+],
     related: ['home-lifts', 'goods-lifts', 'elevator-amc'],
   },
 
   {
     slug: 'wheelchair-lifts',
+    showGlossary: true,
     models: 'home',
     showProcess: true,
     showCost: true,
@@ -636,7 +691,17 @@ export const LANDERS = [
         q: 'Is this useful for elderly parents who do not use a wheelchair?',
         a: 'Yes, and that is the more common case. Extended door timing, a handrail, a low panel and a seat are what make a lift comfortable for someone unsteady on their feet.',
       },
-    ],
+          {
+        q: "Is a home lift or a platform lift better for a wheelchair user?",
+        a:
+          "An enclosed home lift is more comfortable and weatherproof, and travels further. A platform lift suits short rises, typically a few steps at an entrance. The rise and whether it is indoors usually decide it.",
+      },
+      {
+        q: "What should we ask for if a resident uses a powered wheelchair?",
+        a:
+          "Give us the chair's dimensions and weight at enquiry. Powered chairs are heavier and longer than manual ones, and both the capacity and the turning space have to account for the chair plus the user.",
+      },
+],
     related: ['home-lifts', 'elevator-modernization', 'elevator-amc'],
   },
 
@@ -774,7 +839,12 @@ export const LANDERS = [
         q: 'Is modernization cheaper than a new lift?',
         a: 'Normally, because the rails, shaft and structure stay and the civil work is minimal. Where the shaft itself is the problem, replacement can be better value.',
       },
-    ],
+          {
+        q: "Can we modernize in stages to spread the cost?",
+        a:
+          "Often, yes. Controller and drive first usually gives the biggest improvement in ride and running cost, with doors, car interior and fixtures following later. We set the order from what the survey finds.",
+      },
+],
     related: ['elevator-amc', 'passenger-lifts', 'wheelchair-lifts'],
   },
 ];

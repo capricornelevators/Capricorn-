@@ -58,6 +58,7 @@ export const galleryItems = [
     id: 1,
     image: galleryProject1,
     title: 'Luxury Villa Home Lift',
+    description: 'A machine-room-less home lift serving a multi-floor villa. Gearless drives of this size fit inside the shaft, which is what lets a lift go into a house without surrendering a room to machinery.',
     category: 'residential',
     height: 'tall'
   },
@@ -65,6 +66,7 @@ export const galleryItems = [
     id: 2,
     image: galleryImg1,
     title: 'Gold Laser Etched Cabin Interior',
+    description: 'Laser-etched panels in a gold finish. The pattern is cut into the stainless rather than printed on it, so it does not wear off the areas people touch most.',
     category: 'cabins',
     height: 'short'
   },
@@ -72,6 +74,7 @@ export const galleryItems = [
     id: 3,
     image: galleryProject2,
     title: 'Corporate Passenger Elevator',
+    description: 'A passenger elevator specified for office traffic. Commercial cars are sized on how many people must move in the busiest five minutes, not on the number of floors.',
     category: 'commercial',
     height: 'tall'
   },
@@ -79,6 +82,7 @@ export const galleryItems = [
     id: 4,
     image: galleryImg2,
     title: '360° Scenic View Panoramic Shaft',
+    description: 'A panoramic shaft glazed on three sides. Laminated safety glass is used throughout, and on an exposed elevation it should be solar-control grade so the car does not heat up through the afternoon.',
     category: 'glass',
     height: 'short'
   },
@@ -95,6 +99,7 @@ export const galleryItems = [
     id: 6,
     image: galleryProject4,
     title: 'Pitless Hydraulic Duplex Lift',
+    description: 'A pitless hydraulic installation. Where a deep pit cannot be dug or kept dry, a reduced-pit arrangement avoids the problem instead of fighting the groundwater, which matters on low-lying Kerala sites.',
     category: 'residential',
     height: 'short'
   },
@@ -102,6 +107,7 @@ export const galleryItems = [
     id: 7,
     image: galleryImg3,
     title: 'Royal Gold Mirror Stainless Steel',
+    description: 'Mirror-polished stainless in a gold tone. A mirror finish makes a small car feel larger, and shows fingerprints, so it suits display and lobby use more than a service lift.',
     category: 'cabins',
     height: 'tall'
   },
@@ -118,6 +124,7 @@ export const galleryItems = [
     id: 9,
     image: galleryProject5,
     title: 'Commercial High-Speed Lift',
+    description: 'A high-speed commercial car. Above roughly six floors the travel speed has to rise with the building, or journey times become the thing people complain about.',
     category: 'commercial',
     height: 'tall'
   },
@@ -125,6 +132,7 @@ export const galleryItems = [
     id: 10,
     image: galleryImg5,
     title: 'Penthouse Curved Glass Lift',
+    description: 'A curved glass car serving a penthouse level. Curved glazing is fabricated to the shaft radius, so the shaft geometry has to be fixed before the glass is ordered.',
     category: 'glass',
     height: 'short'
   },
@@ -132,6 +140,7 @@ export const galleryItems = [
     id: 11,
     image: galleryImg8,
     title: 'Touch Operating COP Panel',
+    description: 'A touch-operated car operating panel. Touch and hybrid panels replace mechanical buttons, and the layout should stay reachable from seated height if elderly or wheelchair users will travel alone.',
     category: 'cabins',
     height: 'tall'
   },
@@ -139,6 +148,7 @@ export const galleryItems = [
     id: 12,
     image: galleryProject8,
     title: 'Contemporary Luxury Residence Lift',
+    description: 'A contemporary residential installation. Cabin finish, door type and lighting are the three choices that change how a home lift looks, and all three are specified before manufacturing starts.',
     category: 'residential',
     height: 'short'
   },
@@ -146,6 +156,7 @@ export const galleryItems = [
     id: 13,
     image: galleryImg9,
     title: 'Outdoor Weatherproof Glass Lift',
+    description: 'An outdoor-rated glass lift. An external installation needs weather sealing, corrosion-resistant fixings and, within a few kilometres of the Kerala coast, stainless on everything exposed to salt air.',
     category: 'glass',
     height: 'tall'
   },
@@ -153,6 +164,7 @@ export const galleryItems = [
     id: 14,
     image: galleryProject10,
     title: 'Hospital Emergency Elevator',
+    description: 'A hospital elevator sized for emergency use. The car depth is set by the longest loaded bed plus an attendant, and the clear door opening has to pass that bed while it is being steered.',
     category: 'commercial',
     height: 'short'
   },
@@ -160,6 +172,7 @@ export const galleryItems = [
     id: 15,
     image: galleryImg12,
     title: 'Italian Travertine Marble Cabin',
+    description: 'An Italian travertine cabin. Stone adds weight to the car, so it is accounted for in the capacity calculation rather than added as a finish decision afterwards.',
     category: 'cabins',
     height: 'tall'
   },
@@ -167,6 +180,7 @@ export const galleryItems = [
     id: 16,
     image: galleryProject12,
     title: 'Heritage Villa Retrofit Elevator',
+    description: 'A lift retrofitted into a heritage villa. Where cutting through the structure is not acceptable, a self-supporting shaft in the stair void or against an outside wall carries its own loads.',
     category: 'residential',
     height: 'short'
   },
@@ -174,6 +188,7 @@ export const galleryItems = [
     id: 17,
     image: galleryImg15,
     title: 'Textured Rose Gold Metallic Panel',
+    description: 'A textured rose gold metallic panel. Texture hides fingerprints and light scuffing far better than a mirror finish, which is why it suits a lift in daily family use.',
     category: 'cabins',
     height: 'tall'
   },
@@ -181,6 +196,7 @@ export const galleryItems = [
     id: 18,
     image: galleryImg17,
     title: 'Frameless Structural Glass Lift',
+    description: 'A frameless structural glass lift. The glass and its framing form part of the supporting structure, which gives the cleanest look and the least visible steel.',
     category: 'glass',
     height: 'short'
   },

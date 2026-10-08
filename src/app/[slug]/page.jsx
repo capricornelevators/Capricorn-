@@ -5,7 +5,7 @@ import VideoTestimonial from '../../components/VideoTestimonial';
 import { LANDERS, getLander } from '../../data/landers';
 import { CITIES, getCity } from '../../data/cities';
 import { MODELS, HOME_MODELS, COMMERCIAL_MODELS } from '../../data/models';
-import { REASONS, PROCESS, COST_NOTE } from '../../data/company';
+import { REASONS, PROCESS, COST_NOTE, GLOSSARY } from '../../data/company';
 import { pageMetadata, ORG } from '../../lib/seo';
 import {
   breadcrumbSchema,
@@ -139,6 +139,7 @@ function LanderView({ lander: l, slug }) {
         costTitle={l.showCost ? 'What it costs' : undefined}
         costBody={l.showCost ? COST_NOTE : undefined}
         faqs={l.faqs}
+        glossary={l.showGlossary ? GLOSSARY : []}
         aside={aside}
         related={related}
         serviceAreas={{

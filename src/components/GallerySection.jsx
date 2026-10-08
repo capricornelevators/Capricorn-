@@ -135,6 +135,9 @@ const GallerySection = () => {
           <div className="site-gallery-card-content">
             <span className="site-gallery-card-tag">{item.category.toUpperCase()}</span>
             <p className="site-gallery-card-title">{item.title}</p>
+            {item.description && (
+              <p className="site-gallery-card-desc">{item.description}</p>
+            )}
           </div>
           <div className="site-gallery-expand-icon">
             {item.type === 'video' ? <Play size={20} fill="#000000" /> : <Maximize2 size={18} />}

@@ -59,3 +59,54 @@ export const COST_NOTE =
  * Each entry: { src: '/instagram/01.jpg', alt: 'what is actually in the photo' }
  */
 export const INSTAGRAM_POSTS = [];
+
+/**
+ * Plain-English glossary of the terms that appear on every quotation.
+ *
+ * Buyers are handed these words by every supplier they talk to and are rarely
+ * told what they mean. Explaining them is genuinely useful, and it covers a set
+ * of long-tail queries ("what is ARD in lift", "lift headroom meaning") that
+ * nobody in Kerala currently answers.
+ */
+export const GLOSSARY = [
+  {
+    term: 'ARD (Automatic Rescue Device)',
+    body: 'A battery backup that moves the car to the nearest landing and opens the doors when mains power fails. Check it is included rather than quoted as an extra.',
+  },
+  {
+    term: 'Machine-room-less (MRL)',
+    body: 'The drive sits inside the shaft instead of in a separate room above it. This is what makes a lift practical in a house that is already built.',
+  },
+  {
+    term: 'Gearless traction',
+    body: 'The motor drives the sheave directly, with no gearbox. Quieter, smoother and lower running cost than older geared machines.',
+  },
+  {
+    term: 'Pit',
+    body: 'The space below the lowest landing that houses the buffers. Depth varies with the drive, and on low-lying sites it has to be tanked and drained.',
+  },
+  {
+    term: 'Headroom',
+    body: 'The clear height above the top landing. Hydraulic lifts need noticeably less of it than traction, which decides the choice on some retrofits.',
+  },
+  {
+    term: 'Clear door opening',
+    body: 'The usable width when the doors are fully open, which is always less than the shaft width. This is the number that decides whether a bed or a wheelchair fits.',
+  },
+  {
+    term: 'Duty cycle',
+    body: 'How many trips the lift makes per hour. It drives the specification of the motor, the doors and the maintenance interval.',
+  },
+  {
+    term: 'VVVF drive',
+    body: 'Variable voltage, variable frequency control. It is where most of the ride quality and the energy saving in a modernization comes from.',
+  },
+  {
+    term: 'Levelling',
+    body: 'How accurately the car stops flush with the floor. Poor levelling is a trip hazard and the usual complaint on an ageing lift.',
+  },
+  {
+    term: 'Overspeed governor',
+    body: 'A mechanical safety device that grips the guide rails and stops the car if it descends faster than its rated speed.',
+  },
+];

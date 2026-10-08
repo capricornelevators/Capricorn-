@@ -29,6 +29,8 @@ export default function LanderLayout({
   specs,
   faqs = [],
   faqsTitle = 'Frequently asked questions',
+  glossary = [],
+  glossaryTitle = 'Terms you will see on a quotation',
   beforeFaqs,
   aside,
   serviceAreas,
@@ -190,6 +192,20 @@ export default function LanderLayout({
                     </tbody>
                   </table>
                 </div>
+              </section>
+            )}
+
+            {glossary.length > 0 && (
+              <section className="lander-section">
+                <h2>{glossaryTitle}</h2>
+                <dl className="lander-faq">
+                  {glossary.map((g) => (
+                    <div key={g.term} className="lander-faq-item">
+                      <dt>{g.term}</dt>
+                      <dd>{g.body}</dd>
+                    </div>
+                  ))}
+                </dl>
               </section>
             )}
 

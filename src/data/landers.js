@@ -48,7 +48,22 @@ export const LANDERS = [
         body:
           'We visit the site and measure the shaft, pit and headroom. You get a drawing for approval before anything is manufactured. Delivery is within three months of the order. Installation takes 10 to 20 days once the shaft is ready, then testing and commissioning before handover.',
       },
-    ],
+          {
+        heading: "Space required for a home lift",
+        body:
+          "Three measurements decide it: the clear shaft, the pit depth below the lowest landing, and the headroom above the top landing. A three-passenger machine-room-less lift usually needs about 1200 x 1200 mm of clear shaft, and reduced-pit options exist for houses where digging is impractical. Floor area is rarely the constraint. Pit and headroom are.",
+      },
+      {
+        heading: "Small lift for a home: 2 person and 3 person options",
+        body:
+          "A two or three person car suits a house where the lift is mainly for elderly parents or for carrying things between floors rather than moving a family at once. The smaller car needs less shaft, which is often what makes a retrofit possible at all. If a wheelchair will use it, size it so the chair can turn inside rather than reverse out.",
+      },
+      {
+        heading: "Elevator for a 2 storey house: what to expect",
+        body:
+          "A two-storey house is two stops, which keeps the equipment and the commissioning simple. The decision that matters is placement: the stair void, a corner of stacked rooms, or an external shaft on a side wall. In a finished house an external or stair-void shaft avoids opening up rooms that are already done.",
+      },
+],
     specs: {
       caption: 'Typical residential configuration',
       rows: [
@@ -83,7 +98,17 @@ export const LANDERS = [
         q: 'How long does it take?',
         a: 'Delivery within three months of order. Installation takes 10 to 20 days once the shaft is ready.',
       },
-    ],
+          {
+        q: "Can I put a lift in a 2 floor house?",
+        a:
+          "Yes, and two-storey houses are among the most common installations we do. Two stops keeps the equipment simple. The question at survey is whether the lift goes in the stair void, in a corner of stacked rooms, or on an outside wall.",
+      },
+      {
+        q: "How much space is required for a small home lift?",
+        a:
+          "From roughly 1200 x 1200 mm of clear shaft for a three-passenger car, plus pit depth and headroom. Reduced-pit options exist where digging is not practical. We measure on site, since wall thickness and plumb change the usable figure.",
+      },
+],
     related: ['home-lift-price-kerala', 'glass-lifts', 'wheelchair-lifts', 'elevator-amc'],
   },
 
@@ -119,7 +144,22 @@ export const LANDERS = [
         body:
           'Over ten years the maintenance contract, the electricity the drive uses and the availability of spares matter more than a few percent at purchase. A lift whose controller board cannot be sourced in five years is the expensive one.',
       },
-    ],
+          {
+        heading: "Home lift price for 2 floors, 3 floors and 4 floors",
+        body:
+          "Each additional stop adds a landing door, a door operator, guide rail, wiring and commissioning time, so the price rises with the number of stops rather than with the height alone. Going from G+1 to G+2 is the smallest step. Going from G+2 to G+3 often also moves you into a different machine and sometimes a different shaft specification, which is the point where the figure changes most. When you ask for a quotation, give the number of stops rather than the number of floors, because a ground floor plus two upper floors is three stops.",
+      },
+      {
+        heading: "How much space a home lift needs",
+        body:
+          "A three-passenger machine-room-less lift typically needs around 1200 x 1200 mm of clear shaft. Compact models go smaller with a reduced-capacity car and a different door arrangement. You also need pit depth below the lowest landing and headroom above the top one, and those two numbers are what rule sites out more often than floor area. We measure all three on site before quoting, because wall thickness and how plumb the existing opening is both change the usable dimension.",
+      },
+      {
+        heading: "Lift for a 2 floor house: what it actually costs to add",
+        body:
+          "For a two-storey house the lift itself is the smaller part of the decision. What moves the total is whether there is an existing shaft, whether the house is finished, and whether the lift goes inside the stair void or on an outside wall. A self-supporting shaft in a finished house is a separate line item from the lift and should be quoted separately so you can see both numbers.",
+      },
+],
     faqs: [
       {
         q: 'Why will nobody quote a price on the phone?',
@@ -141,7 +181,17 @@ export const LANDERS = [
         q: 'What does maintenance add per year?',
         a: 'Budget for it from year one. We offer a Standard package with parts billed separately and a Comprehensive package that includes parts within an agreed scope.',
       },
-    ],
+          {
+        q: "How much does a home lift cost for a 3 floor house?",
+        a:
+          "A three-storey house is normally three or four stops, and each stop adds a landing door, an operator, rail and commissioning. We quote after measuring the shaft, pit and headroom, because whether a shaft already exists changes the total more than the stop count does.",
+      },
+      {
+        q: "What is the cheapest home lift option?",
+        a:
+          "The lowest total usually comes from a small-capacity car, a swing door rather than automatic, a stainless cabin rather than stone or wood, and an existing masonry shaft. The saving that costs you later is leaving out the automatic rescue device, so keep that in whatever else you trim.",
+      },
+],
     related: ['home-lifts', 'elevator-amc', 'hydraulic-lifts'],
   },
 
@@ -175,7 +225,17 @@ export const LANDERS = [
         body:
           'A plumb shaft within tolerance, the specified pit depth and headroom, three phase supply terminated at the controller position, lighting and a socket in the pit and at the machine, and a clear route to deliver the car and rails. Delays on commercial sites are almost always shaft readiness, not equipment.',
       },
-    ],
+          {
+        heading: "Commercial elevator dimensions and capacity",
+        body:
+          "Capacity is quoted in both persons and kilograms, and the two must agree with the car size. Our commercial range covers 4 to 26 passengers. The clear door opening is typically 800 to 1100 mm, and that figure, not the shaft width, is what decides whether trolleys and furniture pass. For a two-storey commercial building the cost driver is usually the shaft and the doors rather than the machine.",
+      },
+      {
+        heading: "Commercial elevator cost for a 2 storey building",
+        body:
+          "For a two-storey commercial building the machine is rarely the biggest number. What drives the total is the shaft, the doors and the civil work, plus whether the building needs a lift sized for trolleys and goods as well as people. Ask for the shaft and electrical supply to be quoted as separate lines, because that is where two very different prices usually diverge.",
+      },
+],
     specs: {
       caption: 'Commercial passenger range',
       rows: [
@@ -249,7 +309,12 @@ export const LANDERS = [
         body:
           'Hospital lifts belong on the essential services supply with generator backup, plus an automatic rescue device as a second layer. If the building has two bed lifts, keep them off the same distribution board.',
       },
-    ],
+          {
+        heading: "Hospital lift dimensions and stretcher clearance",
+        body:
+          "The car is sized from the longest loaded bed in service, plus clearance at the foot for the person steering and along one side for an attendant with a monitor or oxygen cylinder. That is why bed lifts are deep rather than wide. The clear door opening is the number most often got wrong: from 1100 mm is a common minimum, and it has to pass the bed at its widest while the bed is being steered, not while it is standing still.",
+      },
+],
     specs: {
       caption: 'Indicative bed lift configuration',
       rows: [
@@ -592,7 +657,12 @@ export const LANDERS = [
         body:
           'With frequent use and a poorly ventilated machine space, hydraulic oil heats up. Hot oil thins, performance drifts, and the controller can trip on thermal protection. Ventilate the power pack space properly. On higher duty installations, specify an oil cooler. This is the most common complaint on hydraulic lifts installed without thought for the room they sit in.',
       },
-    ],
+          {
+        heading: "Hydraulic lift for a home: size and space",
+        body:
+          "Hydraulic suits a house where headroom above the top landing is tight, because it needs much less overhead than traction. It does need a pit, and a ventilated space for the power pack, which can sit away from the shaft. For two or three stops in a finished house that combination is often what makes the installation possible.",
+      },
+],
     specs: {
       caption: 'Hydraulic configuration',
       rows: [
@@ -739,7 +809,27 @@ export const LANDERS = [
         body:
           'A breakdown is an inconvenience. Someone trapped in a car is an emergency. Ask what the committed attendance time is, who holds the keys, and what happens at night and on Sundays. A contract that says nothing about this is a discount on parts, not a maintenance contract.',
       },
-    ],
+          {
+        heading: "Lift AMC charges: what sets the price",
+        body:
+          "There is no flat rate, and anyone quoting one over the phone has not seen the lift. The figure is driven by the make and model, the capacity, the number of floors, the age and condition of the equipment, how hard the lift works, and whether you want parts included. A six-floor commercial lift running all day costs considerably more to maintain than a three-stop home lift. We inspect the lift, document its condition, and quote against what we find.",
+      },
+      {
+        heading: "Lift AMC renewal: changing provider at the end of a contract",
+        body:
+          "You are free to move once the existing contract ends. The sequence is simple: we inspect the lift before the changeover, write down its current condition, and list anything that needs correcting. That record matters, because it separates faults that already existed from anything that happens on our watch. Give us a few weeks' notice before your current contract expires so there is no gap in cover.",
+      },
+      {
+        heading: "Lift AMC quotation format: what it should contain",
+        body:
+          "Ask every provider for the same things in writing, so you can actually compare. The number of preventive visits per year and whether they are scheduled. The committed response time for a breakdown, and separately for a passenger trapped in the car. A named list of what is included and what is excluded, specifically ropes, door operator, controller board and rescue device battery. Whether repair labour is billed. Whether out-of-hours calls carry a surcharge. A quotation that does not state these is a price, not a contract.",
+      },
+      {
+        heading: "GST and HSN code on an elevator AMC",
+        body:
+          "Elevator maintenance is a service and is invoiced with GST accordingly. Maintenance contracts and lift installation sit under different HSN and SAC classifications, so if your finance team needs the exact code for a purchase order, ask for it with the quotation and we will state it on the invoice. Confirm the current rate with your accountant, since it is set by regulation rather than by us.",
+      },
+],
     specs: {
       caption: 'AMC packages',
       rows: [
@@ -772,7 +862,22 @@ export const LANDERS = [
         q: 'Can we switch providers mid contract?',
         a: 'Once the existing contract ends, yes. We inspect the lift, document its condition, list anything needing correction, and quote from there.',
       },
-    ],
+          {
+        q: "How much are lift AMC charges per year?",
+        a:
+          "It depends on the make, capacity, number of floors, age and how hard the lift works, and on whether you choose Standard with parts billed separately or Comprehensive with parts included. We inspect the lift before quoting. A figure given without seeing the equipment either overprices it or hides exclusions.",
+      },
+      {
+        q: "Do you do lift AMC near me in Kerala?",
+        a:
+          "We maintain lifts across Kochi, Thiruvananthapuram, Kozhikode, Thrissur, Kollam, Kannur, Alappuzha, Palakkad, Kottayam and Malappuram, working from our office in Vyttila, Ernakulam.",
+      },
+      {
+        q: "Can you send a sample lift AMC quotation format?",
+        a:
+          "Yes. Ask and we will send a quotation set out line by line, showing visits per year, response times for breakdown and for entrapment, parts included and parts excluded by name, labour, and any out-of-hours surcharge. You can use it to compare any provider, including ours.",
+      },
+],
     related: ['elevator-modernization', 'passenger-lifts', 'home-lifts'],
   },
 
@@ -843,6 +948,16 @@ export const LANDERS = [
         q: "Can we modernize in stages to spread the cost?",
         a:
           "Often, yes. Controller and drive first usually gives the biggest improvement in ride and running cost, with doors, car interior and fixtures following later. We set the order from what the survey finds.",
+      },
+      {
+        q: "How much does elevator modernization cost compared with a new lift?",
+        a:
+          "Normally less, because the rails, shaft, structure and car frame are retained and the civil work is minimal. Where the shaft itself no longer suits the building, replacement can be better value. The survey decides it, and sometimes the honest answer is replace.",
+      },
+      {
+        q: "What is included in the scope of work for a modernization?",
+        a:
+          "Typically the controller and drive to a modern VVVF system, the door operator and landing door equipment, the car interior and fixtures, and the safety systems including rescue device, door detection and intercom. Ropes and guide shoes if worn. Rails, shaft and structure usually stay.",
       },
 ],
     related: ['elevator-amc', 'passenger-lifts', 'wheelchair-lifts'],

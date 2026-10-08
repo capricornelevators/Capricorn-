@@ -44,6 +44,11 @@ export const CITIES = [
         body:
           "Plenty of three and four storey buildings around the city centre were built with no shaft. You can still have a lift. We build a self supporting shaft in a light well, the stair void or against the rear wall, so there is no need to open up the structure. We handle delivery into narrow city centre streets as part of the job.",
       },
+      {
+        heading: "Choosing the best elevator company in Kochi",
+        body:
+          "Whoever you pick, ask the same five things. Can they show you a lift they installed that is still running after five years, not just a photo of a new one. Will they put the response time for a breakdown, and separately for someone trapped in the car, in writing. Are the controller and drive from a manufacturer whose spares you can still buy in ten years. Is the automatic rescue device included or extra. And does the quotation separate the lift from the shaft, the electrical supply and GST, so you can see what you are comparing. A supplier who answers all five plainly is worth more than the lowest number.",
+      },
     ],
     areas: [
       'Kakkanad', 'Edappally', 'Vyttila', 'Palarivattom', 'Kaloor', 'Marine Drive',

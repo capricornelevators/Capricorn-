@@ -92,6 +92,13 @@ export default function LanderLayout({
                       <h3>{m.name}</h3>
                       <p className="lander-model-sub">{m.subtitle}</p>
                       <p>{m.description}</p>
+                      {m.features?.length > 0 && (
+                        <ul className="lander-model-features">
+                          {m.features.map((ft) => (
+                            <li key={ft}>{ft}</li>
+                          ))}
+                        </ul>
+                      )}
                       <div className="lander-table-wrap">
                         <table className="lander-table">
                           <tbody>
@@ -106,6 +113,37 @@ export default function LanderLayout({
                       </div>
                     </div>
                   ))}
+                </div>
+              </section>
+            )}
+
+            {models.length > 1 && (
+              <section className="lander-section">
+                <h2>Comparing the range</h2>
+                <div className="lander-table-wrap">
+                  <table className="lander-table lander-compare">
+                    <thead>
+                      <tr>
+                        <th scope="col">Model</th>
+                        {['Drive', 'Cabin', 'Door', 'Controls', 'Suits'].map((k) => (
+                          <th key={k} scope="col">{k}</th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {models.map((m) => {
+                        const by = Object.fromEntries(m.spec);
+                        return (
+                          <tr key={m.slug}>
+                            <th scope="row">{m.name.replace('Capricorn ', '')}</th>
+                            {['Drive', 'Cabin', 'Door', 'Controls', 'Suits'].map((k) => (
+                              <td key={k}>{by[k] ?? '—'}</td>
+                            ))}
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
                 </div>
               </section>
             )}

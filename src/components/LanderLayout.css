@@ -357,3 +357,39 @@
 .lander-steps strong {
   color: var(--lander-ink);
 }
+
+/* Model feature bullets */
+.lander-model-features {
+  margin: 0 0 1.1rem;
+  padding-left: 1.15rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--lander-body);
+}
+
+.lander-model-features li {
+  margin-bottom: 0.25rem;
+}
+
+/* Side-by-side range comparison */
+.lander-compare {
+  min-width: 720px;
+  font-size: 0.88rem;
+}
+
+.lander-compare thead th {
+  width: auto;
+  border-bottom: 2px solid var(--lander-gold);
+  color: var(--lander-ink);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.lander-compare tbody th {
+  width: 15%;
+  white-space: nowrap;
+}
+
+.lander-compare td {
+  vertical-align: top;
+}

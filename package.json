@@ -11,7 +11,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "next build",
+    "build": "next build --webpack",
     "start": "vite preview --host 0.0.0.0",
     "lint": "eslint .",
     "preview": "vite preview --host 0.0.0.0"

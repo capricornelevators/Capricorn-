@@ -3,6 +3,8 @@ name: Build static site for Hostinger
 on:
   push:
     branches: [master]
+  pull_request:
+    branches: [master]
   workflow_dispatch:
 
 permissions:
@@ -26,13 +28,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build site
+        env:
+          NEXT_PUBLIC_GA_ID: ${{ vars.NEXT_PUBLIC_GA_ID }}
+          NEXT_PUBLIC_META_PIXEL_ID: ${{ vars.NEXT_PUBLIC_META_PIXEL_ID }}
         run: npm run build
       - name: Publish Hostinger-ready files
+        if: github.event_name != 'pull_request'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           deploy_dir="$(mktemp -d)"
-          cp -R dist/. "$deploy_dir/"
+          cp -R out/. "$deploy_dir/"
           cd "$deploy_dir"
           git init --initial-branch=hostinger-deploy
           git config user.name "github-actions[bot]"

@@ -5,7 +5,7 @@ import { pageMetadata } from '../lib/seo';
 export const metadata = pageMetadata({
   title: 'Elevator Company in Kochi, Kerala | Home & Commercial Lifts',
   description:
-    'Capricorn Elevators designs, installs and maintains luxury home lifts and commercial elevators across Kochi and Kerala. AMC for all elevator brands.',
+    'Capricorn Elevators designs, installs and maintains home lifts and commercial elevators across Kochi and Kerala. AMC for all elevator brands.',
   path: '/',
 });
 

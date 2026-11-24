@@ -186,7 +186,7 @@ const Home = () => {
       icon: <Phone size={20} />,
       title: 'Call Us',
       details: ['+971-50-916-9002', '+91-759-3000-222'],
-      subtitle: 'Mon - Sat, 9:00 AM - 6:00 PM'
+      subtitle: 'Monday - Friday, 9:00 AM - 6:00 PM; Saturday, 9:00 AM - 4:00 PM'
     },
     {
       icon: <Mail size={20} />,
@@ -214,7 +214,7 @@ const Home = () => {
     {
       id: 'residential',
       title: 'Home Lift',
-      subtitle: 'Luxury, Accessibility, and Innovation',
+      subtitle: 'Comfort, Accessibility, and Innovation',
       image: residentialImage,
       description: "Our hydraulic and Machine-Room-Less (MRL) elevators provide smooth, quiet operation and energy-efficient, space-saving designs for modern homes.",
     },
@@ -223,7 +223,7 @@ const Home = () => {
       title: 'Commercial Elevators',
       subtitle: 'Efficient Solution for Business Spaces.',
       image: commercialImage,
-      description: "From luxurious residential lifts to high-performance commercial and industrial elevators, we offer reliable, efficient, and space-saving solutions for all types of buildings.",
+      description: "From residential lifts to high-performance commercial and industrial elevators, we offer reliable, efficient, and space-saving solutions for all types of buildings.",
     }
   ];
 
@@ -864,7 +864,7 @@ const Home = () => {
               <span className="highlight">Elevator Excellence</span>
             </h2>
             <p className="global-subtitle">
-              From Kerala to the UAE, we deliver premium elevator solutions
+              From Kerala to the UAE, we deliver elevator solutions
               that connect communities and elevate experiences globally.
             </p>
           </div>
@@ -984,7 +984,7 @@ const Home = () => {
             </h2>
             <p className="contact-subtitle">
               Connect with our elevator experts for personalized solutions. From consultation to installation,
-              we're here to bring your vision to life with premium elevator systems.
+              we're here to bring your vision to life with reliable elevator systems.
             </p>
           </div>
 

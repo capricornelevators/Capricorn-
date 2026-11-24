@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import Home from './Pages/Home';
-import About from './Pages/About';
-import Residential from './Pages/Residential';
-import Commercial from './Pages/Commercial';
-import Services from './Pages/Services';
-import Gallery from './Pages/Gallery';
-import Contact from './Pages/Contact';
-import Careers from './Pages/Careers';
+import Home from './views/Home';
+import About from './views/About';
+import Residential from './views/Residential';
+import Commercial from './views/Commercial';
+import Services from './views/Services';
+import Gallery from './views/Gallery';
+import Contact from './views/Contact';
+import Careers from './views/Careers';
 import './App.css';
 
 // ScrollToTop component
@@ -29,17 +29,17 @@ function App() {
         <Routes>
           {/* Main Pages */}
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} /> 
-          <Route path="/gallery" element={<Gallery />} /> 
-          <Route path="/contact" element={<Contact />} /> 
-          <Route path="/careers" element={<Careers />} /> 
-          
+          <Route path="/about" element={<About />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/careers" element={<Careers />} />
+
           {/* Products Routes */}
           <Route path="/products/home" element={<Residential />} />
-          <Route path="/products/commercial" element={<Commercial />} /> 
-          
+          <Route path="/products/commercial" element={<Commercial />} />
+
           {/* Services Routes */}
-          <Route path="/services" element={<Services />} /> 
+          <Route path="/services" element={<Services />} />
         </Routes>
       </div>
     </Router>

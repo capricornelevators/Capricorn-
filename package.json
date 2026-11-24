@@ -10,11 +10,11 @@
     }
   },
   "scripts": {
-    "dev": "next dev --webpack",
-    "build": "next build --webpack",
-    "start": "next start",
-    "lint": "next lint",
-    "preview": "next start"
+    "dev": "vite",
+    "build": "vite build",
+    "start": "vite preview --host 0.0.0.0",
+    "lint": "eslint .",
+    "preview": "vite preview --host 0.0.0.0"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

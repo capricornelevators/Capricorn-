@@ -94,8 +94,8 @@ const Home = () => {
 
   // Data Arrays
   const locations = [
-    { id: 'india', name: 'India', city: 'Kerala', x: 80, y: 51, flag: '🇮🇳', flagImage: indiaFlag, offices: 5, projects: 250, code: 'IN' },
-    { id: 'uae', name: 'UAE', city: 'Dubai', x: 65, y: 40, flag: '🇦🇪', flagImage: uaeFlag, offices: 2, projects: 80, code: 'AE' },
+    { id: 'india', name: 'India', city: 'Kerala', x: 80, y: 51, flag: '🇮🇳', flagImage: indiaFlag, code: 'IN' },
+    { id: 'uae', name: 'UAE', city: 'Dubai', x: 65, y: 40, flag: '🇦🇪', flagImage: uaeFlag, code: 'AE' },
   ];
 
   const countries = [
@@ -186,7 +186,7 @@ const Home = () => {
       icon: <Phone size={20} />,
       title: 'Call Us',
       details: ['+971-50-916-9002', '+91-759-3000-222'],
-      subtitle: 'Mon - Sat, 9:00 AM - 6:00 PM'
+      subtitle: 'Monday - Friday, 9:00 AM - 6:00 PM; Saturday, 9:00 AM - 4:00 PM'
     },
     {
       icon: <Mail size={20} />,
@@ -214,7 +214,7 @@ const Home = () => {
     {
       id: 'residential',
       title: 'Home Lift',
-      subtitle: 'Luxury, Accessibility, and Innovation',
+      subtitle: 'Comfort, Accessibility, and Innovation',
       image: residentialImage,
       description: "Our hydraulic and Machine-Room-Less (MRL) elevators provide smooth, quiet operation and energy-efficient, space-saving designs for modern homes.",
     },
@@ -223,7 +223,7 @@ const Home = () => {
       title: 'Commercial Elevators',
       subtitle: 'Efficient Solution for Business Spaces.',
       image: commercialImage,
-      description: "From luxurious residential lifts to high-performance commercial and industrial elevators, we offer reliable, efficient, and space-saving solutions for all types of buildings.",
+      description: "From residential lifts to high-performance commercial and industrial elevators, we offer reliable, efficient, and space-saving solutions for all types of buildings.",
     }
   ];
 
@@ -864,7 +864,7 @@ const Home = () => {
               <span className="highlight">Elevator Excellence</span>
             </h2>
             <p className="global-subtitle">
-              From Kerala to the UAE, we deliver premium elevator solutions
+              From Kerala to the UAE, we deliver elevator solutions
               that connect communities and elevate experiences globally.
             </p>
           </div>
@@ -899,7 +899,7 @@ const Home = () => {
                       <div className="tooltip-content">
                         <span className="tooltip-country-name">{location.name}</span>
                         <p>{location.city}</p>
-                        <div className="tooltip-stats">
+                        <div className="tooltip-stats" style={{ display: 'none' }}>
                           <span>{location.offices} Offices</span>
                           <span>{location.projects} Projects</span>
                         </div>
@@ -910,7 +910,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="global-stats">
+            <div className="global-stats" style={{ display: 'none' }}>
               <div className="stats-header">
                 <h3>Our Global Impact</h3>
               </div>
@@ -984,7 +984,7 @@ const Home = () => {
             </h2>
             <p className="contact-subtitle">
               Connect with our elevator experts for personalized solutions. From consultation to installation,
-              we're here to bring your vision to life with premium elevator systems.
+              we're here to bring your vision to life with reliable elevator systems.
             </p>
           </div>
 

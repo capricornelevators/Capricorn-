@@ -32,7 +32,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           deploy_dir="$(mktemp -d)"
-          cp -R dist/. "$deploy_dir/"
+          cp -R out/. "$deploy_dir/"
           cd "$deploy_dir"
           git init --initial-branch=hostinger-deploy
           git config user.name "github-actions[bot]"

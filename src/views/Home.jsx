@@ -94,8 +94,8 @@ const Home = () => {
 
   // Data Arrays
   const locations = [
-    { id: 'india', name: 'India', city: 'Kerala', x: 80, y: 51, flag: '🇮🇳', flagImage: indiaFlag, code: 'IN' },
-    { id: 'uae', name: 'UAE', city: 'Dubai', x: 65, y: 40, flag: '🇦🇪', flagImage: uaeFlag, code: 'AE' },
+    { id: 'india', name: 'India', city: 'Kerala', x: 80, y: 51, flag: '🇮🇳', flagImage: indiaFlag, offices: 5, projects: 250, code: 'IN' },
+    { id: 'uae', name: 'UAE', city: 'Dubai', x: 65, y: 40, flag: '🇦🇪', flagImage: uaeFlag, offices: 2, projects: 80, code: 'AE' },
   ];
 
   const countries = [
@@ -899,7 +899,7 @@ const Home = () => {
                       <div className="tooltip-content">
                         <span className="tooltip-country-name">{location.name}</span>
                         <p>{location.city}</p>
-                        <div className="tooltip-stats" style={{ display: 'none' }}>
+                        <div className="tooltip-stats">
                           <span>{location.offices} Offices</span>
                           <span>{location.projects} Projects</span>
                         </div>
@@ -910,7 +910,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="global-stats" style={{ display: 'none' }}>
+            <div className="global-stats">
               <div className="stats-header">
                 <h3>Our Global Impact</h3>
               </div>
